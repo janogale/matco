@@ -1,9 +1,11 @@
 "use client";
-import { Alert, Navbar } from "flowbite-react";
+
+import Navbar from "../components/Navbar";
+
 export default function Home() {
   return (
-    <main className="flex flex-col justify-center  ">
-    
+    <main className="w-screen">
+      <Navbar />
     </main>
   );
 }
