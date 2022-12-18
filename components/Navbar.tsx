@@ -7,7 +7,7 @@ export default function NavbarTop() {
     <Navbar
       fluid={true}
       rounded={true}
-      className="max-w-6xl mx-auto bg-white shadow"
+      className="max-w-6xl mx-auto bg-gray-50 shadow absolute z-50 left-0 right-0 "
     >
       <Navbar.Brand href="/">
         <Image src={logo} width={120} className="mr-3 h-16" alt="Matco Logo" />
