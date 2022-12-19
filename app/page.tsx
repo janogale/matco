@@ -5,7 +5,7 @@ import Navbar from "../components/Navbar";
 
 export default function Home() {
   return (
-    <main className="w-full mx-auto relative">
+    <main className="mx-auto w-full relative">
       <Navbar />
       <HomeCarousel />
       <div className="h-64"></div>
