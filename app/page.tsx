@@ -1,5 +1,6 @@
 "use client";
 
+import Banner from "../components/ui/Banner";
 import HomeCarousel from "../components/HomeCarousel";
 import Navbar from "../components/Navbar";
 
@@ -8,7 +9,7 @@ export default function Home() {
     <main className="mx-auto w-full relative">
       <Navbar />
       <HomeCarousel />
-      <div className="h-64"></div>
+      <Banner text1="Explore the Affordable" text2="New Models" />
     </main>
   );
 }
