@@ -7,6 +7,11 @@ This Project is using Next JS, latest release (NextJS 13), which has new folder 
 - Node v16.8 or higher
 - React v18 or higher
 
+## User Interface (UI) used
+
+- Tailwind CSS is used for styling the project UI.
+- for UI components `flowbite-react` is used which is a UI library based on Tailwind.
+
 ## Getting Started
 
 First, run the development server:
