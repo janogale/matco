@@ -55,4 +55,18 @@ export const carsData = [
     name: "Ertiga",
     logo: "/images/swiftlogo.png",
   },
+  {
+    id: 9,
+    href: "#",
+    image: "/images/models/jac/1.webp",
+    name: "JAC",
+    logo: "/images/jaclogo.png",
+  },
+  {
+    id: 10,
+    href: "#",
+    image: "/images/models/jac/2.webp",
+    name: "JAC",
+    logo: "/images/jaclogo.png",
+  },
 ];

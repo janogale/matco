@@ -15,6 +15,10 @@ const jemnyCars = carsData.filter((car) =>
   car.name.toLowerCase().includes("jimny")
 );
 
+const jacCars = carsData.filter((car) =>
+  car.name.toLowerCase().includes("jac")
+);
+
 export default function TabsCars() {
   return (
     <Tabs.Group aria-label="Tabs" style="underline">
@@ -32,7 +36,7 @@ export default function TabsCars() {
         <CarList cars={jemnyCars} />
       </Tabs.Item>
       <Tabs.Item title="JAC">
-        <CarList cars={carsData} />
+        <CarList cars={jacCars} />
       </Tabs.Item>
     </Tabs.Group>
   );
