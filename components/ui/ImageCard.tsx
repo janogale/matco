@@ -15,17 +15,19 @@ export default function ImageCard({ img, alt, logo }: CardProps) {
         />
       </div>
       {/* <h3 className=" text-gray-900">Celerio</h3> */}
+      <div className="my-4" />
       <div className="absolute flex justify-center inset-x-0 bottom-0 h-36 bg-gradient-to-t from-black opacity-25">
-        {!logo && (
+        {logo ? (
+          <img
+            src={logo}
+            alt={alt}
+            className="absolute bottom-2 object-cover object-center h-6 "
+          />
+        ) : (
           <h1 className="absolute bottom-3 font-mono font-bold  text-white">
             {alt}
           </h1>
         )}
-        <img
-          src={logo}
-          alt={alt}
-          className="absolute bottom-2 object-cover object-center h-8 "
-        />
       </div>
     </div>
   );
