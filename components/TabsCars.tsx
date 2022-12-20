@@ -1,18 +1,39 @@
 import { Tabs } from "flowbite-react";
 import CarList from "./CarList";
 
+// sample data
+import { carsData } from "../sampledata";
+
+const celerioCars = carsData.filter((car) =>
+  car.name.toLowerCase().includes("celerio")
+);
+const swiftCars = carsData.filter((car) =>
+  car.name.toLowerCase().includes("swift")
+);
+
+const jemnyCars = carsData.filter((car) =>
+  car.name.toLowerCase().includes("jimny")
+);
+
 export default function TabsCars() {
   return (
-    <Tabs.Group aria-label="Tabs" style="underline" className="text-2xl">
+    <Tabs.Group aria-label="Tabs" style="underline">
       <Tabs.Item title="All">
-        <CarList />
+        <CarList cars={carsData} />
       </Tabs.Item>
-      <Tabs.Item active={true} title="Dashboard">
-        All
+
+      <Tabs.Item title="Swift">
+        <CarList cars={swiftCars} />
       </Tabs.Item>
-      <Tabs.Item title="Swift">Swift</Tabs.Item>
-      <Tabs.Item title="Celerio">Celerio</Tabs.Item>
-      <Tabs.Item title="Jimny">Jimny</Tabs.Item>
+      <Tabs.Item title="Celerio">
+        <CarList cars={celerioCars} />
+      </Tabs.Item>
+      <Tabs.Item title="Jimny">
+        <CarList cars={jemnyCars} />
+      </Tabs.Item>
+      <Tabs.Item title="JAC">
+        <CarList cars={carsData} />
+      </Tabs.Item>
     </Tabs.Group>
   );
 }
