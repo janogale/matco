@@ -26,6 +26,9 @@ export default function NavbarTop() {
           Cars
         </Navbar.Link>
         <Navbar.Link href="/navbars" className="text-lg">
+          Finance
+        </Navbar.Link>
+        <Navbar.Link href="/navbars" className="text-lg">
           Services
         </Navbar.Link>
         <Navbar.Link href="/navbars" className="text-lg">

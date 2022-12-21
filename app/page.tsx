@@ -6,6 +6,7 @@ import Navbar from "../components/Navbar";
 import TabsCars from "../components/TabsCars";
 import Container from "../components/ui/Container";
 import Heading from "../components/ui/Heading";
+import HomeCTA from "../components/HomeCTA";
 
 export default function Home() {
   return (
@@ -17,6 +18,8 @@ export default function Home() {
         <Heading>Car Models</Heading>
         <TabsCars />
       </Container>
+      <HomeCTA />
+      <div className="my-16"></div>
     </main>
   );
 }
