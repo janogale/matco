@@ -1,6 +1,8 @@
 import { Navbar, Button } from "flowbite-react";
 import Image from "next/image";
 import logo from "../public/logo.png";
+import jacLogo from "../public/images/jac.png";
+import suzukiLogo from "../public/images/suzuki.png";
 
 export default function NavbarTop() {
   return (
@@ -34,7 +36,23 @@ export default function NavbarTop() {
         </Navbar.Link>
       </Navbar.Collapse>
       <div className="flex md:order-2 gap-4">
-        <Button>Get started</Button>
+        <div
+          className="overflow-hidden hover:cursor-pointer hover:opacity-75 p-2 rounded-md shadow-md"
+          title="JAC Motors"
+        >
+          <Image src={jacLogo} width={80} alt="JAC Logo" className="h-16" />
+        </div>
+        <div
+          className="overflow-hidden hover:cursor-pointer hover:opacity-75 p-2 rounded-md shadow-md"
+          title="Suzuki Motors"
+        >
+          <Image
+            src={suzukiLogo}
+            width={80}
+            alt="Suzuki Logo"
+            className="h-16"
+          />
+        </div>
         <Navbar.Toggle />
       </div>
     </Navbar>

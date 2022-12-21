@@ -69,4 +69,11 @@ export const carsData = [
     name: "JAC",
     logo: "/images/jaclogo.png",
   },
+  {
+    id: 11,
+    href: "#",
+    image: "/images/models/vitara/1.webp",
+    name: "VITARA",
+    logo: undefined,
+  },
 ];
