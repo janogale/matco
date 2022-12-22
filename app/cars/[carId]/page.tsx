@@ -14,10 +14,8 @@ export default function Page({ params }: any) {
             <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3">
               <div className="lg:flex">
                 <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
+                  <h1 className="text-xl font-bold ">TITLE</h1>
+                  <p className="text-xl font-normal text-gray-800 text-justify  ">
                     How to use sticky note for problem solving How to use sticky
                     note for problem solving How to use sticky note for problem
                     solving How to use sticky note for problem solving How to
@@ -27,53 +25,37 @@ export default function Page({ params }: any) {
                     use sticky note for problem solving How to use sticky note
                     for problem solving How to use sticky note for problem
                     solving
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 20 October 2019
-                  </span>
+                  </p>
                 </div>
               </div>
 
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1544654803-b69140b285a1?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1470&q=80"
-                  alt=""
-                />
+              <div className="">
+                <div className="">
+                  <div className="lg:flex gap-4 mb-4">
+                    <img
+                      className="object-contain w-full h-56 rounded-lg lg:w-100"
+                      src="/images/1.png"
+                      alt=""
+                    />
+                    <img
+                      className="object-cover w-full h-56 rounded-lg lg:w-100"
+                      src="/images/1.png"
+                      alt=""
+                    />
+                  </div>
+                  <div className="lg:flex gap-4 mb-4">
+                    <img
+                      className="object-cover w-full h-56 rounded-lg lg:w-100"
+                      src="/images/1.png"
+                      alt=""
+                    />
 
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    Morning routine to boost your mood
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 25 November 2020
-                  </span>
-                </div>
-              </div>
-
-              <div className="lg:flex">
-                <img
-                  className="object-cover w-full h-56 rounded-lg lg:w-64"
-                  src="https://images.unsplash.com/photo-1530099486328-e021101a494a?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1547&q=80"
-                  alt=""
-                />
-
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <a
-                    href="#"
-                    className="text-xl font-semibold text-gray-800 hover:underline dark:text-white "
-                  >
-                    All the features you want to know
-                  </a>
-
-                  <span className="text-sm text-gray-500 dark:text-gray-300">
-                    On: 30 September 2020
-                  </span>
+                    <img
+                      className="object-cover w-full h-56 rounded-lg lg:w-100"
+                      src="/images/1.png"
+                      alt=""
+                    />
+                  </div>
                 </div>
               </div>
             </div>
