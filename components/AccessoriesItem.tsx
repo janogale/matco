@@ -10,7 +10,7 @@ export const AccessoriesItem = ({
   return (
     <div className="max-w-sm">
       <Card
-        className="transition-transform duration-500 transform ease-in-out hover:scale-110"
+        className="transition-transform duration-500 transform ease-in-out hover:scale-105 shadow-none hover:shadow-md"
         imgAlt="Meaningful alt text for an image that is not purely decorative"
         imgSrc={accessoriesItem.image}
       >
