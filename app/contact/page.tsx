@@ -112,16 +112,9 @@ export default function ContactPage() {
                   Contact us
                 </h2>
                 <p className="text-lg text-white">
-                  Varius facilisi mauris sed sit. Non sed et duis dui leo,
-                  vulputate id malesuada non. Cras aliquet purus dui laoreet
-                  diam sed lacus, fames.
+                  For information, technical support, and sales details, please
+                  contact us below numbers
                 </p>
-                <a
-                  className="block w-full rounded-md border border-transparent bg-white py-3 px-5 text-center text-base font-medium text-indigo-700 shadow-md hover:bg-gray-50 sm:inline-block sm:w-auto"
-                  href="#"
-                >
-                  Explore open positions
-                </a>
               </div>
             </div>
           </div>
