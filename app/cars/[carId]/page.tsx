@@ -62,88 +62,54 @@ export default function Page({ params }: any) {
               </div>
             </div>
 
-            <div className="container grid grid-cols-2 gap-8 mt-8 md:mt-16 md:grid-cols-2">
-              <div className="lg:flex ml-20">
-                <div className="flex flex-col justify-between py-6 lg:mx-6">
-                  <p className="text-lg text-gray-800 text-justify  ">
-                    <span className="text-black font-bold text-xl">TITLE</span>{' '}
-                    <br />
-                    <span className="text-sm">
-                      {' '}
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving
-                    </span>{' '}
-                    <br />
-                    <span className="text-md text-black font-medium">
-                      How to use sticky
-                    </span>{' '}
-                    <br />
-                    <span className="text-sm">
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving How to use sticky note for
-                      problem solving How to use sticky note for problem solving
-                      How to use sticky note for problem solving How to use
-                      sticky note for problem solving
-                    </span>
+            <div className="container flex flex-col px-6 py-10 mx-auto space-y-6 lg:h-[32rem] lg:py-16 lg:flex-row lg:items-center">
+              <div className="w-full lg:w-1/2">
+                <div className="lg:max-w-lg">
+                  <h1 className="text-3xl font-semibold tracking-wide text-gray-800 dark:text-white lg:text-4xl">
+                    Find your Car you want
+                  </h1>
+                  <p className="mt-4 text-gray-600 text-justify">
+                    We work with the best remunated glasses dealers in US to
+                    find your new glasses. How to use sticky note for problem
+                    solving How to use sticky note for problem solving How to
+                    use sticky note for problem solving How to use sticky note
+                    for problem solving How to use sticky note for problem
+                    solving How to use sticky note for problem solving How to
+                    use sticky note for problem solving How to use sticky note
+                    for problem solving How to use sticky note for problem
+                    solving How to use sticky note for problem solving How to
+                    use sticky note for problem solving How to use sticky note
+                    for problem solving How to use sticky note for problem
+                    solving How to use sticky note for problem solving How to
+                    use sticky note for problem solving How to use sticky note
+                    for problem solving How to use sticky note for problem
+                    solving How to use sticky note for problem solving How to
+                    use sticky note for problem solving How to use sticky note
+                    for problem solving How to use sticky note for problem
+                    solving How to use sticky note for problem solving
                   </p>
                 </div>
               </div>
 
-              <div className=" w-full">
-                <div className="grid-cols-3 p-2 space-y-2 bg-yellow-200 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
-                  <div className="w-full rounded">
+              <div className="flex items-center justify-center w-full h-58 lg:w-1/3">
+                <div className="flex items-center justify-center -mx-4 lg:pl-8">
+                  <div className="flex flex-col items-end px-3">
                     <img
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                      alt="image"
+                      className="object-cover mb-6 rounded shadow-lg h-28 sm:h-48 xl:h-56 w-28 sm:w-48 xl:w-56"
+                      src="https://images.pexels.com/photos/3184287/pexels-photo-3184287.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                      alt=""
+                    />
+                    <img
+                      className="object-cover w-20 h-20 rounded shadow-lg sm:h-32 xl:h-40 sm:w-32 xl:w-40"
+                      src="https://images.pexels.com/photos/3182812/pexels-photo-3182812.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;h=750&amp;w=1260"
+                      alt=""
                     />
                   </div>
-                  <div className="w-full col-span-2 row-span-2 rounded">
+                  <div className="px-3">
                     <img
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                      alt="image"
-                    />
-                  </div>
-                  <div className="w-full rounded">
-                    <img
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                      alt="image"
-                    />
-                  </div>
-                  <div className="w-full rounded">
-                    <img
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                      alt="image"
-                    />
-                  </div>
-                  <div className="w-full rounded">
-                    <img
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                      alt="image"
-                    />
-                  </div>
-                  <div className="w-full rounded">
-                    <img
-                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
-                      alt="image"
+                      className="object-cover w-40 h-40 rounded shadow-lg sm:h-64 xl:h-80 sm:w-64 xl:w-80"
+                      src="https://images.pexels.com/photos/3182739/pexels-photo-3182739.jpeg?auto=compress&amp;cs=tinysrgb&amp;dpr=2&amp;w=500"
+                      alt=""
                     />
                   </div>
                 </div>
