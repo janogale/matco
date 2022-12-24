@@ -1,17 +1,18 @@
 "use client";
 
-import Heading from "../../components/ui/Heading";
-import { Accessories } from "../../components/Accessories";
-import { accessoriesData } from "../../sampledata";
+import Image from "next/image";
 import Navbar from "../../components/Navbar";
+import Heading from "../../components/ui/Heading";
+import { accessoriesData } from "../../sampledata";
 import Container from "../../components/ui/Container";
-import ImageCard from "../../components/ui/ImageCard";
+import { Accessories } from "../../components/Accessories";
+import  banner  from '../../public/images/accessories/acc-cover.jpg';
 
 export declare interface IAccessoriesType {
   id: number | string;
   image: string;
   name: string;
-  serial: string;
+  model: string;
 }
 
 export default function AccessoriesPage() {
@@ -19,20 +20,16 @@ export default function AccessoriesPage() {
     <div>
      <Navbar />
       <Container>
-      {/* <div className="my-16"></div>
-        <div className="w-full">
-          <ImageCard img="/images/accessories/acc-cover.jpg" alt="" />
-        </div> */}
         <div className="rounded-lg overflow-hidden h-96 mt-28">
           <div className="inset-0 h-48">
-            <img className="rounded-t-lg" src="/images/accessories/acc-cover.jpg" alt=""  />
+            <Image className="rounded-t-lg" src={banner} alt="banner image" width={1500} height={500} />
           </div>
       </div>
-        <div className="mt-10" >
+        <div className="mt-10">
           <Heading>Accessories</Heading>
           <Accessories accessories={accessoriesData} />
         </div>
       </Container>
     </div>
   );
-}
+};

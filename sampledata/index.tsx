@@ -83,30 +83,32 @@ export const accessoriesData = [
     id:1,
     image: "/images/accessories/acc1.jpg",
     name: "front under spoiler",
-    serial: "AED"
+    model: "AED",
+    desc: "adkjfladf ",
+    usedFor: ['Jimny', 'Vitara']
   },
   {
     id:2,
     image: "/images/accessories/acc2.jpg",
     name: "Side under spoiler",
-    serial: "AED"
+    model: "AED"
   },
   {
     id:3,
     image: "/images/accessories/acc4.jpg",
     name: "front under spoiler",
-    serial: "AED"
+    model: "AED"
   },
   {
     id:4,
     image: "/images/accessories/acc6.jpg",
     name: "front under spoiler",
-    serial: "AED"
+    model: "AED"
   },
   {
     id:5,
     image: "/images/accessories/acc7.jpg",
     name: "front under spoiler",
-    serial: "AED"
+    model: "AED"
   },
 ]
