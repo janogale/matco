@@ -12,7 +12,9 @@ export declare interface IAccessoriesType {
   id: number | string;
   image: string;
   name: string;
-  model: string;
+  partNumber: string;
+  description: string,
+  usedFor: string[],
 }
 
 export default function AccessoriesPage() {

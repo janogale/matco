@@ -83,32 +83,64 @@ export const accessoriesData = [
     id:1,
     image: "/images/accessories/acc1.jpg",
     name: "front under spoiler",
-    model: "AED",
-    desc: "adkjfladf ",
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
     usedFor: ['Jimny', 'Vitara']
   },
   {
     id:2,
     image: "/images/accessories/acc2.jpg",
     name: "Side under spoiler",
-    model: "AED"
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
   },
   {
     id:3,
     image: "/images/accessories/acc4.jpg",
     name: "front under spoiler",
-    model: "AED"
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
   },
   {
     id:4,
     image: "/images/accessories/acc6.jpg",
     name: "front under spoiler",
-    model: "AED"
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
   },
   {
     id:5,
     image: "/images/accessories/acc7.jpg",
     name: "front under spoiler",
-    model: "AED"
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
+  },
+  {
+    id:6,
+    image: "/images/accessories/acc7.jpg",
+    name: "front under spoiler",
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
+  },
+  {
+    id:7,
+    image: "/images/accessories/acc4.jpg",
+    name: "front under spoiler",
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
+  },
+  {
+    id:8,
+    image: "/images/accessories/acc4.jpg",
+    name: "front under spoiler",
+    partNumber: "990E0-78R13",
+    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ['Jimny', 'Vitara']
   },
 ]
