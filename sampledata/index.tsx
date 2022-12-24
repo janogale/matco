@@ -77,3 +77,36 @@ export const carsData = [
     logo: undefined,
   },
 ];
+
+export const accessoriesData = [
+  {
+    id:1,
+    image: "/images/accessories/acc1.jpg",
+    name: "front under spoiler",
+    serial: "AED"
+  },
+  {
+    id:2,
+    image: "/images/accessories/acc2.jpg",
+    name: "Side under spoiler",
+    serial: "AED"
+  },
+  {
+    id:3,
+    image: "/images/accessories/acc4.jpg",
+    name: "front under spoiler",
+    serial: "AED"
+  },
+  {
+    id:4,
+    image: "/images/accessories/acc6.jpg",
+    name: "front under spoiler",
+    serial: "AED"
+  },
+  {
+    id:5,
+    image: "/images/accessories/acc7.jpg",
+    name: "front under spoiler",
+    serial: "AED"
+  },
+]
