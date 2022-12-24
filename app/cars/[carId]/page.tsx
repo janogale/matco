@@ -5,7 +5,7 @@ export default function Page({ params }: any) {
       <div>
         <h1>This is Car {params.carId}</h1>
 
-        <section className="bg-white dark:bg-gray-900">
+        <section className="bg-white">
           <div className=" px-6 py-10 mx-auto">
             <div className="mx-auto bg-gray-50 my-8">
               <div className="overflow-hidden rounded-lg lg:grid lg:grid-cols-2 lg:gap-4">
@@ -62,50 +62,90 @@ export default function Page({ params }: any) {
               </div>
             </div>
 
-            <div className="grid grid-cols-1 gap-8 mt-8 md:mt-16 md:grid-cols-3">
-              <div className="lg:flex">
+            <div className="container grid grid-cols-2 gap-8 mt-8 md:mt-16 md:grid-cols-2">
+              <div className="lg:flex ml-20">
                 <div className="flex flex-col justify-between py-6 lg:mx-6">
                   <p className="text-lg text-gray-800 text-justify  ">
                     <span className="text-black font-bold text-xl">TITLE</span>{' '}
                     <br />
-                    How to use sticky note for problem solving How to use sticky
-                    note for problem solving How to use sticky note for problem
-                    solving How to use sticky note for problem solving How to
-                    use sticky note for problem solving How to use sticky note
-                    for problem solving How to use sticky note for problem
-                    solving How to use sticky note for problem solving How to
-                    use sticky note for problem solving How to use sticky note
-                    for problem solving How to use sticky note for problem
-                    solving
+                    <span className="text-sm">
+                      {' '}
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving
+                    </span>{' '}
+                    <br />
+                    <span className="text-md text-black font-medium">
+                      How to use sticky
+                    </span>{' '}
+                    <br />
+                    <span className="text-sm">
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving How to use sticky note for
+                      problem solving How to use sticky note for problem solving
+                      How to use sticky note for problem solving How to use
+                      sticky note for problem solving
+                    </span>
                   </p>
                 </div>
               </div>
 
-              <div className="">
-                <div className="lg:flex gap-4 mb-4">
-                  <img
-                    className="object-contain w-full h-56 rounded-lg lg:w-100"
-                    src="/images/1.png"
-                    alt=""
-                  />
-                  <img
-                    className="object-cover w-full h-56 rounded-lg lg:w-100"
-                    src="/images/1.png"
-                    alt=""
-                  />
-                </div>
-                <div className="lg:flex gap-4 mb-4">
-                  <img
-                    className="object-cover w-full h-56 rounded-lg lg:w-100"
-                    src="/images/1.png"
-                    alt=""
-                  />
-
-                  <img
-                    className="object-cover w-full h-56 rounded-lg lg:w-100"
-                    src="/images/1.png"
-                    alt=""
-                  />
+              <div className=" w-full">
+                <div className="grid-cols-3 p-2 space-y-2 bg-yellow-200 lg:space-y-0 lg:grid lg:gap-3 lg:grid-rows-3">
+                  <div className="w-full rounded">
+                    <img
+                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="w-full col-span-2 row-span-2 rounded">
+                    <img
+                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="w-full rounded">
+                    <img
+                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="w-full rounded">
+                    <img
+                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="w-full rounded">
+                    <img
+                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                      alt="image"
+                    />
+                  </div>
+                  <div className="w-full rounded">
+                    <img
+                      src="https://images.unsplash.com/photo-1523275335684-37898b6baf30?ixlib=rb-1.2.1&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=989&q=80"
+                      alt="image"
+                    />
+                  </div>
                 </div>
               </div>
             </div>
