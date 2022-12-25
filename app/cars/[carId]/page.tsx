@@ -220,21 +220,14 @@ export default function Page({ params }: any) {
                   </div>
                   <div className="flex">
                     <div>
-                      <h6 className="mb-2 font-semibold leading-5">
-                        Enhanced security
-                      </h6>
-                      <p className="text-md text-gray-900 text-justify">
-                        From the protective body to the airbags and intelligent
-                        warnings, the Ertiga is fully designed to protect you,
-                        your fellow travelers and your pedestrians. Suzuki's
-                        advanced TECT (Total Effective Control Technology) body
-                        makes extensive use of ultra-high-tensile steel to
-                        increase stiffness, lower weight despite larger overall
-                        dimensions, and more effectively absorb and disperse
-                        energy from impact in the event of a collision. New load
-                        paths under the engine compartment further mitigate
-                        damage in high-speed frontal collisions.
-                      </p>
+                      <h6 className="mb-2 font-semibold leading-5">FEATURES</h6>
+                      <div className="flex justify-between">
+                        <p className="flex justify-center">
+                          <span className="text-left">afafadf</span>
+                          <span className="text-right">afafadf</span>
+                        </p>
+                      </div>
+
                       <hr className="w-full my-6 border-gray-300" />
                     </div>
                   </div>
