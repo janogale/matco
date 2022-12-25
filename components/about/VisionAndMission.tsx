@@ -2,7 +2,7 @@ export default function VisionAndMission() {
   return (
     <>
       <div className="content text-lg">
-        <h2 className="text-3xl uppercase text-sky-600 font-bold">MISSION</h2>
+        <h2 className="text-3xl uppercase text-sky-600 font-bold mb-3">MISSION</h2>
         <p>
           Al Rostamani Group’s mission is to be recognized as a leading
           successful regional conglomerate with diverse commercial interests and
@@ -10,7 +10,7 @@ export default function VisionAndMission() {
         </p>
       </div>
       <div className="content text-lg">
-        <h2 className="text-3xl suzuki-bold uppercase text-sky-600 font-bold">
+        <h2 className="text-3xl suzuki-bold uppercase text-sky-600 font-bold mb-3">
           VISION
         </h2>
         <p>

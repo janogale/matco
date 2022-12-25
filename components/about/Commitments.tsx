@@ -1,7 +1,7 @@
 export default function Commitments() {
   return (
     <div className="content text-lg">
-      <h2 className="text-3xl uppercase text-sky-600 font-bold">COMMITMENTS</h2>
+      <h2 className="text-3xl uppercase text-sky-600 font-bold mb-3">COMMITMENTS</h2>
       <p>
         True to the company Mission &amp; Vision Values Al Rostamani Trading
         Company LLC is committed to provide a much focused attitude to deliver
@@ -23,7 +23,7 @@ export default function Commitments() {
         provide the below values to meet the high standards expected by Suzuki
         Owners.
       </p>
-      <ul className="list-disc list-outside leading-10">
+      <ul className="list-disc list-outside leading-8 mt-5">
         <li className="font-bold">
           Quality Service
           <ul className="font-normal list-disc list-inside">
