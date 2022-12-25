@@ -166,30 +166,20 @@ export default function Page({ params }: any) {
                   </div>
                   <div className="flex">
                     <div>
-                      <h6 className="mb-2 font-semibold leading-5">TITLE</h6>
+                      <h6 className="mb-2 font-semibold leading-5">
+                        Enhanced security
+                      </h6>
                       <p className="text-md text-gray-900 text-justify">
-                        Skate ipsum dolor sit amet, alley oop vert mute-air
-                        Colby Carter flail 180 berm. Half-cab camel back ollie
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
-                        Skate ipsum dolor sit amet, alley oop vert mute-air
-                        Colby Carter flail 180 berm. Half-cab camel back ollie
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
+                        From the protective body to the airbags and intelligent
+                        warnings, the Ertiga is fully designed to protect you,
+                        your fellow travelers and your pedestrians. Suzuki's
+                        advanced TECT (Total Effective Control Technology) body
+                        makes extensive use of ultra-high-tensile steel to
+                        increase stiffness, lower weight despite larger overall
+                        dimensions, and more effectively absorb and disperse
+                        energy from impact in the event of a collision. New load
+                        paths under the engine compartment further mitigate
+                        damage in high-speed frontal collisions.
                       </p>
                       <hr className="w-full my-6 border-gray-300" />
                     </div>
@@ -198,17 +188,17 @@ export default function Page({ params }: any) {
                 <div className="grid grid-cols-2 gap-5">
                   <img
                     className="object-cover w-full h-56 col-span-2 rounded"
-                    src="/images/details/1.jpg"
+                    src="/images/details/7.jpg"
                     alt=""
                   />
                   <img
                     className="object-cover w-full h-48 rounded"
-                    src="/images/models/jac/1.webp"
+                    src="/images/details/8.jpg"
                     alt=""
                   />
                   <img
                     className="object-cover w-full h-48 rounded"
-                    src="/images/models/jac/1.webp"
+                    src="/images/details/9.jpg"
                     alt=""
                   />
                 </div>
