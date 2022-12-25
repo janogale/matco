@@ -1,12 +1,21 @@
+import Image from 'next/image';
+import Box1 from '../../public/images/about/box1.png';
+import Box2 from '../../public/images/about/box2.png';
+import Box3 from '../../public/images/about/box3.png';
+import Box4 from '../../public/images/about/box4.png';
+import ImageBanner from '../../public/images/about/recall-cover.png';
+
 export default function AboutPage() {
   return (
     <main>
       <section className="section space-y-16">
         <div className="cover relative">
-          <img
-            src="https://suzuki.ae/assets/images/recall/recall-cover.png"
+          <Image
+            src={ImageBanner}
             alt="cover"
             className="w-full"
+            width={500}
+            height={500}
           />
           <div className="absolute inset-0 bg-black bg-opacity-25">
             <div className="md:max-w-screen-xl mx-auto px-5 xxl:px-0 text-gray-800 flex items-end h-full pb-8 md:pb-16 xxl:pb-32">
@@ -53,9 +62,11 @@ export default function AboutPage() {
             </div>
             <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
               <div className="relative overflow-hidden">
-                <img
-                  src="https://suzuki.ae/assets/images/commitment/box1.png"
+                <Image
+                  src={Box1}
                   alt="box"
+                  width={200}
+                  height={200}
                   className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
                 />
                 <div className="absolute top-0 left-0 p-3">
@@ -65,9 +76,11 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative overflow-hidden">
-                <img
-                  src="https://suzuki.ae/assets/images/commitment/box4.png"
+                <Image
+                  src={Box2}
                   alt="box"
+                  width={200}
+                  height={200}
                   className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
                 />
                 <div className="absolute bottom-0 left-0 p-3">
@@ -77,9 +90,11 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative overflow-hidden">
-                <img
-                  src="https://suzuki.ae/assets/images/commitment/box3.png"
+                <Image
+                  src={Box3}
                   alt="box"
+                  width={200}
+                  height={200}
                   className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
                 />
                 <div className="absolute bottom-0 left-0 p-3">
@@ -89,9 +104,11 @@ export default function AboutPage() {
                 </div>
               </div>
               <div className="relative overflow-hidden">
-                <img
-                  src="https://suzuki.ae/assets/images/commitment/box4.png"
+                <Image
+                  src={Box4}
                   alt="box"
+                  width={200}
+                  height={200}
                   className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
                 />
                 <div className="absolute bottom-0 left-0 p-3">
