@@ -47,7 +47,7 @@ export default function AccessoriesPage() {
   )
     .sort()
     .map((use) => (
-      <option value={use} key={use}>
+      <option value={use} key={use} className="bg-white text-black">
         {use}
       </option>
     ));
@@ -69,15 +69,25 @@ export default function AccessoriesPage() {
           <Heading>
             <div className="flex justify-between items-center">
               <h1>Accessories</h1>
-              <label htmlFor="use-select">Filter by use:</label>
-              <select
-                id="use-select"
-                value={selectedUse}
-                onChange={handleSelected}
-              >
-                <option value="">All</option>
-                {filteringOption}
-              </select>
+              <div className="">
+                <label
+                  htmlFor="use-select"
+                  className="mb-2 text-md font-medium text-gray-900 dark:text-white m-3"
+                >
+                  Filter by use:
+                </label>
+                <select
+                  id="use-select"
+                  value={selectedUse}
+                  onChange={handleSelected}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg w-32 p-2.5 cursor-pointer dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option value="" className="bg-white text-black">
+                    All
+                  </option>
+                  {filteringOption}
+                </select>
+              </div>
             </div>
           </Heading>
           <Accessories accessories={filteredAccessories} />
