@@ -85,7 +85,7 @@ export const accessoriesData = [
     name: "front under spoiler",
     partNumber: "990E0-78R13",
     description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    usedFor: ['Jimny',]
   },
   {
     id:2,
@@ -109,7 +109,7 @@ export const accessoriesData = [
     name: "front under spoiler",
     partNumber: "990E0-78R13",
     description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    usedFor: ['Vitara']
   },
   {
     id:5,
@@ -117,7 +117,7 @@ export const accessoriesData = [
     name: "front under spoiler",
     partNumber: "990E0-78R13",
     description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    usedFor: ['Jimny', 'Vitara', 'swift']
   },
   {
     id:6,
@@ -125,7 +125,7 @@ export const accessoriesData = [
     name: "front under spoiler",
     partNumber: "990E0-78R13",
     description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    usedFor: ['Jimny']
   },
   {
     id:7,
