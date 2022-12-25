@@ -96,17 +96,17 @@ export default function Page({ params }: any) {
                 <div className="grid grid-cols-2 gap-5">
                   <img
                     className="object-cover w-full h-56 col-span-2 rounded"
-                    src="/images/models/jac/2.webp"
+                    src="/images/details/1.jpg"
                     alt=""
                   />
                   <img
                     className="object-cover w-full h-48 rounded"
-                    src="/images/models/jac/1.webp"
+                    src="/images/details/2.jpg"
                     alt=""
                   />
                   <img
                     className="object-cover w-full h-48 rounded"
-                    src="/images/models/jac/1.webp"
+                    src="/images/details/3.jpg"
                     alt=""
                   />
                 </div>
@@ -214,7 +214,7 @@ export default function Page({ params }: any) {
                 <div className="grid grid-cols-2 gap-5">
                   <img
                     className="object-cover w-full h-56 col-span-2 rounded"
-                    src="/images/models/jac/2.webp"
+                    src="/images/details/1.jpg"
                     alt=""
                   />
                   <img
