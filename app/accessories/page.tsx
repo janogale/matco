@@ -24,21 +24,33 @@ export default function AccessoriesPage() {
   const [filteredAccessories, setFilteredAccessories] =
     useState(accessoriesData);
 
-    useEffect(() => {
-      if (selectedUse === "") {
-        setFilteredAccessories(accessoriesData);
-      } else {
-        setFilteredAccessories(
-          accessoriesData.filter(
-            (accessory) => accessory.usedFor.includes(selectedUse)
-          )
-        );
-      }
-    }, [selectedUse]);
-
-    const handleSelected = (e: { target: { value: React.SetStateAction<string>; }; }) =>{
-      setSelectedUse(e.target.value)
+  useEffect(() => {
+    if (selectedUse === "") {
+      setFilteredAccessories(accessoriesData);
+    } else {
+      setFilteredAccessories(
+        accessoriesData.filter((accessory) =>
+          accessory.usedFor.includes(selectedUse)
+        )
+      );
     }
+  }, [selectedUse]);
+
+  const handleSelected = (e: {
+    target: { value: React.SetStateAction<string> };
+  }) => {
+    setSelectedUse(e.target.value);
+  };
+
+  const filteringOption = Array.from(
+    new Set(accessoriesData.flatMap((a) => a.usedFor))
+  )
+    .sort()
+    .map((use) => (
+      <option value={use} key={use}>
+        {use}
+      </option>
+    ));
 
   return (
     <div className="mx-5">
@@ -59,19 +71,12 @@ export default function AccessoriesPage() {
               <h1>Accessories</h1>
               <label htmlFor="use-select">Filter by use:</label>
               <select
-              id="use-select"
-              value={selectedUse}
-              onChange={handleSelected}
+                id="use-select"
+                value={selectedUse}
+                onChange={handleSelected}
               >
                 <option value="">All</option>
-                {Array.from(new Set(accessoriesData.flatMap((a) => a.usedFor)))
-                .sort()
-                .map((use) =>(
-                  <option value={use} key={use}>
-                    {use}
-                  </option>
-                ))
-                }
+                {filteringOption}
               </select>
             </div>
           </Heading>
