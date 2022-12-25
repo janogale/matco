@@ -66,28 +66,27 @@ export default function Page({ params }: any) {
                     <div>
                       <h6 className="mb-2 font-semibold leading-5">TITLE</h6>
                       <p className="text-md text-gray-900 text-justify">
-                        Skate ipsum dolor sit amet, alley oop vert mute-air
-                        Colby Carter flail 180 berm. Half-cab camel back ollie
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
-                        Skate ipsum dolor sit amet, alley oop vert mute-air
-                        Colby Carter flail 180 berm. Half-cab camel back ollie
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
+                        <span className="font-bold text-gray-900">
+                          Comfort and elegance in a functional cabin
+                        </span>{' '}
+                        <br />
+                        Welcome to a world where elegance meets utility and
+                        every inch of space is designed to optimize comfort and
+                        convenience for the driver, as well as family members.
+                        With contemporary interiors, technology to complement
+                        the luxury and accessories to enhance your experience,
+                        Ertiga is a place where the world will be more
+                        beautiful.
+                        <br />
+                        <span className="font-bold text-gray-900">
+                          {' '}
+                          Easy to use luggage space{' '}
+                        </span>
+                        <br />
+                        Effortlessly haul shopping bags, suitcases and more in
+                        the spacious rear luggage area with a 50:50 split
+                        luggage board. The large tailgate opening simplifies the
+                        loading and unloading of everyone's personal effects.
                       </p>
                       <hr className="w-full my-6 border-gray-300" />
                     </div>
@@ -120,17 +119,17 @@ export default function Page({ params }: any) {
                 <div className="grid grid-cols-2 gap-5">
                   <img
                     className="object-cover w-full h-56 col-span-2 rounded shadow-lg"
-                    src="/images/models/jac/2.webp"
+                    src="/images/details/6.jpg"
                     alt=""
                   />
                   <img
                     className="object-cover w-full h-48 rounded shadow-lg"
-                    src="/images/models/jac/1.webp"
+                    src="/images/details/5.jpg"
                     alt=""
                   />
                   <img
                     className="object-cover w-full h-48 rounded shadow-lg"
-                    src="/images/models/jac/1.webp"
+                    src="/images/details/4.jpg"
                     alt=""
                   />
                 </div>
@@ -142,28 +141,13 @@ export default function Page({ params }: any) {
                     <div>
                       <h6 className="mb-2 font-semibold leading-5">TITLE</h6>
                       <p className="text-md text-gray-900 text-justify">
-                        Skate ipsum dolor sit amet, alley oop vert mute-air
-                        Colby Carter flail 180 berm. Half-cab camel back ollie
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
-                        Skate ipsum dolor sit amet, alley oop vert mute-air
-                        Colby Carter flail 180 berm. Half-cab camel back ollie
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
-                        transition ledge Wes Humpston 1080. Skate ipsum dolor
-                        sit amet, alley oop vert mute-air Colby Carter flail 180
-                        berm. Half-cab camel back ollie transition ledge Wes
-                        Humpston 1080. Skate ipsum dolor sit amet, alley oop
-                        vert mute-air Colby Carter flail 180 berm. Half-cab
-                        camel back ollie transition ledge Wes Humpston 1080.
+                        An all-new exterior design with a taller and wider nose,
+                        dynamic shoulder line, deeper curves, aerodynamic body
+                        and refined chrome accents. The exterior of the new
+                        Ertiga is elegant with a strong personality that clearly
+                        differentiates it from other minivans; the lamps feature
+                        a distinct three-dimensional design that complements the
+                        large body with a long vertical LED light guide.
                       </p>
                       <hr className="w-full my-6 border-gray-300" />
                     </div>
