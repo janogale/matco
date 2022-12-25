@@ -18,7 +18,7 @@ export default function HomeCTA() {
 
             <a
               href="tel:0636390004"
-              className="mt-8 inline-flex items-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-bold text-green-600 shadow hover:bg-indigo-50"
+              className="mt-8 inline-flex items-center rounded-md border border-transparent bg-white px-5 py-3 text-base font-bold text-sky-600 shadow hover:bg-indigo-50"
             >
               Call Us For Booking Vehicle
             </a>
