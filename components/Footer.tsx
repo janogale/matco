@@ -19,11 +19,11 @@ const footerLinks = {
     { name: "S-presso", href: "/cars/spresso" },
   ],
   company: [
-    { name: "About", href: "#" },
+    { name: "About", href: "/about" },
     { name: "Contact", href: "/contact" },
     { name: "Gallery", href: "#" },
-    { name: "Mission", href: "#" },
-    { name: "Partners", href: "#" },
+    { name: "Mission", href: "/about" },
+    { name: "Partners", href: "/partners" },
   ],
   support: [
     { name: "Installment", href: "#" },
@@ -56,7 +56,7 @@ const footerLinks = {
 
 export default function Footer() {
   return (
-    <footer className="bg-gray-800" aria-labelledby="footer-heading">
+    <footer className="bg-gray-800 mt-24" aria-labelledby="footer-heading">
       <h2 id="footer-heading" className="sr-only">
         Footer
       </h2>
