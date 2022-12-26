@@ -1,5 +1,4 @@
 "use client";
-
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import Navbar from "../../components/Navbar";
@@ -8,7 +7,6 @@ import { accessoriesData } from "../../sampledata";
 import Container from "../../components/ui/Container";
 import { Accessories } from "../../components/Accessories";
 import banner from "../../public/images/accessories/acc-cover.jpg";
-import { Dropdown, Select } from "flowbite-react";
 
 export declare interface IAccessoriesType {
   id: number | string;
@@ -54,7 +52,6 @@ export default function AccessoriesPage() {
 
   return (
     <div className="mx-5">
-      <Navbar />
       <Container>
         <div className="rounded-lg overflow-hidden w-full h-96 min-h-96 mt-28">
           <Image
@@ -69,6 +66,20 @@ export default function AccessoriesPage() {
           <Heading>
             <div className="flex justify-between items-center">
               <h1>Accessories</h1>
+              {/* <div>
+                <select
+                  id="accessories"
+                  value={selectedUse}
+                  onChange={handleSelected}
+                  className="bg-gray-50 border border-gray-300 text-gray-900 text-sm rounded-lg focus:ring-blue-500 focus:border-blue-500 block w-full p-2.5 dark:bg-gray-700 dark:border-gray-600 dark:placeholder-gray-400 dark:text-white dark:focus:ring-blue-500 dark:focus:border-blue-500"
+                >
+                  <option selected>Filter</option>
+                  <option value="All">All</option>
+                  <option value="CA">Canada</option>
+                  <option value="FR">France</option>
+                  <option value="DE">Germany</option>
+                </select>
+              </div> */}
               <label htmlFor="use-select">Filter by use:</label>
               <select
                 id="use-select"

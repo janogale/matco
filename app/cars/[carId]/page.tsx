@@ -1,10 +1,7 @@
 export default function Page({ params }: any) {
-  console.log(params);
   return (
     <section>
       <div>
-        <h1>This is Car {params.carId}</h1>
-
         <section className="bg-white">
           <div className=" px-6 py-10 mx-auto">
             <div className="mx-auto my-8">
@@ -68,7 +65,7 @@ export default function Page({ params }: any) {
                       <p className="text-md text-gray-900 text-justify">
                         <span className="font-bold text-gray-900">
                           Comfort and elegance in a functional cabin
-                        </span>{' '}
+                        </span>{" "}
                         <br />
                         Welcome to a world where elegance meets utility and
                         every inch of space is designed to optimize comfort and
@@ -79,8 +76,8 @@ export default function Page({ params }: any) {
                         beautiful.
                         <br />
                         <span className="font-bold text-gray-900">
-                          {' '}
-                          Easy to use luggage space{' '}
+                          {" "}
+                          Easy to use luggage space{" "}
                         </span>
                         <br />
                         Effortlessly haul shopping bags, suitcases and more in
@@ -206,7 +203,7 @@ export default function Page({ params }: any) {
             </div>
 
             {/* specification section */}
-            <div className="bg-red-400 P-8 py-2 M text-center">
+            <div className="bg-red-500 P-8 py-2 M text-center">
               <span className="font-semibold text-xl">SPECIFICATIONS</span>
             </div>
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-2">

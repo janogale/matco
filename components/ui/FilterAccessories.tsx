@@ -1,12 +1,13 @@
 import { Dropdown } from "flowbite-react";
 
-export const FilterAccessories = () => {
+export const FilterAccessories = ({ options = [] }) => {
   return (
     <Dropdown label="Filter">
-      <Dropdown.Item>jimny</Dropdown.Item>
-      <Dropdown.Item>swift</Dropdown.Item>
-      <Dropdown.Item>vitara</Dropdown.Item>
-      <Dropdown.Item>balleno</Dropdown.Item>
+      {options.map((option) => (
+        <Dropdown.Item key={option}>{option}</Dropdown.Item>
+      ))}
     </Dropdown>
   );
 };
+
+

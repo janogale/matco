@@ -8,18 +8,19 @@ import youtubeIcon from "../public/icons/youtube.svg";
 const footerLinks = {
   solutions: [
     { name: "Inspection", href: "#" },
-    { name: "Accessories", href: "#" },
+    { name: "Accessories", href: "/accessories" },
     { name: "Servicing", href: "#" },
     { name: "Maintenance", href: "#" },
   ],
   models: [
-    { name: "Swift", href: "#" },
-    { name: "Vitara", href: "#" },
-    { name: "Jimny", href: "#" },
-    { name: "S-presso", href: "#" },
+    { name: "Swift", href: "/cars/swift" },
+    { name: "Vitara", href: "/cars/vitara" },
+    { name: "Jimny", href: "/cars/jimny/" },
+    { name: "S-presso", href: "/cars/spresso" },
   ],
   company: [
     { name: "About", href: "#" },
+    { name: "Contact", href: "/contact" },
     { name: "Gallery", href: "#" },
     { name: "Mission", href: "#" },
     { name: "Partners", href: "#" },
