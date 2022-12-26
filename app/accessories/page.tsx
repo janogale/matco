@@ -80,15 +80,18 @@ export default function AccessoriesPage() {
                   <option value="DE">Germany</option>
                 </select>
               </div> */}
-              <label htmlFor="use-select">Filter by use:</label>
+             <div className="flex justify-center items-center">
+             <label htmlFor="use-select" className="mx-3">Filter by use:</label>
               <select
                 id="use-select"
                 value={selectedUse}
                 onChange={handleSelected}
+                className="rounded"
               >
                 <option value="">All</option>
                 {filteringOption}
               </select>
+             </div>
             </div>
           </Heading>
           <Accessories accessories={filteredAccessories} />
