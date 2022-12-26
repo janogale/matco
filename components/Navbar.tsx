@@ -19,22 +19,22 @@ export default function NavbarTop() {
       </Navbar.Brand>
 
       <Navbar.Collapse>
-        <Navbar.Link href="/navbars" className="text-lg" active={true}>
+        <Navbar.Link href="/" className="text-lg" active={true}>
           Home
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-lg">
+        <Navbar.Link href="/cars" className="text-lg">
           Cars
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-lg">
+        <Navbar.Link href="/finance" className="text-lg">
           Finance
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-lg">
+        <Navbar.Link href="/services" className="text-lg">
           Services
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-lg">
+        <Navbar.Link href="/showroom" className="text-lg">
           Show Room
         </Navbar.Link>
-        <Navbar.Link href="/navbars" className="text-lg">
+        <Navbar.Link href="/contact" className="text-lg">
           Contact
         </Navbar.Link>
       </Navbar.Collapse>
