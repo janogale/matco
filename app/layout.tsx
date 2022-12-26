@@ -1,18 +1,29 @@
-import './globals.css'
+"use client";
+import { usePathname } from "next/navigation";
+
+import Footer from "../components/Footer";
+import Navbar from "../components/Navbar";
+import "./globals.css";
 
 export default function RootLayout({
   children,
 }: {
-  children: React.ReactNode
+  children: React.ReactNode;
 }) {
+  const path = usePathname();
+
   return (
     <html lang="en">
-      {/*
-        <head /> will contain the components returned by the nearest parent
-        head.tsx. Find out more at https://beta.nextjs.org/docs/api-reference/file-conventions/head
-      */}
       <head />
-      <body>{children}</body>
+      <body>
+        <div className="mx-auto w-full relative">
+          <Navbar />
+          {/* Add empty to all paths except home page */}
+          {path !== "/" && <div className="h-28 "></div>}
+          {children}
+          <Footer />
+        </div>
+      </body>
     </html>
-  )
+  );
 }
