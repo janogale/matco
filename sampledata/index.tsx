@@ -80,67 +80,96 @@ export const carsData = [
 
 export const accessoriesData = [
   {
-    id:1,
+    id: 1,
     image: "/images/accessories/acc1.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny',]
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny"],
   },
   {
-    id:2,
+    id: 2,
     image: "/images/accessories/acc2.jpg",
     name: "Side under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny", "Vitara"],
   },
   {
-    id:3,
+    id: 3,
     image: "/images/accessories/acc4.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny", "Vitara"],
   },
   {
-    id:4,
+    id: 4,
     image: "/images/accessories/acc6.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Vitara']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Vitara"],
   },
   {
-    id:5,
+    id: 5,
     image: "/images/accessories/acc7.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara', 'swift']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny", "Vitara", "swift"],
   },
   {
-    id:6,
+    id: 6,
     image: "/images/accessories/acc7.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny"],
   },
   {
-    id:7,
+    id: 7,
     image: "/images/accessories/acc4.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny", "Vitara"],
   },
   {
-    id:8,
+    id: 8,
     image: "/images/accessories/acc4.jpg",
     name: "front under spoiler",
     partNumber: "990E0-78R13",
-    description: "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
-    usedFor: ['Jimny', 'Vitara']
+    description:
+      "Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.",
+    usedFor: ["Jimny", "Vitara"],
   },
-]
+];
+
+export const carDetails = {
+  id: 1,
+  name: "Vitara",
+  slogan: "Confortably drive",
+  featureImage: "/images/vitara/1.webp",
+  interior: {
+    images: [],
+    description: "some text",
+  },
+  security: {
+    images: [],
+    description: "some text",
+    features: [],
+  },
+  specs: {
+    images: [],
+    description: "some text",
+    features: [],
+  },
+};
