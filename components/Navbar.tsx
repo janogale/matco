@@ -31,7 +31,7 @@ export default function NavbarTop() {
         <Navbar.Link href="/services" className="text-lg">
           Services
         </Navbar.Link>
-        <Navbar.Link href="/showroom" className="text-lg">
+        <Navbar.Link href="/show-room" className="text-lg">
           Show Room
         </Navbar.Link>
         <Navbar.Link href="/contact" className="text-lg">
