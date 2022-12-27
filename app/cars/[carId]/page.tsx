@@ -65,7 +65,7 @@ export default function Page({ params }: any) {
                       <p className="text-md text-gray-900 text-justify">
                         <span className="font-bold text-gray-900">
                           Comfort and elegance in a functional cabin
-                        </span>{" "}
+                        </span>{' '}
                         <br />
                         Welcome to a world where elegance meets utility and
                         every inch of space is designed to optimize comfort and
@@ -76,8 +76,8 @@ export default function Page({ params }: any) {
                         beautiful.
                         <br />
                         <span className="font-bold text-gray-900">
-                          {" "}
-                          Easy to use luggage space{" "}
+                          {' '}
+                          Easy to use luggage space{' '}
                         </span>
                         <br />
                         Effortlessly haul shopping bags, suitcases and more in
@@ -237,22 +237,74 @@ export default function Page({ params }: any) {
                   </div>
                   <div className="flex">
                     <div>
-                      <h6 className="mb-2 font-semibold leading-5">
-                        Enhanced security
-                      </h6>
-                      <p className="text-md text-gray-900 text-justify">
-                        From the protective body to the airbags and intelligent
-                        warnings, the Ertiga is fully designed to protect you,
-                        your fellow travelers and your pedestrians. Suzuki's
-                        advanced TECT (Total Effective Control Technology) body
-                        makes extensive use of ultra-high-tensile steel to
-                        increase stiffness, lower weight despite larger overall
-                        dimensions, and more effectively absorb and disperse
-                        energy from impact in the event of a collision. New load
-                        paths under the engine compartment further mitigate
-                        damage in high-speed frontal collisions.
-                      </p>
-                      <hr className="w-full my-6 border-gray-300" />
+                      <div className="space-y-4">
+                        <details
+                          className="group [&_summary::-webkit-details-marker]:hidden"
+                          open
+                        >
+                          <summary className="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                            <h2 className="font-medium text-gray-900">
+                              Lorem ipsum dolor sit amet consectetur
+                              adipisicing?
+                            </h2>
+
+                            <svg
+                              className="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+
+                          <p className="px-4 mt-4 leading-relaxed text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ab hic veritatis molestias culpa in,
+                            recusandae laboriosam neque aliquid libero nesciunt
+                            voluptate dicta quo officiis explicabo consequuntur
+                            distinctio corporis earum similique!
+                          </p>
+                        </details>
+
+                        <details className="group [&_summary::-webkit-details-marker]:hidden">
+                          <summary className="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                            <h2 className="font-medium text-gray-900">
+                              Lorem ipsum dolor sit amet consectetur
+                              adipisicing?
+                            </h2>
+
+                            <svg
+                              className="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
+                              xmlns="http://www.w3.org/2000/svg"
+                              fill="none"
+                              viewBox="0 0 24 24"
+                              stroke="currentColor"
+                            >
+                              <path
+                                stroke-linecap="round"
+                                stroke-linejoin="round"
+                                stroke-width="2"
+                                d="M19 9l-7 7-7-7"
+                              />
+                            </svg>
+                          </summary>
+
+                          <p className="px-4 mt-4 leading-relaxed text-gray-700">
+                            Lorem ipsum dolor sit amet consectetur, adipisicing
+                            elit. Ab hic veritatis molestias culpa in,
+                            recusandae laboriosam neque aliquid libero nesciunt
+                            voluptate dicta quo officiis explicabo consequuntur
+                            distinctio corporis earum similique!
+                          </p>
+                        </details>
+                      </div>
                     </div>
                   </div>
                 </div>
