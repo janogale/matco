@@ -284,7 +284,7 @@ export default function Page({ params }: any) {
                           className="group [&_summary::-webkit-details-marker]:hidden"
                           open
                         >
-                          <summary className="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
+                          <summary className="flex  justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
                             <h2 className="font-medium text-gray-900">
                               PERFORMANCE & FUEL CONSUMPTION
                             </h2>
