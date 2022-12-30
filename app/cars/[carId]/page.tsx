@@ -208,27 +208,7 @@ export default function Page({ params }: any) {
             </div>
             <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-2">
               <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"></div>
-              <div className="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
-                <div className="flex flex-col justify-center">
-                  <div className="bg-gray-300 p-2 w-full mb-4">
-                    <p className="text-xl font-bold text-gray-500">
-                      SPECIFICATIONS
-                    </p>
-                  </div>
-                  <div className="flex">
-                    <div>
-                      <h6 className="mb-2 font-semibold leading-5">FEATURES</h6>
-                      <div className="flex justify-between">
-                        <p className="flex justify-center">
-                          <span className="text-left">afafadf</span>
-                          <span className="text-right">afafadf</span>
-                        </p>
-                      </div>
-
-                      <hr className="w-full my-6 border-gray-300" />
-                    </div>
-                  </div>
-                </div>
+              <div className="grid max-w-screen-lg gap-8 lg:grid-cols-1 sm:mx-auto">
                 <div className="flex flex-col justify-center">
                   <div className="bg-gray-300 p-2 w-full mb-4">
                     <p className="text-xl font-bold text-gray-500">
@@ -243,10 +223,7 @@ export default function Page({ params }: any) {
                           open
                         >
                           <summary className="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
-                            <h2 className="font-medium text-gray-900">
-                              Lorem ipsum dolor sit amet consectetur
-                              adipisicing?
-                            </h2>
+                            <h2 className="font-medium text-gray-900">one</h2>
 
                             <svg
                               className="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
@@ -275,10 +252,7 @@ export default function Page({ params }: any) {
 
                         <details className="group [&_summary::-webkit-details-marker]:hidden">
                           <summary className="flex items-center justify-between p-4 rounded-lg cursor-pointer bg-gray-50">
-                            <h2 className="font-medium text-gray-900">
-                              Lorem ipsum dolor sit amet consectetur
-                              adipisicing?
-                            </h2>
+                            <h2 className="font-medium text-gray-900">two</h2>
 
                             <svg
                               className="ml-1.5 h-5 w-5 flex-shrink-0 transition duration-300 group-open:-rotate-180"
