@@ -9,6 +9,10 @@
     "lint": "next lint"
   },
   "dependencies": {
+    "@emotion/core": "^11.0.0",
+    "@emotion/react": "^11.10.5",
+    "@emotion/styled": "^11.10.5",
+    "@mui/material": "^5.11.2",
     "@next/font": "13.0.7",
     "@tailwindcss/aspect-ratio": "^0.4.2",
     "@types/node": "18.11.16",
@@ -21,9 +25,9 @@
     "next": "13.0.8-canary.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "react-grid-gallery": "^1.0.0",
-    "react-image-lightbox": "^5.1.4",
-    "typescript": "4.9.4"
+    "react-photo-album": "^2.0.0",
+    "typescript": "4.9.4",
+    "yet-another-react-lightbox": "^2.2.5"
   },
   "devDependencies": {
     "autoprefixer": "^10.4.13",

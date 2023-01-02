@@ -1,123 +1,283 @@
-import { Image } from "react-grid-gallery";
+const breakpoints = [4320, 2160, 1080, 640, 384, 256, 128];
 
-export interface CustomImage extends Image {
-  original: string;
-}
+const unsplashLink = (id: any, width: any, height: any) =>
+  `https://source.unsplash.com/${id}/${width}x${height}`;
 
-export const images: CustomImage[] = [
+const unsplashPhotos = [
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 174,
-    // tags: [
-    //   { value: "Nature", title: "Nature" },
-    //   { value: "Flora", title: "Flora" },
-    // ],
-    caption: "After Rain (Jeshu John - designerspics.com)",
+    id: "ts1zXzsD7xc",
+    width: 1080,
+    height: 1620
   },
   {
-    src: "/images/models/baleno/1.jpeg",
-    original: "/images/models/baleno/1.jpeg",
-    width: 320,
-    height: 212,
-    caption: "Boats (Jeshu John - designerspics.com)",
+    id: "F_r83HEzsXI",
+    width: 1080,
+    height: 1426
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "Color Pencils (Jeshu John - designerspics.com)",
+    id: "m82uh_vamhg",
+    width: 1080,
+    height: 1440
   },
   {
-    src: "/images/models/ciaz/1.png",
-    original: "/images/models/ciaz/1.png",
-    width: 320,
-    height: 212,
-    caption: "Red Apples with other Red Fruit (foodiesfeed.com)",
+    id: "br-Xdb9KE0Q",
+    width: 1080,
+    height: 716
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "37H (gratispgraphy.com)",
+    id: "6mze64HRU2Q",
+    width: 1080,
+    height: 1620
   },
   {
-    src: "/images/models/jimny/1.png",
-    original: "/images/models/jimny/1.png",
-    width: 320,
-    height: 212,
-    // tags: [{ value: "Nature", title: "Nature" }],
-    caption: "8H (gratisography.com)",
+    id: "7ENqG6Gmch0",
+    width: 1080,
+    height: 718
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "286H (gratisography.com)",
+    id: "KMn4VEeEPR8",
+    width: 1080,
+    height: 718
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    // tags: [{ value: "People", title: "People" }],
-    caption: "315H (gratisography.com)",
+    id: "uQDRDqpYJHI",
+    width: 1080,
+    height: 1620
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "201H (gratisography.com)",
+    id: "AD6rn3vqG7o",
+    width: 1080,
+    height: 1620
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    alt: "Big Ben - London",
-    width: 320,
-    height: 212,
-    caption: "Big Ben (Tom Eversley - isorepublic.com)",
+    id: "SYx3UCHZJlo",
+    width: 1080,
+    height: 720
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    alt: "Red Zone - Paris",
-    width: 320,
-    height: 212,
-    // tags: [{ value: "People", title: "People" }],
-    caption: "Red Zone - Paris (Tom Eversley - isorepublic.com)",
+    id: "qH-JPcFXUTY",
+    width: 1080,
+    height: 1620
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    alt: "Wood Glass",
-    width: 320,
-    height: 212,
-    caption: "Wood Glass (Tom Eversley - isorepublic.com)",
+    id: "NLUkAA-nDdE",
+    width: 1080,
+    height: 1441
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "Flower Interior Macro (Tom Eversley - isorepublic.com)",
+    id: "55OH6wnJqXo",
+    width: 1080,
+    height: 1587
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "A photo by 贝莉儿 NG. (unsplash.com)",
+    id: "CSs8aiN_LkI",
+    width: 1080,
+    height: 1626
   },
   {
-    src: "/images/models/celerio/1.png",
-    original: "/images/models/celerio/1.png",
-    width: 320,
-    height: 212,
-    caption: "A photo by Matthew Wiebe. (unsplash.com)",
+    id: "dZ4Ylj91F2M",
+    width: 1080,
+    height: 1350
   },
+  {
+    id: "35muyqODIHA",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "xarhNpLSHTk",
+    width: 1080,
+    height: 720
+  },
+  {
+    id: "oR0uERTVyD0",
+    width: 1080,
+    height: 1922
+  },
+  {
+    id: "h0AnGGgseio",
+    width: 1080,
+    height: 1623
+  },
+  {
+    id: "ImHttRUM2jE",
+    width: 1080,
+    height: 1613
+  },
+  {
+    id: "TkGZFU2t9gc",
+    width: 1080,
+    height: 720
+  },
+  {
+    id: "P93ijX1URuU",
+    width: 1080,
+    height: 1441
+  },
+  {
+    id: "MGKGuMP9nLY",
+    width: 1080,
+    height: 1350
+  },
+  {
+    id: "1VYdx37vOGQ",
+    width: 1080,
+    height: 720
+  },
+  {
+    id: "9kY6iayVGIk",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "7zT-vbOFoSM",
+    width: 1080,
+    height: 1309
+  },
+  {
+    id: "K8e4DtETWpg",
+    width: 1080,
+    height: 718
+  },
+  {
+    id: "HRVpJIkZP4o",
+    width: 1080,
+    height: 1923
+  },
+  {
+    id: "qY_yTu7YBT4",
+    width: 1080,
+    height: 639
+  },
+  {
+    id: "Siuwr3uCir0",
+    width: 1080,
+    height: 1440
+  },
+  {
+    id: "alfhBV8JxlE",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "6_pFPo2YM9c",
+    width: 1080,
+    height: 1440
+  },
+  {
+    id: "exfO5IC0etk",
+    width: 1080,
+    height: 1350
+  },
+  {
+    id: "CY3wdG4eRoA",
+    width: 1080,
+    height: 1920
+  },
+  {
+    id: "4-Dq3Gyozk8",
+    width: 1080,
+    height: 1440
+  },
+  {
+    id: "yt1-v0TrOi8",
+    width: 1080,
+    height: 810
+  },
+  {
+    id: "nRZoLSr0mEE",
+    width: 1080,
+    height: 864
+  },
+  {
+    id: "5iYR93akU48",
+    width: 1080,
+    height: 720
+  },
+  {
+    id: "yRc9FiM1Zdk",
+    width: 1080,
+    height: 1619
+  },
+  {
+    id: "HXqpJnLyHzg",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "3bAblStd-IY",
+    width: 1080,
+    height: 607
+  },
+  {
+    id: "a6ux9NBPJac",
+    width: 1080,
+    height: 1350
+  },
+  {
+    id: "8qEuawM_txg",
+    width: 1080,
+    height: 1440
+  },
+  {
+    id: "p0Fvb9MvLAY",
+    width: 1080,
+    height: 1350
+  },
+  {
+    id: "72IuuwilrY8",
+    width: 1080,
+    height: 1350
+  },
+  {
+    id: "Q3Qdb3ni-zw",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "AAFH_AADpRg",
+    width: 1080,
+    height: 2206
+  },
+  {
+    id: "6JU5C73KQ5Q",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "UxZVUDxWppw",
+    width: 1080,
+    height: 720
+  },
+  {
+    id: "X-Far-t1woI",
+    width: 1080,
+    height: 1620
+  },
+  {
+    id: "Y1gBZbB_5bA",
+    width: 1080,
+    height: 720
+  }
 ];
+
+const photos = unsplashPhotos.map((photo, index) => {
+  const width = photo.width * 4;
+  const height = photo.height * 4;
+  return {
+    src: unsplashLink(photo.id, width, height),
+    key: `${index}`,
+    width,
+    height,
+    images: breakpoints.map((breakpoint) => {
+      const breakpointHeight = Math.round((height / width) * breakpoint);
+      return {
+        src: unsplashLink(photo.id, breakpoint, breakpointHeight),
+        width: breakpoint,
+        height: breakpointHeight
+      };
+    })
+  };
+});
+
+export default photos;
