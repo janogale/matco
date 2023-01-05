@@ -21,7 +21,7 @@ export default function About() {
         </div>
         <p>
           The main purpose of the company is to provide
-          <strong>modern services through modern automotive technology,</strong>
+          <strong> modern services through modern automotive technology, </strong>
           which includes the following:
         </p>
         <ul className="list-disc list-outside leading-10 ml-5">
