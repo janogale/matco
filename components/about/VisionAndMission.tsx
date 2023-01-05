@@ -2,7 +2,7 @@ export default function VisionAndMission() {
   return (
     <>
       <div className="content text-lg">
-        <h2 className="text-3xl suzuki-bold uppercase text-sky-600 font-bold">
+        <h2 className="text-3xl suzuki-bold uppercase text-sky-600 font-bold" id="vision">
           VISION
         </h2>
         <p>
@@ -11,7 +11,7 @@ export default function VisionAndMission() {
         </p>
       </div>
       <div className="content text-lg">
-        <h2 className="text-3xl uppercase text-sky-600 font-bold">MISSION</h2>
+        <h2 className="text-3xl uppercase text-sky-600 font-bold" id="mission">MISSION</h2>
         <p>
           To provide high quality products and services with a reasonable price
           to meet stakeholders expectations.
