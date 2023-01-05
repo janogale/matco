@@ -4,12 +4,12 @@ import missionImage from "../../public/images/about/mission.jpg";
 
 export default function VisionAndMission() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 bg-gray-100">
+    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 bg-gray-100"
+    id="vision-and-mission">
       <div className="content text-lg  flex justify-center items-center p-10 rounded-md">
         <div>
           <h2
             className="text-3xl suzuki-bold uppercase text-sky-600 font-bold mb-5"
-            id="vision"
           >
             VISION
           </h2>
@@ -45,7 +45,6 @@ export default function VisionAndMission() {
         <div>
           <h2
             className="text-3xl uppercase text-sky-600 font-bold mb-5"
-            id="mission"
           >
             MISSION
           </h2>
