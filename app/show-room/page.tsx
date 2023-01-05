@@ -20,6 +20,7 @@ import "yet-another-react-lightbox/plugins/thumbnails.css";
 import Container from "../../components/ui/Container";
 
 import gallery from "../../sampledata/gallery";
+import Heading from "../../components/ui/Heading";
 
 const ShowRoom = () => {
   const [open, setOpen] = useState(false);
@@ -27,7 +28,9 @@ const ShowRoom = () => {
 
   return (
     <Container>
-      <div className="mt-12 min-h-[500px]">
+      <div className="mt-20 sm:mt-12 min-h-[500px] ">
+        <Heading className=" text-2xl">MATCO Gallery</Heading>
+        <div className="mt-6"></div>
         <PhotoAlbum
           photos={gallery}
           layout="rows"
@@ -38,7 +41,7 @@ const ShowRoom = () => {
           }}
         />
       </div>
-
+      <Heading className="mt-6 text-2xl">MATCO Videos</Heading>
       <Lightbox
         open={open}
         close={() => setOpen(false)}
