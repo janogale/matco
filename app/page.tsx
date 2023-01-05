@@ -10,14 +10,14 @@ import HomeCTA from "../components/HomeCTA";
 export default function Home() {
   return (
     <main>
-      <HomeCarousel />
-      <Container>
-        <Banner text1="Explore the Affordable" text2="New Models" />
-        <Heading>Car Models</Heading>
-        <TabsCars />
-      </Container>
-      <HomeCTA />
-      <div className="my-16"></div>
+        <HomeCarousel />
+        <Container>
+          <Banner text1="Explore the Affordable" text2="New Models" />
+          <Heading>Car Models</Heading>
+          <TabsCars />
+        </Container>
+        <HomeCTA />
+        <div className="my-16"></div>
     </main>
   );
 }
