@@ -1,45 +1,45 @@
 import Image from "next/image";
-import Box1 from "../../public/images/about/box1.png";
-import Box2 from "../../public/images/about/box2.png";
-import Box3 from "../../public/images/about/box3.png";
-import Box4 from "../../public/images/about/box4.png";
+import Box1 from "../../public/images/about/picture2.jpg";
+import Box2 from "../../public/images/about/picture3.jpg";
+import Box3 from "../../public/images/about/picture4.jpg";
+import Box4 from "../../public/images/about/picture5.jpg";
 
 export default function About() {
   return (
     <>
       <div className="content text-lg">
         <p className="mb-5">
-          Al Rostamani Trading Company (ARTC), a member of Al Rostamani Group
-          which is one of the largest and oldest business conglomerates in the
-          United Arab Emirates. Founded in 1957 with the late Mr. Abdullah
-          Hassan Al Rostamani as Chairman, the group has grown steadfastly and
-          conscientiously over the last 50 years with the guiding principles of
-          commitment, care and vision with genuine concern for the community.
+          Modern Automotive Technology (MATCO) is a modern workshop, and car
+          sales center based in Somaliland. MATCO has been established in 2014
+          and will start its operations in 2018. MATCO shall be engaged in
+          operating sales and dealership services.
         </p>
-        <p className="mb-5">
-          ARTC is the sole authorized distributor of Suzuki automobiles in the
-          UAE which is headquartered in Dubai, was founded in the year 2002 and
-          is now well established and respected in the market. Today, ARTC has
-          representation across the UAE with Sales, Service and Parts outlets
-          able to serve its customers throughout the country.
+        <div className="m-5">
+        <h2 className="text-3xl uppercase text-sky-600 font-bold">
+          Objectives
+        </h2>
+        </div>
+        <p>
+          The main purpose of the company is to provide
+          <strong>modern services through modern automotive technology,</strong>
+          which includes the following:
         </p>
-        <p className="mb-5">
-          Suzuki offers a wide range of product lines to satisfy the needs of
-          most new car buyers in terms of quality, safety and value for money.
-          It also efficiently caters to the transportation needs of the business
-          sector as if offers a full range of commercial fleet vehicles suitable
-          for many practical and economical purposes. ARTC takes pride in
-          offering its customers the best possible solutions in Sales, Service
-          and Parts supply.
-        </p>
+        <ul className="list-disc list-outside leading-10 ml-5">
+          <li>Building modern Automotive Technology Company in Somaliland.</li>
+          <li>
+            Enabling customers to access modern services at a reasonable price.
+          </li>
+          <li>Selling Modern cars to our customers.</li>
+          <li>Creating employment opportunities.</li>
+        </ul>
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden cursor-pointer">
           <Image
             src={Box1}
             alt="box"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
           />
           <div className="absolute top-0 left-0 p-3">
@@ -48,12 +48,12 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden cursor-pointer">
           <Image
             src={Box2}
             alt="box"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
           />
           <div className="absolute bottom-0 left-0 p-3">
@@ -62,12 +62,12 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden cursor-pointer">
           <Image
             src={Box3}
             alt="box"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
           />
           <div className="absolute bottom-0 left-0 p-3">
@@ -76,12 +76,12 @@ export default function About() {
             </div>
           </div>
         </div>
-        <div className="relative overflow-hidden">
+        <div className="relative overflow-hidden cursor-pointer">
           <Image
             src={Box4}
             alt="box"
-            width={200}
-            height={200}
+            width={500}
+            height={500}
             className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
           />
           <div className="absolute bottom-0 left-0 p-3">

@@ -2,21 +2,19 @@ export default function VisionAndMission() {
   return (
     <>
       <div className="content text-lg">
-        <h2 className="text-3xl uppercase text-sky-600 font-bold">MISSION</h2>
-        <p>
-          Al Rostamani Group’s mission is to be recognized as a leading
-          successful regional conglomerate with diverse commercial interests and
-          core competencies in select sectors.
-        </p>
-      </div>
-      <div className="content text-lg">
         <h2 className="text-3xl suzuki-bold uppercase text-sky-600 font-bold">
           VISION
         </h2>
         <p>
-          Al Rostamani Group’s vision is to be regarded as a responsible,
-          reliable and respectable business conglomerate and to be the partner
-          of choice for international and regional corporations
+          To be leader in modern automotive industry and sales center in Horn of
+          Africa.
+        </p>
+      </div>
+      <div className="content text-lg">
+        <h2 className="text-3xl uppercase text-sky-600 font-bold">MISSION</h2>
+        <p>
+          To provide high quality products and services with a reasonable price
+          to meet stakeholders expectations.
         </p>
       </div>
     </>
