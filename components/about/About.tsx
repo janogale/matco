@@ -33,14 +33,14 @@ export default function About() {
           <li>Creating employment opportunities.</li>
         </ul>
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4">
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 mt-5">
         <div className="relative overflow-hidden cursor-pointer">
           <Image
             src={Box1}
             alt="box"
             width={500}
             height={500}
-            className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
+            className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
           />
           <div className="absolute top-0 left-0 p-3">
             <div className="text-white text-3xl text-shadow-overlay">
@@ -54,7 +54,7 @@ export default function About() {
             alt="box"
             width={500}
             height={500}
-            className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
+            className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
           />
           <div className="absolute bottom-0 left-0 p-3">
             <div className="text-white text-3xl text-shadow-overlay">
@@ -68,7 +68,7 @@ export default function About() {
             alt="box"
             width={500}
             height={500}
-            className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
+            className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
           />
           <div className="absolute bottom-0 left-0 p-3">
             <div className="text-white text-3xl text-shadow-overlay">
@@ -82,7 +82,7 @@ export default function About() {
             alt="box"
             width={500}
             height={500}
-            className="h-full hover:scale-105 transform transition ease-out duration-500 w-full"
+            className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
           />
           <div className="absolute bottom-0 left-0 p-3">
             <div className="text-white text-3xl text-shadow-overlay">

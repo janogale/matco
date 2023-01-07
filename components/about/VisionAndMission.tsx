@@ -41,7 +41,7 @@ export default function VisionAndMission() {
           />
         </div>
       </div>
-      <div className="content text-lg  flex justify-center items-center p-10 rounded-md">
+      <div className="content text-lg flex justify-center items-center p-10 rounded-md">
         <div>
           <h2
             className="text-3xl uppercase text-sky-600 font-bold mb-5"
