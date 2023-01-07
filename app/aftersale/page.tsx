@@ -132,7 +132,6 @@ const page = () => {
               <div className="bg-gray-300 p-2 w-full mb-4">
                 <p className="text-xl font-bold text-gray-900">SERVICE PLAN</p>
               </div>
-
               <div className="grid max-w-screen-lg gap-8 lg:grid-cols-2 sm:mx-auto">
                 <div className="flex flex-col justify-center">
                   <div className="flex">
@@ -140,199 +139,38 @@ const page = () => {
                       <h6 className="mb-2 font-semibold leading-5">
                         Enhanced security
                       </h6>
-
-                      <ul className="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>Individual configuration</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>No setup, or hidden fees</span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Team size:{' '}
-                            <span className="font-semibold text-gray-900 dark:text-white">
-                              1 Technical Mechine
-                            </span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Premium support:{' '}
-                            <span className="font-semibold text-gray-900 dark:text-white">
-                              6 months
-                            </span>
-                          </span>
-                        </li>
-                        <li className="flex items-center space-x-3">
-                          <svg
-                            className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                            fill="currentColor"
-                            viewBox="0 0 20 20"
-                            xmlns="http://www.w3.org/2000/svg"
-                          >
-                            <path
-                              fill-rule="evenodd"
-                              d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                              clip-rule="evenodd"
-                            ></path>
-                          </svg>
-                          <span>
-                            Free updates:{' '}
-                            <span className="font-semibold text-gray-900 dark:text-white">
-                              6 months
-                            </span>
-                          </span>
-                        </li>
+                      <ul className="mb-8 space-y-4 text-left text-base">
+                        <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside">
+                          <li>
+                            At least 10 characters (and up to 100 characters)
+                          </li>
+                          <li>At least one lowercase character</li>
+                          <li>Inclusion of at least one special character</li>
+                          <li>At least one lowercase character</li>
+                          <li>Inclusion of at least one special character</li>
+                        </ul>
                       </ul>
                     </div>
                   </div>
                 </div>
-                <div className="grid grid-cols-2 gap-5">
-                  <div>
-                    <h6 className="mb-2 font-semibold leading-5">
-                      Enhanced security
-                    </h6>
-                    <ul className="mb-8 space-y-4 text-left text-gray-500 dark:text-gray-400">
-                      <li className="flex items-center space-x-3">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                        <span>Individual configuration</span>
-                      </li>
-                      <li className="flex items-center space-x-3">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                        <span>No setup, or hidden fees</span>
-                      </li>
-                      <li className="flex items-center space-x-3">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                        <span>
-                          Team size:{' '}
-                          <span className="font-semibold text-gray-900 dark:text-white">
-                            1 Technical Mechine
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-center space-x-3">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                        <span>
-                          Premium support:{' '}
-                          <span className="font-semibold text-gray-900 dark:text-white">
-                            6 months
-                          </span>
-                        </span>
-                      </li>
-                      <li className="flex items-center space-x-3">
-                        <svg
-                          className="flex-shrink-0 w-5 h-5 text-green-500 dark:text-green-400"
-                          fill="currentColor"
-                          viewBox="0 0 20 20"
-                          xmlns="http://www.w3.org/2000/svg"
-                        >
-                          <path
-                            fill-rule="evenodd"
-                            d="M16.707 5.293a1 1 0 010 1.414l-8 8a1 1 0 01-1.414 0l-4-4a1 1 0 011.414-1.414L8 12.586l7.293-7.293a1 1 0 011.414 0z"
-                            clip-rule="evenodd"
-                          ></path>
-                        </svg>
-                        <span>
-                          Free updates:{' '}
-                          <span className="font-semibold text-gray-900 dark:text-white">
-                            6 months
-                          </span>
-                        </span>
-                      </li>
-                    </ul>
+                <div className="flex flex-col justify-center">
+                  <div className="flex">
+                    <div>
+                      <h6 className="mb-2 font-semibold leading-5">
+                        Enhanced security
+                      </h6>
+                      <ul className="mb-8 space-y-4 text-left text-base">
+                        <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside">
+                          <li>
+                            At least 10 characters (and up to 100 characters)
+                          </li>
+                          <li>At least one lowercase character</li>
+                          <li>Inclusion of at least one special character</li>
+                          <li>At least one lowercase character</li>
+                          <li>Inclusion of at least one special character</li>
+                        </ul>
+                      </ul>
+                    </div>
                   </div>
                 </div>
               </div>
