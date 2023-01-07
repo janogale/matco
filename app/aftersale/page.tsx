@@ -45,10 +45,38 @@ const page = () => {
         </div>
 
         {/* Warranty section */}
+        <div className="px-4 py-16 mx-auto sm:max-w-xl md:max-w-full lg:max-w-screen-xl md:px-24 lg:px-8 lg:py-2">
+          <div className="max-w-xl mb-10 md:mx-auto sm:text-center lg:max-w-2xl md:mb-12"></div>
+          <div className="grid max-w-screen-lg gap-8 lg:grid-cols-1 sm:mx-auto">
+            <div className="container ">
+              <div className="bg-gray-300 p-2 w-full mb-4">
+                <p className="text-xl font-bold text-gray-900">WARRANTY</p>
+              </div>
+              <div className="flex">
+                <div>
+                  <p className="text-md text-gray-900 text-justify">
+                    If your warranty is running out, you can continue protecting
+                    your car with a Suzuki Extended Warranty. You’ll be able to
+                    protect against the cost of future repair and replacement
+                    parts with our Extended Warranty, which is designed to give
+                    you the flexibility you need. So, for example, you can
+                    choose from three levels of cover, a choice of excess level
+                    and the option to pay as you go. And, if you decide an
+                    Extended Warranty isn’t for you – you’re free to cancel your
+                    policy at any time.
+                  </p>
+                  <hr className="w-full my-6 border-gray-300" />
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
 
         {/* recall check section */}
 
         {/* special offers section */}
+
+        {/* service plan section */}
       </div>
     </section>
   );
