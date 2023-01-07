@@ -1,54 +1,54 @@
-import Image from "next/image";
+import Image from 'next/image';
 
-import twitterIcon from "../public/icons/twitter.svg";
-import facebookIcon from "../public/icons/facebook.svg";
-import instagramIcon from "../public/icons/instagram.svg";
-import youtubeIcon from "../public/icons/youtube.svg";
+import twitterIcon from '../public/icons/twitter.svg';
+import facebookIcon from '../public/icons/facebook.svg';
+import instagramIcon from '../public/icons/instagram.svg';
+import youtubeIcon from '../public/icons/youtube.svg';
 
 const footerLinks = {
   solutions: [
-    { name: "Inspection", href: "#" },
-    { name: "Accessories", href: "/accessories" },
-    { name: "Servicing", href: "#" },
-    { name: "Maintenance", href: "#" },
+    { name: 'Inspection', href: '#' },
+    { name: 'Accessories', href: '/accessories' },
+    { name: 'Servicing', href: '#' },
+    { name: 'Maintenance', href: '#' },
   ],
   models: [
-    { name: "Swift", href: "/cars/swift" },
-    { name: "Vitara", href: "/cars/vitara" },
-    { name: "Jimny", href: "/cars/jimny/" },
-    { name: "S-presso", href: "/cars/spresso" },
+    { name: 'Swift', href: '/cars/swift' },
+    { name: 'Vitara', href: '/cars/vitara' },
+    { name: 'Jimny', href: '/cars/jimny/' },
+    { name: 'S-presso', href: '/cars/spresso' },
   ],
   company: [
-    { name: "About", href: "/about" },
-    { name: "Contact", href: "/contact" },
-    { name: "Show Room", href: "/show-room" },
-    { name: "Mission", href: "/about" },
-    { name: "Partners", href: "/partners" },
+    { name: 'About', href: '/about' },
+    { name: 'Contact', href: '/contact' },
+    { name: 'Show Room', href: '/show-room' },
+    { name: 'Mission', href: '/about' },
+    { name: 'Partners', href: '/partners' },
   ],
   support: [
-    { name: "Installment", href: "#" },
-    { name: "After Sale", href: "#" },
-    { name: "Terms", href: "#" },
+    { name: 'Installment', href: '#' },
+    { name: 'After Sale', href: '/aftersale' },
+    { name: 'Terms', href: '#' },
   ],
   social: [
     {
-      name: "Facebook",
-      href: "#",
+      name: 'Facebook',
+      href: '#',
       icon: facebookIcon,
     },
     {
-      name: "Instagram",
-      href: "#",
+      name: 'Instagram',
+      href: '#',
       icon: instagramIcon,
     },
     {
-      name: "Twitter",
-      href: "#",
+      name: 'Twitter',
+      href: '#',
       icon: twitterIcon,
     },
     {
-      name: "Youtube",
-      href: "#",
+      name: 'Youtube',
+      href: '#',
       icon: youtubeIcon,
     },
   ],
