@@ -9,7 +9,7 @@ export default function AboutPage() {
     <section>
       <Container>
       <Cover />
-        <Heading className="mt-6 text-3xl">
+        <Heading className="mt-10 text-3xl">
           About us
         </Heading>
         <div className="md:max-w-screen-xl xxl:px-0 text-gray-800">
