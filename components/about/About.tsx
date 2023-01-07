@@ -1,4 +1,5 @@
 import Image from "next/image";
+import Heading from "../ui/Heading";
 import Box1 from "../../public/images/about/picture2.jpg";
 import Box2 from "../../public/images/about/picture3.jpg";
 import Box3 from "../../public/images/about/picture4.jpg";
@@ -14,10 +15,10 @@ export default function About() {
           and will start its operations in 2018. MATCO shall be engaged in
           operating sales and dealership services.
         </p>
-        <div className="m-5">
-        <h2 className="text-3xl uppercase text-sky-600 font-bold">
+        <div className="my-5">
+        <Heading className="text-2xl">
           Objectives
-        </h2>
+        </Heading>
         </div>
         <p>
           The main purpose of the company is to provide

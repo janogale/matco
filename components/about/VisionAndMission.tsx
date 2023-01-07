@@ -1,19 +1,18 @@
 import Image from "next/image";
+import Heading from "../ui/Heading";
 import visionImage from "../../public/images/about/vision.jpg";
 import missionImage from "../../public/images/about/mission.jpg";
 
 export default function VisionAndMission() {
   return (
-    <div className="grid grid-cols-1 sm:grid-cols-2 gap-10 bg-gray-100"
-    id="vision-and-mission">
+    <div
+      className="grid grid-cols-1 sm:grid-cols-2 gap-10 bg-gray-100"
+      id="vision-and-mission"
+    >
       <div className="content text-lg  flex justify-center items-center p-10 rounded-md">
         <div>
-          <h2
-            className="text-3xl suzuki-bold uppercase text-sky-600 font-bold mb-5"
-          >
-            VISION
-          </h2>
-          <p>
+          <Heading className="mt-6 text-3xl">Vision</Heading>
+          <p className="mt-3">
             To be leader in modern automotive industry and sales center in Horn
             of Africa.
           </p>
@@ -43,12 +42,8 @@ export default function VisionAndMission() {
       </div>
       <div className="content text-lg flex justify-center items-center p-10 rounded-md">
         <div>
-          <h2
-            className="text-3xl uppercase text-sky-600 font-bold mb-5"
-          >
-            MISSION
-          </h2>
-          <p>
+          <Heading className="mt-6 text-3xl">Mission</Heading>
+          <p className="mt-3">
             To provide high quality products and services with a reasonable
             price to meet stakeholders expectations.
           </p>
