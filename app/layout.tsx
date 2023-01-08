@@ -11,11 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const path = usePathname();
-
-  if (path === "/") {
-    notFound();
-  }
-
+  
   return (
     <html lang="en">
       <head />
