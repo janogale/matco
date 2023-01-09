@@ -31,7 +31,7 @@ const CarsItem = ({ car }: any) => {
       <hr />
       <p className="text-black flex justify-center items-center space-x-10">
         <span>{car.engineCapacity}</span>
-        <span>{car.carType}</span>
+        <span>{car.carType.toUpperCase()}</span>
       </p>
     </Card>
   );
