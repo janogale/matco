@@ -3,18 +3,16 @@ import { Card } from "flowbite-react";
 import { FaRoad } from "react-icons/fa";
 import { AiFillCar } from "react-icons/ai";
 import { GiFuelTank } from "react-icons/gi";
+import { TCar } from "../CarList";
 
-const CarsItem = ({ car }: any) => {
+const CarsItem = ({ car }: { car: TCar }) => {
   return (
-     <Card
-      imgAlt="cars"
-      imgSrc={car.image}
-    >
+    <Card imgAlt="cars" imgSrc={car.image}>
       <p className="text-xl text-gray-700 font-bold dark:text-gray-400">
         {car.name}
       </p>
       <h5 className="text-3xl font-bold tracking-tight text-green-500 dark:text-white">
-        {!car.price ? 'CALL FOR PRICE' :  `$ ${car.price}`}
+        {!car.price ? "CALL FOR PRICE" : `$ ${car.price}`}
       </h5>
       <hr />
       <p className="text-gray-400 dark:text-gray-400 flex justify-between items-center">
