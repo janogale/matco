@@ -7,6 +7,11 @@ import CarsList from '../../components/cars/CarsList';
 import Container from "../../components/ui/Container";
 
 export default function CarsPage() {
+
+  if(carsData.length === 0){
+    return <div> <p className='text-center text-red-500 font-bold'>No accessories data to show</p> </div>
+  };
+
   return (
     <main>
       <Container>
