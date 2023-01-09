@@ -1,4 +1,4 @@
-import { Navbar, Button } from "flowbite-react";
+import { Navbar } from "flowbite-react";
 import Image from "next/image";
 import logo from "../public/matcologo.jpg";
 import jacLogo from "../public/images/jac.png";
