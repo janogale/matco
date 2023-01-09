@@ -1,15 +1,18 @@
+"use client";
+
+import { Card } from "flowbite-react";
+import Banner from "../../components/ui/Banner";
+import Container from "../../components/ui/Container";
+
 export default function CarsPage() {
   return (
     <main>
-      <h1>Cars</h1>
-      <ul>
-        <li>
-          <a href="/cars/1">Car 1</a>
-        </li>
-        <li>
-          <a href="/cars/2">Car 2</a>
-        </li>
-      </ul>
+      <Container>
+        <Banner
+          text1="Explore Our Range"
+          text2="Explore Suzuki’s range of affordable new cars."
+        />
+      </Container>
     </main>
   );
 }
