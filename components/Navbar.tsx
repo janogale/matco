@@ -1,6 +1,6 @@
 import { Navbar } from "flowbite-react";
 import Image from "next/image";
-import logo from "../public/matcologo.jpg";
+import logo from "../public/logo.png";
 import jacLogo from "../public/images/jac.png";
 import suzukiLogo from "../public/images/suzuki.png";
 
@@ -12,12 +12,7 @@ export default function NavbarTop() {
       className="max-w-6xl mx-auto bg-gray-50 shadow absolute z-50 left-0 right-0 "
     >
       <Navbar.Brand href="/">
-        <Image
-          src={logo}
-          width={80}
-          className="mr-3 h-16 rounded"
-          alt="Matco Logo"
-        />
+        <Image src={logo} width={80} className="mr-3 h-16 " alt="Matco Logo" />
         {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           MATCO
         </span> */}
