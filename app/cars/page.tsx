@@ -5,6 +5,7 @@ import HomeCTA from "../../components/HomeCTA";
 import Banner from "../../components/ui/Banner";
 import TapsCars from "../../components/cars/TapsCars";
 import Container from "../../components/ui/Container";
+import HomeCarousel from "../../components/HomeCarousel";
 
 export default function CarsPage() {
   if (carsData.length === 0) {
@@ -19,6 +20,7 @@ export default function CarsPage() {
 
   return (
     <main>
+      <HomeCarousel />
       <Container>
         <Banner
           text1="Explore Our Range"
