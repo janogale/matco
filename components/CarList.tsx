@@ -11,6 +11,7 @@ export type TCar = {
   fuelType: string;
   carType: string;
   engineCapacity: string;
+  description: string;
   logo?: string;
 };
 
