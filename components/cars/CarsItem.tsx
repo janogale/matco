@@ -1,4 +1,5 @@
 import React from "react";
+import { useRouter } from "next/navigation";
 import { Card } from "flowbite-react";
 import { FaRoad } from "react-icons/fa";
 import { AiFillCar } from "react-icons/ai";
@@ -6,8 +7,15 @@ import { GiFuelTank } from "react-icons/gi";
 import { TCar } from "../CarList";
 
 const CarsItem = ({ car }: { car: TCar }) => {
+  const router = useRouter();
+
   return (
-    <Card imgAlt="cars" imgSrc={car.image}>
+    <Card
+      imgAlt={car.name}
+      imgSrc={car.image}
+      onClick={() => router.push(`/cars/${car.id}`)}
+      className="cursor-pointer"
+    >
       <p className="text-xl text-gray-700 font-bold dark:text-gray-400">
         {car.name}
       </p>

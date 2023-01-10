@@ -104,19 +104,6 @@ export const carsData = [
     logo: "/images/swiftlogo.png",
   },
   {
-    id: 9,
-    href: "#",
-    image: "/images/models/jac/1.webp",
-    name: "JAC",
-    price: '6000',
-    modalYear: '2022',
-    km: "24000ks",
-    fuelType: "petrol",
-    carType: 'Manual',
-    engineCapacity: '998 cc',
-    logo: "/images/jaclogo.png",
-  },
-  {
     id: 10,
     href: "#",
     image: "/images/models/jac/2.webp",
@@ -142,6 +129,19 @@ export const carsData = [
     engineCapacity: '998 cc',
     logo: undefined,
   },
+  // {
+  //   id: 9,
+  //   href: "#",
+  //   image: "/images/models/jac/1.webp",
+  //   name: "JAC",
+  //   price: '6000',
+  //   modalYear: '2022',
+  //   km: "24000ks",
+  //   fuelType: "petrol",
+  //   carType: 'Manual',
+  //   engineCapacity: '998 cc',
+  //   logo: "/images/jaclogo.png",
+  // },
 ];
 
 export const accessoriesData = [
