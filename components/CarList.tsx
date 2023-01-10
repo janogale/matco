@@ -1,10 +1,16 @@
 import ImageCard from "./ui/ImageCard";
 
-type TCar = {
+export type TCar = {
   id: number | string;
   href: string;
   image: string;
   name: string;
+  price: string;
+  modalYear: string;
+  km: string;
+  fuelType: string;
+  carType: string;
+  engineCapacity: string;
   logo?: string;
 };
 

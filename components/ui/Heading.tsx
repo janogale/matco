@@ -1,4 +1,4 @@
-export default function Heading({ children, className = "" }: any) {
+export default function Heading({ children, className }: { children: React.ReactNode, className?: string}) {
   return (
     <div className="border-b border-gray-200 pb-5">
       <h3

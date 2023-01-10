@@ -1,15 +1,35 @@
+"use client";
+
+import { carsData } from "../../sampledata";
+import HomeCTA from "../../components/HomeCTA";
+import Banner from "../../components/ui/Banner";
+import TapsCars from "../../components/cars/TapsCars";
+import Container from "../../components/ui/Container";
+import HomeCarousel from "../../components/HomeCarousel";
+
 export default function CarsPage() {
+  if (carsData.length === 0) {
+    return (
+      <div>
+        <p className="text-center text-red-500 font-bold">
+          No accessories data to show
+        </p>
+      </div>
+    );
+  }
+
   return (
     <main>
-      <h1>Cars</h1>
-      <ul>
-        <li>
-          <a href="/cars/1">Car 1</a>
-        </li>
-        <li>
-          <a href="/cars/2">Car 2</a>
-        </li>
-      </ul>
+      <HomeCarousel />
+      <Container>
+        <Banner
+          text1="Explore Our Range"
+          text2="Explore Suzuki’s range of affordable new cars."
+        />
+        <TapsCars />
+        {/* <CarsList carsData={carsData} /> */}
+      </Container>
+      <HomeCTA />
     </main>
   );
 }
