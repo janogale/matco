@@ -55,7 +55,7 @@ export default function AccessoriesPage() {
     };
 
   return (
-    <div className="mx-5">
+    <div className="bg-gray-50 mx-5">
       <Container>
         <div className="rounded-lg overflow-hidden w-full h-96 min-h-96 mt-10">
           <Image
