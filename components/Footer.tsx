@@ -19,11 +19,10 @@ const footerLinks = {
     { name: 'S-presso', href: '/cars/spresso' },
   ],
   company: [
-    { name: 'About', href: '/about' },
-    { name: 'Contact', href: '/contact' },
-    { name: 'Show Room', href: '/show-room' },
-    { name: 'Mission', href: '/about' },
-    { name: 'Partners', href: '/partners' },
+    { name: "About", href: "/about" },
+    { name: "Contact", href: "/contact" },
+    { name: "Show Room", href: "/show-room" },
+    { name: "Vision & Mission", href: "/about#vision-and-mission" },
   ],
   support: [
     { name: 'Installment', href: '#' },

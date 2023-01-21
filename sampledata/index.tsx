@@ -4,6 +4,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/swift/1.png",
     name: "New Swift",
+    price: '6000',
+    modalYear: '2022',
+    km: "24000km",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/swiftlogo.png",
   },
   {
@@ -11,6 +18,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/celerio/1.png",
     name: "Beleno",
+    price: '8000',
+    modalYear: '2015',
+    km: "40000km",
+    fuelType: "Diesel",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/celeriologo.png",
   },
   {
@@ -18,6 +32,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/ciaz/1.png",
     name: "CIAZ",
+    price: '80000',
+    modalYear: '2017',
+    km: "30000km",
+    fuelType: "ags",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   {
@@ -25,6 +46,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/baleno/1.jpeg",
     name: "Celerio",
+    price: '6000',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/celeriologo.png",
   },
   {
@@ -32,6 +60,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/ertiga/1.webp",
     name: "Ertiga",
+    price: '6000',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   {
@@ -39,6 +74,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/jimny/1.png",
     name: "Jimny",
+    price: '6000',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/jemnylogo.png",
   },
   {
@@ -46,6 +88,13 @@ export const carsData = [
     href: "#",
     image: "/images/models/spresso/1.png",
     name: "S-presso",
+    price: '6000',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   {
@@ -53,20 +102,27 @@ export const carsData = [
     href: "#",
     image: "/images/models/swift/2.webp",
     name: "Ertiga",
+    price: '6000',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/swiftlogo.png",
-  },
-  {
-    id: 9,
-    href: "#",
-    image: "/images/models/jac/1.webp",
-    name: "JAC",
-    logo: "/images/jaclogo.png",
   },
   {
     id: 10,
     href: "#",
     image: "/images/models/jac/2.webp",
     name: "JAC",
+    price: '',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/jaclogo.png",
   },
   {
@@ -74,8 +130,28 @@ export const carsData = [
     href: "#",
     image: "/images/models/vitara/1.webp",
     name: "VITARA",
+    price: '',
+    modalYear: '2022',
+    km: "24000ks",
+    fuelType: "petrol",
+    carType: 'Manual',
+    engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
+  // {
+  //   id: 9,
+  //   href: "#",
+  //   image: "/images/models/jac/1.webp",
+  //   name: "JAC",
+  //   price: '6000',
+  //   modalYear: '2022',
+  //   km: "24000ks",
+  //   fuelType: "petrol",
+  //   carType: 'Manual',
+  //   engineCapacity: '998 cc',
+  //   logo: "/images/jaclogo.png",
+  // },
 ];
 
 export const accessoriesData = [
@@ -173,3 +249,52 @@ export const carDetails = {
     features: [],
   },
 };
+
+
+export const photos = [
+  {
+    src: "https://source.unsplash.com/2ShvY8Lf6l0/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/Dm-qxdynoEc/800x799",
+    width: 1,
+    height: 1
+  },
+  {
+    src: "https://source.unsplash.com/qDkso9nvCg0/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/iecJiKe_RNg/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/epcsn8Ed8kY/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/NQSWvyVRIJk/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/zh7GEuORbUw/600x799",
+    width: 3,
+    height: 4
+  },
+  {
+    src: "https://source.unsplash.com/PpOHJezOalU/800x599",
+    width: 4,
+    height: 3
+  },
+  {
+    src: "https://source.unsplash.com/I1ASdgphUH4/800x599",
+    width: 4,
+    height: 3
+  }
+];

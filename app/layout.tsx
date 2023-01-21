@@ -1,5 +1,5 @@
 "use client";
-import { usePathname } from "next/navigation";
+import { notFound, usePathname } from "next/navigation";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
@@ -11,7 +11,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const path = usePathname();
-
+  
   return (
     <html lang="en">
       <head />

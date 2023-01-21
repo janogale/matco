@@ -1,7 +1,7 @@
 "use client";
+
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
-import Navbar from "../../components/Navbar";
 import Heading from "../../components/ui/Heading";
 import { accessoriesData } from "../../sampledata";
 import Container from "../../components/ui/Container";
@@ -50,10 +50,14 @@ export default function AccessoriesPage() {
       </option>
     ));
 
+    if(accessoriesData.length === 0){
+      return <div> <p  className='text-center text-red-500 font-bold'>No accessories data to show</p> </div>
+    };
+
   return (
-    <div className="mx-5">
+    <div className="bg-gray-50 mx-5">
       <Container>
-        <div className="rounded-lg overflow-hidden w-full h-96 min-h-96 mt-28">
+        <div className="rounded-lg overflow-hidden w-full h-96 min-h-96 mt-10">
           <Image
             className="max-w-full h-auto"
             src={banner}
@@ -80,15 +84,18 @@ export default function AccessoriesPage() {
                   <option value="DE">Germany</option>
                 </select>
               </div> */}
-              <label htmlFor="use-select">Filter by use:</label>
+             <div className="flex justify-center items-center">
+             <label htmlFor="use-select" className="mx-3">Filter by use:</label>
               <select
                 id="use-select"
                 value={selectedUse}
                 onChange={handleSelected}
+                className="rounded"
               >
                 <option value="">All</option>
                 {filteringOption}
               </select>
+             </div>
             </div>
           </Heading>
           <Accessories accessories={filteredAccessories} />

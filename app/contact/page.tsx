@@ -138,7 +138,7 @@ export default function ContactPage() {
                   <PhoneIconSvg />
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>+252 (63) 123 4567</p>
+                  <p>+252(63)639 0000</p>
                   <p className="mt-1">Sat-Thru 8am to 6pm</p>
                 </div>
               </div>
@@ -147,7 +147,7 @@ export default function ContactPage() {
                   <EmailIconSvg />
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>support@matco.com</p>
+                  <p>matcosales@gmail.com</p>
                 </div>
               </div>
             </div>
@@ -169,7 +169,7 @@ export default function ContactPage() {
                   <PhoneIconSvg />
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>+252 (63) 123 4567</p>
+                  <p>+252 (63) 6390000</p>
                   <p className="mt-1">Sat-Thru 8am to 6pm</p>
                 </div>
               </div>
@@ -178,7 +178,7 @@ export default function ContactPage() {
                   <EmailIconSvg />
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>support@matco.com</p>
+                  <p>mustafa.matco@gmail.com</p>
                 </div>
               </div>
             </div>
