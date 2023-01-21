@@ -10,6 +10,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/swiftlogo.png",
   },
   {
@@ -23,6 +24,7 @@ export const carsData = [
     fuelType: "Diesel",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/celeriologo.png",
   },
   {
@@ -36,6 +38,7 @@ export const carsData = [
     fuelType: "ags",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   {
@@ -49,6 +52,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/celeriologo.png",
   },
   {
@@ -62,6 +66,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   {
@@ -75,6 +80,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/jemnylogo.png",
   },
   {
@@ -88,6 +94,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   {
@@ -101,6 +108,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/swiftlogo.png",
   },
   {
@@ -114,6 +122,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/jaclogo.png",
   },
   {
@@ -127,6 +136,7 @@ export const carsData = [
     fuelType: "petrol",
     carType: 'Manual',
     engineCapacity: '998 cc',
+    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
   },
   // {

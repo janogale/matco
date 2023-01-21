@@ -19,7 +19,7 @@ export default function CarsPage() {
 
   return (
     <main>
-      <Container>
+      <Container className="bg-gray-50">
         <Banner
           text1="Explore Our Range"
           text2="Explore Suzuki’s range of affordable new cars."
