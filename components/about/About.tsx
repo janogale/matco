@@ -8,21 +8,29 @@ import Box4 from "../../public/images/about/picture5.jpg";
 export default function About() {
   return (
     <>
-      <div className="content text-lg">
-        <p className="mb-5">
-          Modern Automotive Technology (MATCO) is a modern workshop, and car
-          sales center based in Somaliland. MATCO has been established in 2014
-          and will start its operations in 2018. MATCO shall be engaged in
-          operating sales and dealership services.
+      <div className="px-5 prose prose-lg prose-indigo mx-auto my-12 text-gray-500">
+        <Heading>About MATCO</Heading>
+        <p>
+          Modern Automotive Technology <strong>(MATCO)</strong> is a modern
+          workshop, and car sales center based in Somaliland.
         </p>
+        <p>
+          MATCO has been established in 2014 and will start its operations in
+          2018.
+        </p>
+        <p>
+          MATCO shall be engaged in operating sales and dealership services.
+        </p>
+
         <div className="my-5">
-        <Heading className="text-2xl">
-          Objectives
-        </Heading>
+          <Heading>Objectives</Heading>
         </div>
         <p>
           The main purpose of the company is to provide
-          <strong> modern services through modern automotive technology, </strong>
+          <strong>
+            {" "}
+            modern services through modern automotive technology,{" "}
+          </strong>
           which includes the following:
         </p>
         <ul className="list-disc list-outside leading-10 ml-5">

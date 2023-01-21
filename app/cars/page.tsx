@@ -11,7 +11,7 @@ export default function CarsPage() {
     return (
       <div>
         <p className="text-center text-red-500 font-bold">
-          No Cars Available at this moment
+          No Cars Available at moment!
         </p>
       </div>
     );
@@ -19,7 +19,7 @@ export default function CarsPage() {
 
   return (
     <main>
-      <Container className='bg-gray-50'>
+      <Container className="bg-gray-50">
         <Banner
           text1="Explore Our Range"
           text2="Explore Suzuki’s range of affordable new cars."

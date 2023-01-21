@@ -1,4 +1,3 @@
-import Image from "next/image";
 import { Card } from "flowbite-react";
 import { IAccessoriesType } from "../app/accessories/page";
 
