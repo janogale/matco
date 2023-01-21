@@ -1,4 +1,4 @@
-import React from 'react';
+import React from "react";
 
 const page = () => {
   return (
@@ -11,7 +11,7 @@ const page = () => {
             <div className="container ">
               <div className="bg-gray-300 p-2 w-full mb-4">
                 <p className="text-xl font-bold text-gray-900">
-                  WHY CHOOSE CFAO MOTORS
+                  WHY CHOOSE MATCO MOTORS
                 </p>
               </div>
               <div className="flex">
@@ -19,7 +19,7 @@ const page = () => {
                   <p className="text-md text-gray-900 text-justify">
                     <span className="font-bold text-gray-900">
                       Keeps your Suzuki running like a Suzuki.
-                    </span>{' '}
+                    </span>{" "}
                     <br />
                     There is service, and there is Suzuki Service – the service
                     that is there just for you and your Suzuki. And it can be
@@ -27,8 +27,8 @@ const page = () => {
                     Suzuki Genuine quality.
                     <br />
                     <span className="font-bold text-gray-900">
-                      {' '}
-                      Suzuki service expertise
+                      {" "}
+                      MATCO service expertise
                     </span>
                     <br />
                     Every Suzuki model makes specific demands on service
@@ -111,11 +111,11 @@ const page = () => {
               <div className="flex">
                 <div>
                   <p className="text-md text-gray-900 text-justify">
-                    To know more details please drop a{' '}
-                    <span className="font-bold"> WhatsApp message </span>or{' '}
-                    <span className="font-bold">Call </span> Suzuki service
-                    Hotline Number :{' '}
-                    <span className="font-bold"> +971567413615</span>.
+                    To know more details please drop a{" "}
+                    <span className="font-bold"> WhatsApp message </span>or{" "}
+                    <span className="font-bold">Call </span> MATCO service
+                    Hotline Number :{" "}
+                    <span className="font-bold"> +252(63)639 0000</span>.
                   </p>
                   <hr className="w-full my-6 border-gray-300" />
                 </div>
