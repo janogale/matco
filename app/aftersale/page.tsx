@@ -21,10 +21,10 @@ const page = () => {
                       Keeps your Suzuki running like a Suzuki.
                     </span>{" "}
                     <br />
-                    There is service, and there is Suzuki Service – the service
-                    that is there just for you and your Suzuki. And it can be
-                    obtained only from your Suzuki dealer who is committed to
-                    Suzuki Genuine quality.
+                    There is service, and there is Suzuki Service - the
+                    service that is there just for you and your Suzuki. And it
+                    can be obtained only from your Suzuki dealer who is
+                    committed to Suzuki Genuine quality.
                     <br />
                     <span className="font-bold text-gray-900">
                       {" "}
@@ -56,14 +56,14 @@ const page = () => {
                 <div>
                   <p className="text-md text-gray-900 text-justify">
                     If your warranty is running out, you can continue protecting
-                    your car with a Suzuki Extended Warranty. You’ll be able to
-                    protect against the cost of future repair and replacement
-                    parts with our Extended Warranty, which is designed to give
-                    you the flexibility you need. So, for example, you can
-                    choose from three levels of cover, a choice of excess level
-                    and the option to pay as you go. And, if you decide an
-                    Extended Warranty isn’t for you – you’re free to cancel your
-                    policy at any time.
+                    your car with a Suzuki Extended Warranty. You`ll be
+                    able to protect against the cost of future repair and
+                    replacement parts with our Extended Warranty, which is
+                    designed to give you the flexibility you need. So, for
+                    example, you can choose from three levels of cover, a choice
+                    of excess level and the option to pay as you go. And, if you
+                    decide an Extended Warranty isn`t for you -
+                    you`re free to cancel your policy at any time.
                   </p>
                   <hr className="w-full my-6 border-gray-300" />
                 </div>
@@ -84,14 +84,14 @@ const page = () => {
                 <div>
                   <p className="text-md text-gray-900 text-justify">
                     If your warranty is running out, you can continue protecting
-                    your car with a Suzuki Extended Warranty. You’ll be able to
-                    protect against the cost of future repair and replacement
-                    parts with our Extended Warranty, which is designed to give
-                    you the flexibility you need. So, for example, you can
-                    choose from three levels of cover, a choice of excess level
-                    and the option to pay as you go. And, if you decide an
-                    Extended Warranty isn’t for you – you’re free to cancel your
-                    policy at any time.
+                    your car with a Suzuki Extended Warranty. You`ll be
+                    able to protect against the cost of future repair and
+                    replacement parts with our Extended Warranty, which is
+                    designed to give you the flexibility you need. So, for
+                    example, you can choose from three levels of cover, a choice
+                    of excess level and the option to pay as you go. And, if you
+                    decide an Extended Warranty isn`t for you -
+                    you`re free to cancel your policy at any time.
                   </p>
                   <hr className="w-full my-6 border-gray-300" />
                 </div>
@@ -139,17 +139,17 @@ const page = () => {
                       <h6 className="mb-2 font-semibold leading-5">
                         Enhanced security
                       </h6>
-                      <ul className="mb-8 space-y-4 text-left text-base">
+                      <div className="mb-8 space-y-4 text-left text-base">
                         <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside">
                           <li>
                             At least 10 characters (and up to 100 characters)
                           </li>
                           <li>At least one lowercase character</li>
                           <li>Inclusion of at least one special character</li>
-                          <li>At least one lowercase character</li>
+                          <li>At least one lowercase character </li>
                           <li>Inclusion of at least one special character</li>
                         </ul>
-                      </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
@@ -159,7 +159,7 @@ const page = () => {
                       <h6 className="mb-2 font-semibold leading-5">
                         Enhanced security
                       </h6>
-                      <ul className="mb-8 space-y-4 text-left text-base">
+                      <div className="mb-8 space-y-4 text-left text-base">
                         <ul className="max-w-md space-y-1 text-gray-900 list-disc list-inside">
                           <li>
                             At least 10 characters (and up to 100 characters)
@@ -169,7 +169,7 @@ const page = () => {
                           <li>At least one lowercase character</li>
                           <li>Inclusion of at least one special character</li>
                         </ul>
-                      </ul>
+                      </div>
                     </div>
                   </div>
                 </div>
