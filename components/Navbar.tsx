@@ -9,38 +9,38 @@ export default function NavbarTop() {
     <Navbar
       fluid={true}
       rounded={true}
-      className="max-w-6xl mx-auto bg-gray-50 shadow absolute z-50 left-0 right-0 "
+      className="max-w-6xl mx-auto bg-[#90c340] shadow absolute z-50 left-0 right-0 "
     >
       <Navbar.Brand href="/">
-        <Image src={logo} width={80} className="mr-3 h-16 " alt="Matco Logo" />
+        <Image src={logo} width={85} className="overflow-hidden hover:cursor-pointer hover:opacity-75 mr-3 h-20 bg-white p-2 rounded-md shadow-md" alt="Matco Logo" />
         {/* <span className="self-center whitespace-nowrap text-xl font-semibold dark:text-white">
           MATCO
         </span> */}
       </Navbar.Brand>
 
       <Navbar.Collapse>
-        <Navbar.Link href="/" className="text-lg" active={true}>
+        <Navbar.Link href="/" className="text-lg text-[#fff]">
           Home
         </Navbar.Link>
-        <Navbar.Link href="/services" className="text-lg">
+        <Navbar.Link href="/services" className="text-lg text-[#fff]">
           Services
         </Navbar.Link>
-        <Navbar.Link href="/aftersale" className="text-lg">
+        <Navbar.Link href="/aftersale" className="text-lg text-[#fff]">
           After Sale
         </Navbar.Link>
-        <Navbar.Link href="/contact" className="text-lg">
+        <Navbar.Link href="/contact" className="text-lg text-[#fff]">
           Contact
         </Navbar.Link>
       </Navbar.Collapse>
       <div className="flex md:order-2 gap-4">
         <div
-          className="overflow-hidden hover:cursor-pointer hover:opacity-75 p-2 rounded-md shadow-md"
+          className="overflow-hidden hover:cursor-pointer hover:opacity-75 p-2 bg-white rounded-md shadow-md"
           title="JAC Motors"
         >
           <Image src={jacLogo} width={80} alt="JAC Logo" className="h-16" />
         </div>
         <div
-          className="overflow-hidden hover:cursor-pointer hover:opacity-75 p-2 rounded-md shadow-md"
+          className="overflow-hidden hover:cursor-pointer hover:opacity-75 p-2 bg-white rounded-md shadow-md"
           title="Suzuki Motors"
         >
           <Image
