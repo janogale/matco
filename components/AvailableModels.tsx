@@ -1,4 +1,6 @@
 import React from "react";
+
+import Tagline from "./Tagline";
 import Banner from "./ui/Banner";
 
 interface CarType {
@@ -102,10 +104,11 @@ const CarTypes: React.FC = () => {
   return (
     <div className="container mx-auto p-4">
       <Banner text1="Available Models" />
+      <Tagline />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
         <div className="border border-gray-200 rounded p-10">
           <h2 className="text-2xl font-bold mb-2">Suzuki</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 lg:grid-cols-4 gap-4">
+          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
             {suzukiCars.map((carType) => (
               <div
                 key={carType.id}
