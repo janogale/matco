@@ -106,19 +106,21 @@ const CarTypes: React.FC = () => {
       <Banner text1="Available Models" />
       <Tagline />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
-        <div className="border border-gray-200 rounded p-10">
+        <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
+            <div className="bg-red-700 w-24 text-center text-white rounded-md absolute -top-5 -right-5 py-2">Available</div>
           <h2 className="text-2xl font-bold mb-2">Suzuki</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <hr className="mb-3"/>
+          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
             {suzukiCars.map((carType) => (
               <div
                 key={carType.id}
               >
-                <h3 className="font-semibold mb-2"> <span>{carType.id}.</span> {carType.name}</h3>
+                <h3 className="text-white font-semibold mb-2 border border-gray-100 rounded-md p-2 bg-[#90c340]">{carType.name}</h3>
                 <ul className="text-gray-600">
                   {carType.colors?.map((color) => (
                     <li key={color} className="flex items-center">
                       <div
-                        className="w-4 h-4 rounded-full mr-2"
+                        className="w-4 h-4 rounded-full mr-2 flex"
                         style={{ backgroundColor: color }}
                       ></div>
                       {color}
@@ -129,14 +131,16 @@ const CarTypes: React.FC = () => {
             ))}
           </div>
         </div>
-        <div className="border border-gray-200 rounded p-10">
+        <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
+        <div className="bg-red-700 w-24 text-center text-white rounded-md absolute -top-5 -right-5 py-2">Available</div>
           <h2 className="text-2xl font-bold mb-2">JAC Models</h2>
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-4">
+          <hr className="mb-3"/>
+          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
             {jacCars.map((carType) => (
               <div
                 key={carType.id}
               >
-                <h3 className="font-semibold mb-2"> <span>{carType.id}.</span> {carType.name}</h3>
+                <h3 className="text-white font-semibold mb-2 border border-gray-100 rounded-md p-2 bg-[#90c340]">{carType.name}</h3>
                 <ul className="text-gray-600">
                   {carType.colors?.map((color) => (
                     <li key={color} className="flex items-center">

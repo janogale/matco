@@ -22,11 +22,17 @@ export default function NavbarTop() {
         <Navbar.Link href="/" className="text-lg text-[#fff]">
           Home
         </Navbar.Link>
+        <Navbar.Link href="/cars" className="text-lg text-[#fff]">
+          Cars
+        </Navbar.Link>
         <Navbar.Link href="/services" className="text-lg text-[#fff]">
           Services
         </Navbar.Link>
         <Navbar.Link href="/aftersale" className="text-lg text-[#fff]">
           After Sale
+        </Navbar.Link>
+        <Navbar.Link href="/finance" className="text-lg text-[#fff]">
+          Finance
         </Navbar.Link>
         <Navbar.Link href="/contact" className="text-lg text-[#fff]">
           Contact

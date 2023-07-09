@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import emailjs from "@emailjs/browser";
 
 interface FormData {
   firstName: string;
@@ -21,6 +22,11 @@ const ContactForm = () => {
     message: "",
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
+  const [isErrorMessageVisible, setIsErrorMessageVisible] = useState(false);
+  const [isIncompleteFieldsVisible, setIsIncompleteFieldsVisible] = useState(false);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
   ) => {
@@ -33,7 +39,46 @@ const ContactForm = () => {
 
   const handleSubmit = (e: FormEvent) => {
     e.preventDefault();
-    console.log(formData); // Replace with your form submission logic
+
+    // Check if any input field is empty
+    const isAnyFieldEmpty = Object.values(formData).some(
+      (value) => value === ""
+    );
+    if (isAnyFieldEmpty) {
+      setIsIncompleteFieldsVisible(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    emailjs
+      .sendForm(
+        "service_nwii4qc",
+        "template_0erjgij",
+        e.target as HTMLFormElement,
+        "user_wnA788cKxFTdURQEXJHCA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSuccessMessageVisible(true);
+          setFormData({
+            firstName: "",
+            lastName: "",
+            phoneNumber: "",
+            address: "",
+            email: "",
+            message: "",
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setIsErrorMessageVisible(true);
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   return (
@@ -51,7 +96,7 @@ const ContactForm = () => {
               htmlFor="firstName"
               className="block text-gray-500 font-semibold mb-2"
             >
-              First Name
+              First Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -68,7 +113,7 @@ const ContactForm = () => {
               htmlFor="lastName"
               className="block text-gray-500 font-semibold mb-2"
             >
-              Last Name
+              Last Name <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -87,7 +132,7 @@ const ContactForm = () => {
               htmlFor="phoneNumber"
               className="block text-gray-500 font-semibold mb-2"
             >
-              Phone Number
+              Phone Number <span className="text-red-500">*</span>
             </label>
             <input
               type="tel"
@@ -104,7 +149,7 @@ const ContactForm = () => {
               htmlFor="address"
               className="block text-gray-500 font-semibold mb-2"
             >
-              Address
+              Address <span className="text-red-500">*</span>
             </label>
             <input
               type="text"
@@ -122,7 +167,7 @@ const ContactForm = () => {
             htmlFor="email"
             className="block text-gray-500 font-semibold mb-2 outline-none focus:border-none"
           >
-            Email
+            Email <span className="text-red-500">*</span>
           </label>
           <input
             type="email"
@@ -139,7 +184,7 @@ const ContactForm = () => {
             htmlFor="message"
             className="block text-gray-500 font-semibold mb-2 outline-none focus:border-none"
           >
-            Message
+            Message <span className="text-red-500">*</span>
           </label>
           <textarea
             id="message"
@@ -150,15 +195,36 @@ const ContactForm = () => {
             className="w-full px-3 py-3 border border-gray-200 rounded focus:border-none"
           />
         </div>
-        <div className="flex justify-center">
-          <button
-            type="submit"
-            className="bg-sky-600 text-white w-full px-4 py-2 rounded focus:border-none font-semibold hover:bg-sky-500"
-          >
-            Submit
-          </button>
-        </div>
+        {isSubmitting ? (
+          <div className="flex items-center justify-center mt-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-900"></div>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <button
+              type="submit"
+              className="bg-sky-600 text-white w-full px-4 py-2 rounded focus:border-none font-semibold hover:bg-sky-500"
+            >
+              Submit
+            </button>
+          </div>
+        )}
       </form>
+      {isSuccessMessageVisible && (
+        <div className="bg-green-500 text-white p-4 rounded mt-4">
+          Message sent successfully!
+        </div>
+      )}
+      {isErrorMessageVisible && (
+        <div className="bg-red-500 text-white p-4 rounded mt-4">
+          Error sending message. Please try again later.
+        </div>
+      )}
+      {isIncompleteFieldsVisible && (
+        <div className="bg-yellow-500 text-white p-4 rounded mt-4">
+          Please fill in all the required fields.
+        </div>
+      )}
     </div>
   );
 };
