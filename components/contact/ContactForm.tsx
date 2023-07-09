@@ -25,7 +25,8 @@ const ContactForm = () => {
   const [isSubmitting, setIsSubmitting] = useState(false);
   const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
   const [isErrorMessageVisible, setIsErrorMessageVisible] = useState(false);
-  const [isIncompleteFieldsVisible, setIsIncompleteFieldsVisible] = useState(false);
+  const [isIncompleteFieldsVisible, setIsIncompleteFieldsVisible] =
+    useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
@@ -62,6 +63,7 @@ const ContactForm = () => {
         (result) => {
           console.log(result.text);
           setIsSuccessMessageVisible(true);
+          setIsIncompleteFieldsVisible(false);
           setFormData({
             firstName: "",
             lastName: "",
@@ -209,22 +211,22 @@ const ContactForm = () => {
             </button>
           </div>
         )}
+        {isSuccessMessageVisible && (
+          <div className="bg-green-500 text-white w-full px-4 p-2 rounded mt-4">
+            Message sent successfully!
+          </div>
+        )}
+        {isErrorMessageVisible && (
+          <div className="bg-red-500 text-white p-2 w-full px-4 rounded mt-4">
+            Error sending message. Please try again later.
+          </div>
+        )}
+        {isIncompleteFieldsVisible && (
+          <div className="bg-yellow-500 text-white p-2 w-full px-4 rounded mt-4">
+            Please fill in all the required fields.
+          </div>
+        )}
       </form>
-      {isSuccessMessageVisible && (
-        <div className="bg-green-500 text-white p-4 rounded mt-4">
-          Message sent successfully!
-        </div>
-      )}
-      {isErrorMessageVisible && (
-        <div className="bg-red-500 text-white p-4 rounded mt-4">
-          Error sending message. Please try again later.
-        </div>
-      )}
-      {isIncompleteFieldsVisible && (
-        <div className="bg-yellow-500 text-white p-4 rounded mt-4">
-          Please fill in all the required fields.
-        </div>
-      )}
     </div>
   );
 };
