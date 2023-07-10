@@ -1,4 +1,6 @@
+import Tagline from "../../components/Tagline";
 import Container from "../../components/ui/Container";
+import ContactForm from "../../components/contact/ContactForm";
 
 export default function ContactPage() {
   return (
@@ -127,10 +129,7 @@ export default function ContactPage() {
               Sales Support
             </h2>
             <div className="mt-3">
-              <p className="text-lg text-gray-500">
-                Nullam risus blandit ac aliquam justo ipsum. Quam mauris
-                volutpat massa dictumst amet. Sapien tortor lacus arcu.
-              </p>
+              <Tagline />
             </div>
             <div className="mt-9">
               <div className="flex">
@@ -185,6 +184,7 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      <ContactForm />
     </Container>
   );
 }
