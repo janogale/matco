@@ -71,8 +71,7 @@ export default function Footer() {
                 className="self-start"
               />
               <p className="text-base text-gray-300">
-                Making the world a better place through affordable, modern, and
-                latest automobiles
+                MATCO, your Official Suzuke And JAC Distributor
               </p>
             </div>
             <div className="flex space-x-6">
