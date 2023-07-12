@@ -64,6 +64,7 @@ const ContactForm = () => {
           console.log(result.text);
           setIsSuccessMessageVisible(true);
           setIsIncompleteFieldsVisible(false);
+
           setFormData({
             firstName: "",
             lastName: "",
@@ -72,6 +73,7 @@ const ContactForm = () => {
             email: "",
             message: "",
           });
+          
         },
         (error) => {
           console.log(error.text);

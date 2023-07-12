@@ -102,8 +102,8 @@ const CarTypes: React.FC = () => {
   const jacCars = carTypes.filter((carType) => carType.type === "JAC Models");
 
   return (
-    <div className="container mx-auto p-4">
-      <Banner text1="Available Models" />
+    <div className="container mx-auto my-10 p-4">
+      <Banner text1="Explore Our Range" text2="Explore Suzuki’s and JAC range of available new cars." />
       <Tagline />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
         <div className="border border-gray-200 rounded bg-white shadow p-10 relative">

@@ -9,7 +9,7 @@ export default function NavbarTop() {
     <Navbar
       fluid={true}
       rounded={true}
-      className="max-w-6xl mx-auto bg-[#90c340] shadow absolute z-50 left-0 right-0 "
+      className="max-w-6xl mx-auto bg-[rgb(2,132,199)] shadow absolute z-50 left-0 right-0"
     >
       <Navbar.Brand href="/">
         <Image src={logo} width={85} className="overflow-hidden hover:cursor-pointer hover:opacity-75 mr-3 h-20 bg-white p-2 rounded-md shadow-md" alt="Matco Logo" />
@@ -21,9 +21,6 @@ export default function NavbarTop() {
       <Navbar.Collapse>
         <Navbar.Link href="/" className="text-lg text-[#fff]">
           Home
-        </Navbar.Link>
-        <Navbar.Link href="/cars" className="text-lg text-[#fff]">
-          Cars
         </Navbar.Link>
         <Navbar.Link href="/services" className="text-lg text-[#fff]">
           Services
