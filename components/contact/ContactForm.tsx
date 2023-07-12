@@ -86,10 +86,10 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-sky-600">
+    <div className="container mx-auto p-4 bg-sky-600 rounded">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 shadow rounded focus:outline-none"
+        className="bg-gray-50 p-8 shadow-sm rounded focus:outline-none"
       >
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-4 sm:text-3xl sm:tracking-tight">
           Get in Tech
