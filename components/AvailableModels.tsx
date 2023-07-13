@@ -107,7 +107,7 @@ const CarTypes: React.FC = () => {
       {/* <Tagline /> */}
       <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
         <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
-            <div className="bg-red-600 w-24 text-center text-white rounded-md absolute -top-5 -right-5 py-2">Available</div>
+            <div className="bg-red-600 w-24 text-center text-white rounded-md absolute -top-5 -right-2 sm:-right-5 py-2">Available</div>
           <h2 className="text-2xl font-bold mb-2">Suzuki</h2>
           <hr className="mb-3"/>
           <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
@@ -132,7 +132,7 @@ const CarTypes: React.FC = () => {
           </div>
         </div>
         <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
-        <div className="bg-red-600 w-24 text-center text-white rounded-md absolute -top-5 -right-5 py-2">Available</div>
+        <div className="bg-red-600 w-24 text-center text-white rounded-md absolute -top-5 -right-2 sm:-right-5 py-2">Available</div>
           <h2 className="text-2xl font-bold mb-2">JAC Models</h2>
           <hr className="mb-3"/>
           <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
