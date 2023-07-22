@@ -1,164 +1,42 @@
 import React from "react";
+import { Card } from "flowbite-react";
+import { Button } from "flowbite-react";
+import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
+import { Swiper, SwiperSlide } from "swiper/react";
 
-import Tagline from "./Tagline";
-import Banner from "./ui/Banner";
+import "swiper/css";
+import "swiper/css/navigation";
+import "swiper/css/pagination";
+import "swiper/css/scrollbar";
 
-interface CarType {
-  id: number;
-  name: string;
-  type: string;
-  colors?: string[];
-}
+// sample data
+import { carsData } from "../sampledata";
+import Heading from "./ui/Heading";
 
-const carTypes: CarType[] = [
-  {
-    id: 1,
-    name: "Vitra",
-    type: "Suzuki",
-    colors: ["White", "Gold", "Grey", "Silver", "Blue", "Ice-blue"],
-  },
-  {
-    id: 2,
-    name: "Swift",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 3,
-    name: "Jimny",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 4,
-    name: "Ertiga",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 5,
-    name: "Grand Vitra (coming soon)",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 6,
-    name: "T8 Pickup",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 7,
-    name: "N Series Single Cabin 3ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 8,
-    name: "N Series Double Cabin 3ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 9,
-    name: "Van 3 ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 10,
-    name: "Van 4 ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 11,
-    name: "Van 5 ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 12,
-    name: "Sunray Amblunce",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 13,
-    name: "Sunray Bus 17 Seats",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 14,
-    name: "Sunray Cargo Van",
-    type: "JAC Models",
-    colors: [],
-  },
-];
-
-const CarTypes: React.FC = () => {
-  const suzukiCars = carTypes.filter((carType) => carType.type === "Suzuki");
-  const jacCars = carTypes.filter((carType) => carType.type === "JAC Models");
-
+const AvailableModels = () => {
   return (
-    <div className="container mx-auto my-10 p-4">
-      <Banner text1="MATCO Your Official Suzuke And JAC Distributor" text2="Available Cars" />
-      {/* <Tagline /> */}
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
-        <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
-            <div className="bg-red-600 w-24 text-center text-white rounded-md absolute -top-5 -right-2 sm:-right-5 py-2">Available</div>
-          <h2 className="text-2xl font-bold mb-2">Suzuki</h2>
-          <hr className="mb-3"/>
-          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
-            {suzukiCars.map((carType) => (
-              <div
-                key={carType.id}
-              >
-                <h3 className="text-white font-semibold mb-2 border border-gray-100 rounded-md p-2 bg-[#90c340]">{carType.name}</h3>
-                <ul className="text-gray-600">
-                  {carType.colors?.map((color) => (
-                    <li key={color} className="flex items-center">
-                      <div
-                        className="w-4 h-4 rounded-full mr-2 flex"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                      {color}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-        <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
-        <div className="bg-red-600 w-24 text-center text-white rounded-md absolute -top-5 -right-2 sm:-right-5 py-2">Available</div>
-          <h2 className="text-2xl font-bold mb-2">JAC Models</h2>
-          <hr className="mb-3"/>
-          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
-            {jacCars.map((carType) => (
-              <div
-                key={carType.id}
-              >
-                <h3 className="text-white font-semibold mb-2 border border-gray-100 rounded-md p-2 bg-[#90c340]">{carType.name}</h3>
-                <ul className="text-gray-600">
-                  {carType.colors?.map((color) => (
-                    <li key={color} className="flex items-center">
-                      <div
-                        className="w-4 h-4 rounded-full mr-2"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                      {color}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
+    <div className="p-6">
+      <h1 className="text-3xl font-bold mb-4">React Swiper Carousel</h1>
+      <Swiper
+        modules={[Navigation, Pagination, Scrollbar, A11y]}
+        spaceBetween={5}
+        slidesPerView={3} // Show 3 slides per view by default
+        navigation
+        onSwiper={(swiper) => console.log(swiper)}
+        onSlideChange={() => console.log("slide change")}
+        className="mySwiper"
+      >
+        {carsData.map((item) => (
+          <Card className="w-full max-w-sm cursor-pointer" key={item.id}>
+            <SwiperSlide>
+              <img src={item.image} alt={`Slide ${item.id}`} className="w-96" />
+              <h2 className="text-2xl text-white font-bold absolute left-10 bottom-6 bg-black py-1 px-2">{item.name}</h2>
+            </SwiperSlide>
+          </Card>
+        ))}
+      </Swiper>
     </div>
   );
 };
 
-export default CarTypes;
+export default AvailableModels;

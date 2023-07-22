@@ -7,6 +7,7 @@ import { carsData } from "../sampledata";
 import Heading from "../components/ui/Heading";
 import TapsCars from "../components/cars/TapsCars";
 import Container from "../components/ui/Container";
+import Explore from '../components/explore/Explore';
 import HomeCarousel from "../components/HomeCarousel";
 import AvailableModels from "../components/AvailableModels";
 
@@ -32,6 +33,7 @@ export default function Home() {
           <AvailableModels />
         </Container>
         <HomeCTA />
+        <Explore />
         <div className="my-16"></div>
     </main>
   );

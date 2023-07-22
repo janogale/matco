@@ -28,7 +28,9 @@
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
     "react-icons": "^4.7.1",
+    "react-id-swiper": "^4.0.0",
     "react-photo-album": "^2.0.0",
+    "swiper": "^10.0.4",
     "typescript": "4.9.4",
     "yet-another-react-lightbox": "^2.2.5"
   },
