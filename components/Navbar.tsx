@@ -46,20 +46,20 @@ export default function NavbarTop() {
       </Navbar.Brand>
 
       <Navbar.Collapse>
-        <Navbar.Link href="/" className="text-lg text-[#fff]">
-          Home
+        <Navbar.Link href="/" className="text-lg text-white dark:text-white">
+          <span className="text-white">Home</span>
         </Navbar.Link>
-        <Navbar.Link href="/services" className="text-lg text-[#fff]">
-          Services
+        <Navbar.Link href="/services" className="text-lg text-white dark:text-white">
+          <span className="text-white">Services</span>
         </Navbar.Link>
-        <Navbar.Link href="/aftersale" className="text-lg text-[#fff]">
-          After Sale
+        <Navbar.Link href="/aftersale" className="text-lg text-white dark:text-white">
+        <span className="text-white">After Sale</span>
         </Navbar.Link>
-        <Navbar.Link href="/finance" className="text-lg text-[#fff]">
-          Finance
+        <Navbar.Link href="/finance" className="text-lg text-white dark:text-white">
+        <span className="text-white">Finance</span>
         </Navbar.Link>
-        <Navbar.Link href="/contact" className="text-lg text-[#fff]">
-          Contact
+        <Navbar.Link href="/contact" className="text-lg text-white dark:text-white">
+        <span className="text-white">Contact</span>
         </Navbar.Link>
       </Navbar.Collapse>
       <div className="flex md:order-2 gap-4">

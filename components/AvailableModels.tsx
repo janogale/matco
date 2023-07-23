@@ -37,15 +37,15 @@ const CarouselComponent = ({ carsData }: any) => {
     >
       {carsData.map(
         (item: { image: string; name: string; id: string | number }) => (
-          <Card
-           key={item.id}
+          <Card key={item.id} className="bg-gradient-to-t from-black m-2">
+          <div
            onClick={() => router.push(`/cars/${item.id}`)}
-           className="relative group text-center rounded-md bg-gradient-to-t from-black overflow-hidden  shadow-md p-4 m-2 hover:cursor-pointer hover:opacity-75">
+           className="relative group text-center overflow-hidden border-none p-4 hover:cursor-pointer hover:opacity-75">
             <div className="relative cursor-pointer">
               <Image
                 src={item.image}
                 alt={item.name}
-                width={1500}
+                width={1000}
                 height={500}
                 className="h-full w-full object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105"
               />
@@ -53,7 +53,8 @@ const CarouselComponent = ({ carsData }: any) => {
                 <p className="absolute font-mono text-white text-2xl font-bold">{item.name}</p>
               </div>
             </div>
-          </Card>
+          </div>
+      </Card>
         )
       )}
     </Carousel>
