@@ -6,9 +6,12 @@ import suzukiLogo from "../public/images/suzuki.png";
 import Container from "./ui/Container";
 import { useEffect, useState } from "react";
 
+import { useRouter, usePathname } from 'next/navigation';
+
 export default function NavbarTop() {
   const [scrolled, setScrolled] = useState(false);
 
+  const pathname = usePathname()
   // Function to handle the scroll event
   const handleScroll = () => {
     const scrollY = window.scrollY;
@@ -32,7 +35,7 @@ export default function NavbarTop() {
       fluid={true}
       rounded={true}
       className={`max-w-6xl mx-auto ${
-        scrolled ? 'bg-[rgb(2,132,199)] shadow' : 'bg-transparent'
+        pathname === '/' ? (scrolled ? 'bg-[rgb(2,132,199)] shadow' : 'bg-transparent') : 'bg-[rgb(2,132,199)] shadow'
       } fixed w-full z-50 transition-all`}
     >
       <Navbar.Brand href="/">
@@ -43,19 +46,19 @@ export default function NavbarTop() {
       </Navbar.Brand>
 
       <Navbar.Collapse>
-        <Navbar.Link href="/" className="text-lg text-[#ffffff]">
+        <Navbar.Link href="/" className="text-lg text-[#fff]">
           Home
         </Navbar.Link>
-        <Navbar.Link href="/services" className="text-lg text-[#ffffff]">
+        <Navbar.Link href="/services" className="text-lg text-[#fff]">
           Services
         </Navbar.Link>
-        <Navbar.Link href="/aftersale" className="text-lg text-[#ffffff]">
+        <Navbar.Link href="/aftersale" className="text-lg text-[#fff]">
           After Sale
         </Navbar.Link>
-        <Navbar.Link href="/finance" className="text-lg text-[#ffffff]">
+        <Navbar.Link href="/finance" className="text-lg text-[#fff]">
           Finance
         </Navbar.Link>
-        <Navbar.Link href="/contact" className="text-lg text-[#ffffff]">
+        <Navbar.Link href="/contact" className="text-lg text-[#fff]">
           Contact
         </Navbar.Link>
       </Navbar.Collapse>

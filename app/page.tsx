@@ -2,10 +2,10 @@
 
 import HomeCTA from "../components/HomeCTA";
 import Banner from "../components/ui/Banner";
-// import TabsCars from "../components/TabsCars";
+import TabsCars from "../components/TabsCars";
 import { carsData } from "../sampledata";
 import Heading from "../components/ui/Heading";
-import TapsCars from "../components/cars/TapsCars";
+// import TapsCars from "../components/cars/TapsCars";
 import Container from "../components/ui/Container";
 import Explore from '../components/explore/Explore';
 import HomeCarousel from "../components/HomeCarousel";
@@ -28,9 +28,11 @@ export default function Home() {
         <Container>
           <Banner text1="Explore the Affordable" text2="New Models" />
           <Heading>Car Models</Heading>
-          {/* <TabsCars /> */}
-          <TapsCars /> 
+          <TabsCars />
+          {/* <TapsCars />  */}
+          {/* <div className="my-16">
           <AvailableModels />
+          </div> */}
         </Container>
         <HomeCTA />
         <Explore />

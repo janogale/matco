@@ -1,11 +1,11 @@
 import React from 'react'
 import Image from 'next/image'
 
-import Banner from '../ui/Banner'
+import Banner from '../ui/Banner';
 import Image1 from '../../public/images/explore/1.png';
 import swift from '../../public/images/explore/swift.webp';
-import swiftRed from '../../public/images/explore/swift-red.png';
 import engine from '../../public/images/explore/engine.webp';
+import swiftRed from '../../public/images/explore/swift-red.png';
 
 const Explore = () => {
   return (
