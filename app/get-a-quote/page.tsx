@@ -1,8 +1,8 @@
 import React from "react";
 
-import Container from "../../../components/ui/Container";
-import GetQuoteForm from "../../../components/getqoutform/GetQoutForm";
-import Heading from "../../../components/ui/Heading";
+import Container from "../../components/ui/Container";
+import GetQuoteForm from "../../components/getqoutform/GetQoutForm";
+import Heading from "../../components/ui/Heading";
 
 const GetQuotePage = () => {
   return (

@@ -1,42 +1,63 @@
 import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 import { Card } from "flowbite-react";
-import { Button } from "flowbite-react";
-import { Navigation, Pagination, Scrollbar, A11y } from "swiper/modules";
-import { Swiper, SwiperSlide } from "swiper/react";
 
-import "swiper/css";
-import "swiper/css/navigation";
-import "swiper/css/pagination";
-import "swiper/css/scrollbar";
+const CarouselComponent = ({ carsData }: any) => {
+  const router = useRouter();
+  
+  // Configuration for the carousel
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 3,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
-// sample data
-import { carsData } from "../sampledata";
-import Heading from "./ui/Heading";
-
-const AvailableModels = () => {
   return (
-    <div className="p-6">
-      <h1 className="text-3xl font-bold mb-4">React Swiper Carousel</h1>
-      <Swiper
-        modules={[Navigation, Pagination, Scrollbar, A11y]}
-        spaceBetween={5}
-        slidesPerView={3} // Show 3 slides per view by default
-        navigation
-        onSwiper={(swiper) => console.log(swiper)}
-        onSlideChange={() => console.log("slide change")}
-        className="mySwiper"
-      >
-        {carsData.map((item) => (
-          <Card className="w-full max-w-sm cursor-pointer" key={item.id}>
-            <SwiperSlide>
-              <img src={item.image} alt={`Slide ${item.id}`} className="w-96" />
-              <h2 className="text-2xl text-white font-bold absolute left-10 bottom-6 bg-black py-1 px-2">{item.name}</h2>
-            </SwiperSlide>
+    <Carousel
+      responsive={responsive}
+      infinite={true}
+      autoPlay={true}
+      autoPlaySpeed={5000}
+      itemClass="carousel-item-padding-40-px"
+      transitionDuration={500}
+      containerClass="carousel-container"
+      customTransition="transform 500ms ease-in-out"
+    >
+      {carsData.map(
+        (item: { image: string; name: string; id: string | number }) => (
+          <Card
+           key={item.id}
+           onClick={() => router.push(`/cars/${item.id}`)}
+           className="relative group text-center rounded-md bg-gradient-to-t from-black overflow-hidden  shadow-md p-4 m-2 hover:cursor-pointer hover:opacity-75">
+            <div className="relative cursor-pointer">
+              <Image
+                src={item.image}
+                alt={item.name}
+                width={1500}
+                height={500}
+                className="h-full w-full object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105"
+              />
+              <div className="absolute inset-0 flex items-end justify-start pointer-events-none">
+                <p className="absolute font-mono text-white text-2xl font-bold">{item.name}</p>
+              </div>
+            </div>
           </Card>
-        ))}
-      </Swiper>
-    </div>
+        )
+      )}
+    </Carousel>
   );
 };
 
-export default AvailableModels;
+export default CarouselComponent;

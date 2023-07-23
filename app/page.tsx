@@ -2,7 +2,7 @@
 
 import HomeCTA from "../components/HomeCTA";
 import Banner from "../components/ui/Banner";
-import TabsCars from "../components/TabsCars";
+// import TabsCars from "../components/TabsCars";
 import { carsData } from "../sampledata";
 import Heading from "../components/ui/Heading";
 // import TapsCars from "../components/cars/TapsCars";
@@ -28,11 +28,11 @@ export default function Home() {
         <Container>
           <Banner text1="Explore the Affordable" text2="New Models" />
           <Heading>Car Models</Heading>
-          <TabsCars />
+          {/* <TabsCars /> */}
           {/* <TapsCars />  */}
-          {/* <div className="my-16">
-          <AvailableModels />
-          </div> */}
+          <div className="my-16">
+          <AvailableModels carsData={carsData} />
+          </div>
         </Container>
         <HomeCTA />
         <Explore />
