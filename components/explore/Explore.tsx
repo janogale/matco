@@ -31,7 +31,7 @@ const Explore = () => {
             </div>
             <div className="mt-3">
               <a
-                href="#"
+                href="/get-a-quote"
                 className="bg-red-600 text-white hover:text-black xxl:text-2xl px-3 py-1 hover:bg-white hover:border-white"
               >
                 Explore Now

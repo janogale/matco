@@ -6,6 +6,7 @@ import Button from "../form/Button";
 import TextInput from "../form/Input";
 import SelectInput from "../form/Select";
 import CheckboxInput from "../form/Checkbox";
+import { carsData } from '../../sampledata/index'
 
 interface FormData {
   carOptions: string;
@@ -109,25 +110,25 @@ const GetQouteForm = () => {
           Select a model
         </p>
         <div className="grid grid-cols-2 md:grid-cols-3 lg:grid-cols-7 gap-x-5 gap-y-2 items-center lg:justify-between">
-          {carOptions.map((option) => (
+          {carsData.map((option) => (
             <label
-              key={option.value}
+              key={option.id}
               className={`rounded-md lg:text-center w-full ${
-                formData.carOptions === option.value
+                formData.carOptions === option.name
                   ? "border bg-gray-200"
                   : "border-none bg-transparent"
               }`}
             >
               <p
-                onClick={() => handleCarOptionClick(option.value)}
+                onClick={() => handleCarOptionClick(option.name)}
                 className={`font-normal cursor-pointer text-xl uppercase text-gray-500 rounded p-1 lg:text-center border w-full ${
-                  formData.carOptions === option.value
+                  formData.carOptions === option.name
                     ? "border-blue-600 bg-blue-100"
                     : "border-transparent bg-white"
                 }`}
               >
                 <span className="flex items-center justify-center h-12">
-                  {option.label}
+                  {option.name}
                 </span>
               </p>
             </label>
