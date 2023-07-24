@@ -31,8 +31,8 @@ export default function Home() {
           {/* <TabsCars /> */}
           {/* <TapsCars />  */}
         </Container>
-        <AvailableModels carsData={carsData} />
       </div>
+        <AvailableModels carsData={carsData} />
       <HomeCTA />
       <Explore />
       <div className="my-16"></div>

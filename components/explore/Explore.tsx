@@ -48,7 +48,8 @@ const Explore = () => {
             />
           </div>
         </div>
-        <div className="cursor-pointer bg-gray-50 h-screen-50 lg:h-20rem xxl:h-20rem flex flex-col items-center justify-around image-scale-effect-small">
+        <div className="cursor-pointer bg-gray-50 h-screen-25 lg:h-10rem xxl:h-15rem flex flex-col items-center justify-around image-scale-effect-small">
+        <a href="/test-drive">
           <div>
             <span className="text-center w-full text-3xl capitalize font-medium">
               let&apos;s drive
@@ -63,8 +64,10 @@ const Explore = () => {
               />
             </div>
           </div>
+        </a>
         </div>
         <div className="cursor-pointer bg-red-500 h-screen-50 lg:h-20rem xxl:h-20rem relative overflow-hidden image-scale-effect-small">
+         <a href="/genuine-parts">
           <div className="flex flex-col items-center justify-around lg:justify-end absolute left-0 top-0 w-full h-full">
             <div className="absolute left-0 top-0 w-full pt-10">
               <span className="z-10 relative block text-center text-gray-200 lg:mb-5 w-full text-3xl capitalize font-medium">
@@ -82,6 +85,7 @@ const Explore = () => {
               height={500}
             />
           </div>
+          </a>
         </div>
         <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-20rem xxl:h-20rem flex items-center justify-center">
           <div className="capitalize text-center text-gray-100 font-light">
@@ -91,7 +95,7 @@ const Explore = () => {
             </div>
             <div>
               <a
-                href="#"
+                href="/get-a-quote"
                 className="trasn-button border-gray-100 border-2 mt-5 inline-block px-8 rounded py-1 text-base hover:text-sky-600 hover:bg-white hover:border-white transition ease-linear duration-200 hover:font-medium"
               >
                 Explore Parts
@@ -100,6 +104,7 @@ const Explore = () => {
           </div>
         </div>
         <div className="cursor-pointer bg-white h-screen-50 lg:h-20rem xxl:h-20rem relative">
+          <a href="/book-service">
           <div className="flex flex-col items-center justify-end absolute left-0 top-0 w-full h-full">
             <div>
               <span className="text-center text-gray-900 mb-5 w-full text-3xl capitalize font-medium">
@@ -117,6 +122,7 @@ const Explore = () => {
               />
             </div>
           </div>
+          </a>
         </div>
       </div>
     </section>
