@@ -12,7 +12,7 @@ const CarouselComponent = ({ carsData }: any) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 3,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -47,6 +47,7 @@ const CarouselComponent = ({ carsData }: any) => {
                 alt={item.name}
                 width={1000}
                 height={500}
+                quality={80}
                 className="h-full w-full object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105"
               />
               <div className="absolute inset-0 flex items-end justify-start pointer-events-none">

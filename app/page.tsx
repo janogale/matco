@@ -27,13 +27,12 @@ export default function Home() {
         <HomeCarousel />
         <Container>
           <Banner text1="Explore the Affordable" text2="New Models" />
-          <Heading>Car Models</Heading>
           {/* <TabsCars /> */}
           {/* <TapsCars />  */}
+        </Container>
           <div className="my-16">
           <AvailableModels carsData={carsData} />
           </div>
-        </Container>
         <HomeCTA />
         <Explore />
         <div className="my-16"></div>
