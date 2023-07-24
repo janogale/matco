@@ -3,6 +3,7 @@ import { notFound, usePathname } from "next/navigation";
 
 import Footer from "../components/Footer";
 import Navbar from "../components/Navbar";
+import Sidebar from "../components/Sidebar";
 import "./globals.css";
 
 export default function RootLayout({
@@ -18,6 +19,7 @@ export default function RootLayout({
       <body>
         <div className="mx-auto w-full relative">
           <Navbar />
+          <Sidebar />
           {/* Add empty to all paths except home page */}
           {path !== "/" && <div className="h-28 "></div>}
           {children}
