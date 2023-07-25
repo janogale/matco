@@ -49,6 +49,9 @@ export default function NavbarTop() {
         <Navbar.Link href="/" className="text-lg text-white dark:text-white">
           <span className="text-white">Home</span>
         </Navbar.Link>
+        <Navbar.Link href="/about" className="text-lg text-white dark:text-white">
+          <span className="text-white">About</span>
+        </Navbar.Link>
         <Navbar.Link href="/services" className="text-lg text-white dark:text-white">
           <span className="text-white">Services</span>
         </Navbar.Link>
