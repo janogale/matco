@@ -51,7 +51,9 @@ const GenuinePartsPage = () => {
         <div className="text-xl font-semibold uppercase text-gray-600 my-5">
           <div>Request a Quote – Genuine Parts</div>
         </div>
+        <div className="shadow rounded-md p-5 mt-5 bg-gray-50">
         <GetQouteForm />
+        </div>
       </div>
     </Container>
   );

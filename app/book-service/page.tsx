@@ -83,7 +83,9 @@ const page = () => {
         <div className="text-3xl font-semibold uppercase text-sky-600 mb-5">
           <div>Request Service booking</div>
         </div>
+        <div className="shadow rounded-md p-5 mt-5 bg-gray-50">
         <GetQouteForm />
+        </div>
       </div>
     </Container>
   );
