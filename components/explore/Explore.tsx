@@ -89,7 +89,7 @@ const Explore = () => {
           </div>
           </a>
         </div>
-        <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[30rem] xxl:h-[35rem] flex items-center justify-center">
+        <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[17rem] xxl:h-[35rem] flex items-center justify-center">
           <div className="capitalize text-center text-gray-100 font-light mt-28 mb-32 lg:my-0">
             <div className="text-4xl leading-tight">
               <span className="block">Suzuki</span>
@@ -105,18 +105,18 @@ const Explore = () => {
             </div>
           </div>
         </div>
-        <div className="cursor-pointer bg-white h-screen-50 lg:h-[30rem] xxl:h-[35rem] relative my-48 lg:my-0">
+        <div className="cursor-pointer bg-white h-screen-50 lg:h-[17rem] xxl:h-[35rem] relative my-48 lg:my-0">
           <a href="/book-service">
-          <div className="flex flex-col items-center justify-around absolute left-0 top-10 w-full h-full">
+          <div className="flex flex-col items-center justify-center absolute left-0 top-10 w-full h-full">
             <div>
               <span className="text-center text-gray-900 mb-5 w-full text-3xl capitalize font-medium">
                 <span className="block text-sm">Book A</span>
                 <span className="block">Car Service</span>
               </span>
             </div>
-            <div className="relative transition-transform duration-300 transform hover:scale-102">
+            <div className="flex flex-col items-center justify-center relative transition-transform duration-300 transform hover:scale-102">
               <Image
-                className="w-2/3 md:w-full"
+                className="w-1/3 md:w-1/2"
                 src={engine}
                 alt="banner image"
                 width={500}

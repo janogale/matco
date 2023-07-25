@@ -36,26 +36,27 @@ const CarouselComponent = ({ carsData }: any) => {
       customTransition="transform 500ms ease-in-out"
     >
       {carsData.map(
-        (item: { image: string; name: string; id: string | number }) => (
-          <Card key={item.id} className="bg-gradient-to-t from-black m-2">
+        (item: { image: string; name: string; logo: string; id: string | number }) => (
           <div
+          key={item.id}
            onClick={() => router.push(`/cars/${item.id}`)}
-           className="relative group text-center overflow-hidden border-none p-4 hover:cursor-pointer hover:opacity-75">
-            <div className="relative cursor-pointer">
+           className="bg-gradient-to-t from-black rounded-md m-2 relative group text-center overflow-hidden border-none p-4 hover:cursor-pointer hover:opacity-75">
+            <div className="relative overflow-hidden cursor-pointer">
               <Image
                 src={item.image}
-                alt={item.name}
+                alt={item.name} 
                 width={1000}
                 height={500}
                 quality={80}
-                className="h-full w-full object-cover object-center rounded-lg transition-transform duration-300 transform hover:scale-105"
+                className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
               />
               <div className="absolute inset-0 flex items-end justify-start pointer-events-none">
-                <p className="absolute font-mono text-white text-2xl font-bold">{item.name}</p>
+                <p className="absolute font-mono text-white text-2xl font-bold">
+                  {item.logo ? <img src={item.logo} alt={item.name} className="w-28 h-10" /> : <span>{item.name}</span>}
+                </p>
               </div>
             </div>
           </div>
-      </Card>
         )
       )}
     </Carousel>
