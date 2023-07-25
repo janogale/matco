@@ -37,44 +37,44 @@ const page = () => {
               Servicing
             </h2>
             <div className="prose prose-lg prose-indigo mt-5 text-gray-500">
-            <p>
-              Help us making your journey and Suzuki/JAC Service Experience a
-              memorable one.
-            </p>
-            <p>
-              Book an Appointment for all your servicing needs, including
-              Express maintenance & get
-            </p>
-            <ul className="list-disc mt-5">
-              <li>Priority Privileged Services</li>
-              <li>
-                Extra 5% discount on Published Menu Pricing if booked between
-                Tuesday to Thursday for Periodic Maintenance Services
-              </li>
-              <li>Saturday Appointments (Cut off time Wednesday 5 pm)</li>
-              <li>Free End of Warranty Inspection</li>
-              <li>Recall / Product Update Check done in Advance</li>
-            </ul>
-            <div className="font-semibold mt-10">
-              To know more details please drop a{" "}
-              <a
-                href="https://wa.me/+252636390000"
-                target="_blank"
-                className="border-b border-gray-400 pb-1 hover:text-red-500"
-                rel="noreferrer"
-              >
-                WhatsApp message
-              </a>{" "}
-              or Call Suzuki Service Hotline Number:
-              <a
-                href="callto:+252636390000"
-                target="_blank"
-                className="border-b border-gray-400 pb-1 hover:text-red-500"
-                rel="noreferrer"
-              >
-                +252 (63) 6390000
-              </a>
-            </div>
+              <p>
+                Help us making your journey and Suzuki/JAC Service Experience a
+                memorable one.
+              </p>
+              <p>
+                Book an Appointment for all your servicing needs, including
+                Express maintenance & get
+              </p>
+              <ul className="list-disc mt-5">
+                <li>Priority Privileged Services</li>
+                <li>
+                  Extra 5% discount on Published Menu Pricing if booked between
+                  Tuesday to Thursday for Periodic Maintenance Services
+                </li>
+                <li>Saturday Appointments (Cut off time Wednesday 5 pm)</li>
+                <li>Free End of Warranty Inspection</li>
+                <li>Recall / Product Update Check done in Advance</li>
+              </ul>
+              <div className="font-semibold mt-10">
+                To know more details please drop a{" "}
+                <a
+                  href="https://wa.me/+252636390000"
+                  target="_blank"
+                  className="border-b border-gray-400 pb-1 hover:text-red-500"
+                  rel="noreferrer"
+                >
+                  WhatsApp message
+                </a>{" "}
+                or Call Suzuki Service Hotline Number:
+                <a
+                  href="callto:+252636390000"
+                  target="_blank"
+                  className="border-b border-gray-400 pb-1 hover:text-red-500"
+                  rel="noreferrer"
+                >
+                  +252 (63) 6390000
+                </a>
+              </div>
             </div>
           </div>
         </div>
@@ -84,8 +84,15 @@ const page = () => {
           <div>Request Service booking</div>
         </div>
         <div className="shadow rounded-md p-5 mt-5 bg-gray-50">
-        <GetQouteForm />
+          <GetQouteForm />
         </div>
+      </div>
+      <div className="prose prose-xl prose-indigo mt-5 text-gray-700">
+        <ul className="list-disc mt-5">
+          <li>
+          This is only a Service Booking Request and Suzuki Service Team will call you to confirm if your requested date and time slot is available.
+          </li>
+        </ul>
       </div>
     </Container>
   );

@@ -7,10 +7,17 @@ import Button from "../form/Button";
 import TextInput from "../form/Input";
 import SelectInput from "../form/Select";
 import CheckboxInput from "../form/Checkbox";
-import { carsData } from '../../sampledata/index'
+import { carsData } from "../../sampledata/index";
 
 interface FormData {
+  preferredBranch: string;
+  serviceType: string;
+  mobile: string;
+  time: string;
+  date: string;
+  age: string;
   carOptions: string;
+  modelYear: string;
   firstName: string;
   lastName: string;
   phoneNumber: string;
@@ -20,14 +27,20 @@ interface FormData {
   PurchaseType: string;
   hearUs: string;
   confirm: boolean;
-  latestUpdates: boolean;
 }
 
 const GetQouteForm = () => {
   const [formData, setFormData] = useState<FormData>({
+    preferredBranch: "",
+    serviceType: "",
+    mobile: "",
+    time: "",
+    date: "",
     carOptions: "Vitra",
+    modelYear: "2022",
     firstName: "",
     lastName: "",
+    age: "",
     email: "",
     showroom: "New Hargeisa",
     phoneNumber: "",
@@ -35,7 +48,6 @@ const GetQouteForm = () => {
     PurchaseType: "Individual",
     hearUs: "Email",
     confirm: false,
-    latestUpdates: false,
   });
 
   const handleChange = (
@@ -69,39 +81,58 @@ const GetQouteForm = () => {
     console.log(formData);
   };
 
+  // Extract unique car names from carsData
+  const carNames = Array.from(new Set(carsData.map((car) => car.name)));
+
+  // Extract unique model years from carsData
+  const modelYears = Array.from(new Set(carsData.map((car) => car.modalYear)));
+
   const selectOptions = [
-    { value: "select option", label: "Select Option" },
+    { value: "", label: "Title" },
     { value: "Mr", label: "Mr" },
     { value: "Mrs", label: "Mrs" },
   ];
 
   const PurchaseType = [
-    { value: "purchase type", label: "Select Purchase type" },
+    { value: "", label: "Select Purchase type" },
     { value: "individual", label: "Individual" },
     { value: "company", label: "Company" },
   ];
 
   const showroom = [
-    { value: "showroom", label: "Select showroom" },
+    { value: "", label: "Select showroom" },
     { value: "new hargeisa", label: "New Hargeisa" },
     { value: "Pepsi", label: "Pepsi" },
   ];
 
+  const preferredBranch = [
+    { value: "", label: "Preferred Branch" },
+    { value: "new hargeisa", label: "New Hargeisa" },
+    { value: "Pepsi", label: "Pepsi" },
+  ];
+
+  const serviceTypes = [
+    { value: "", label: "Service Type" },
+    { value: "service1", label: "First 5,000KM service" },
+    { value: "service2", label: "10k/30k/50K/70K/90K KM Interim Service" },
+    { value: "service3", label: "20K/60K/100K KM Semi-Major Service" },
+    { value: "service4", label: "40K/80K KM Service Major Service" },
+    { value: "service5", label: "Inspection & Diagnoses" },
+    { value: "service6", label: "End Of Warranty Inspection" },
+    { value: "service7", label: "General Repairs" },
+    { value: "service8", label: "Accessories Fitment" },
+    { value: "service9", label: "Recall Appointment" },
+    { value: "service10", label: "Rust Proof/Paint Protection/Window Tinting" },
+  ];
+
   const hearUs = [
-    { value: "hear us", label: "Where do you hear us" },
+    { value: "", label: "Where do you hear us" },
     { value: "email", label: "Email" },
     { value: "friend", label: "Friend" },
     { value: "google", label: "Google" },
     { value: "Internet", label: "Web - Internet" },
     { value: "social media", label: "Social Media" },
     { value: "others", label: "Others" },
-  ];
-
-  const carOptions = [
-    { value: "Coupe", label: "Coupe" },
-    { value: "SUV", label: "SUV" },
-    { value: "Sedan", label: "Sedan" },
-    { value: "Hatchback", label: "Hatchback" },
   ];
 
   return (
@@ -129,7 +160,11 @@ const GetQouteForm = () => {
                 }`}
               >
                 <span className="flex items-center justify-center h-12">
-                  {option.logo ? <img src={option.logo} alt={option.name} /> : <span className="italic font-bold">{option.name}</span>}
+                  {option.logo ? (
+                    <img src={option.logo} alt={option.name} />
+                  ) : (
+                    <span className="italic font-bold">{option.name}</span>
+                  )}
                 </span>
               </p>
             </label>
@@ -160,7 +195,7 @@ const GetQouteForm = () => {
           name="firstName"
           value={formData.firstName}
           onChange={handleChange}
-          placeholder="Enter your first name"
+          placeholder="First name"
         />
 
         <TextInput
@@ -168,24 +203,76 @@ const GetQouteForm = () => {
           name="lastName"
           value={formData.lastName}
           onChange={handleChange}
-          placeholder="Enter your last name"
+          placeholder="Last name"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
-          label="Phone Number"
-          name="phoneNumber"
-          placeholder="Enter your number"
-          value={formData.phoneNumber}
+          label="Age"
+          name="age"
+          value={formData.age}
           onChange={handleChange}
+          placeholder="Age"
         />
-
         <TextInput
           label="Email"
           name="email"
           value={formData.email}
           onChange={handleChange}
-          placeholder="Enter your email"
+          placeholder="Email"
+        />
+      </div>
+
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+        <TextInput
+          label="Phone Number"
+          name="phoneNumber"
+          placeholder="Phone Number"
+          value={formData.phoneNumber}
+          onChange={handleChange}
+        />
+
+        <TextInput
+          label="Mobile Number"
+          name="mobile"
+          value={formData.mobile}
+          onChange={handleChange}
+          placeholder="Mobile Number"
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+        <SelectInput
+          label="Car Options"
+          name="carOptions"
+          value={formData.carOptions}
+          onChange={handleChange}
+          options={carNames.map((name) => ({ value: name, label: name }))}
+        />
+
+        <SelectInput
+          label="Model Year"
+          name="modelYear"
+          value={formData.modelYear}
+          onChange={handleChange}
+          options={modelYears.map((year) => ({ value: year, label: year }))}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+        <TextInput
+          label="Date"
+          name="date"
+          value={formData.date}
+          onChange={handleChange}
+          placeholder="Date"
+          type="date"
+        />
+        <TextInput
+          label="Time"
+          name="time"
+          value={formData.time}
+          onChange={handleChange}
+          placeholder="Time"
+          type="time"
         />
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
@@ -205,6 +292,23 @@ const GetQouteForm = () => {
           options={hearUs}
         />
       </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+        <SelectInput
+          label="Preferred Branch"
+          name="preferredBranch"
+          value={formData.preferredBranch}
+          onChange={handleChange}
+          options={preferredBranch}
+        />
+
+        <SelectInput
+          label="Service Type"
+          name="serviceType"
+          value={formData.serviceType}
+          onChange={handleChange}
+          options={serviceTypes}
+        />
+      </div>
       <hr className="my-5 text-red-500" />
       <div>
         <CheckboxInput
@@ -213,13 +317,6 @@ const GetQouteForm = () => {
           checked={formData.confirm}
           onChange={handleChange}
           className="mt-1 text-red-600"
-        />
-        <CheckboxInput
-          label="Check this for latest offers, deals and updates."
-          name="latestUpdates"
-          checked={formData.latestUpdates}
-          onChange={handleChange}
-          className="mt-1"
         />
       </div>
       <hr className="my-5 text-red-500" />

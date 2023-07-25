@@ -5,6 +5,7 @@ import { TextInput } from 'flowbite-react';
 interface TextInputProps {
     label: string;
     name: string;
+    type?: string;
     placeholder: string;
     className?: string;
     labelClassName?: string;
@@ -12,14 +13,14 @@ interface TextInputProps {
     onChange: (e: ChangeEvent<HTMLInputElement>) => void;
   }
   
-const Input = ({ label, name, value, onChange, placeholder, className, labelClassName, ...rest }: TextInputProps) => {
+const Input = ({ label, name, value, onChange, placeholder, className, type, labelClassName, ...rest }: TextInputProps) => {
   return (
     <div className="mb-4">
       {/* <label htmlFor={name} className={`${labelClassName}`}>
         {label}
       </label> */}
       <TextInput
-        type="text"
+        type={type}
         id={name}
         name={name}
         placeholder={placeholder}

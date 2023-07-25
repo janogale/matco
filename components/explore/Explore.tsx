@@ -90,7 +90,7 @@ const Explore = () => {
           </a>
         </div>
         <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[30rem] xxl:h-[35rem] flex items-center justify-center">
-          <div className="capitalize text-center text-gray-100 font-light my-28 md:my-0">
+          <div className="capitalize text-center text-gray-100 font-light mt-28 mb-32 lg:my-0">
             <div className="text-4xl leading-tight">
               <span className="block">Suzuki</span>
               <span className="block">Genuine Parts</span>
@@ -105,7 +105,7 @@ const Explore = () => {
             </div>
           </div>
         </div>
-        <div className="cursor-pointer bg-white h-screen-50 lg:h-[30rem] xxl:h-[35rem] relative my-48 md:my-0">
+        <div className="cursor-pointer bg-white h-screen-50 lg:h-[30rem] xxl:h-[35rem] relative my-48 lg:my-0">
           <a href="/book-service">
           <div className="flex flex-col items-center justify-around absolute left-0 top-10 w-full h-full">
             <div>
