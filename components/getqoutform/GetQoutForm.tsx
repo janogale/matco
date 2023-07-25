@@ -1,6 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
+import Image from "next/image";
 
 import Button from "../form/Button";
 import TextInput from "../form/Input";
@@ -121,14 +122,14 @@ const GetQouteForm = () => {
             >
               <p
                 onClick={() => handleCarOptionClick(option.name)}
-                className={`font-normal cursor-pointer text-xl uppercase text-gray-500 rounded p-1 lg:text-center border w-full ${
+                className={`font-normal cursor-pointer text-xl uppercase bg-black text-white rounded p-1 lg:text-center border w-full ${
                   formData.carOptions === option.name
-                    ? "border-blue-600 bg-blue-100"
+                    ? "border-blue-600 bg-[rgb(2,132,199)]"
                     : "border-transparent bg-white"
                 }`}
               >
                 <span className="flex items-center justify-center h-12">
-                  {option.name}
+                  {option.logo ? <img src={option.logo} alt={option.name} /> : <span className="italic font-bold">{option.name}</span>}
                 </span>
               </p>
             </label>
