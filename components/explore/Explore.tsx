@@ -38,9 +38,9 @@ const Explore = () => {
               </a>
             </div>
           </div>
-          <div className="w-full h-screen-60 sm:h-screen lg:h-20rem xxl:h-30rem image-scale-effect-small flex items-center justify-end">
+          <div className="w-full h-screen-40 sm:h-screen lg:h-[35rem] xxl:h-[40rem] flex items-center justify-end">
             <Image
-              className="mt-24 sm:mt-0 w-full object-cover object-right-bottom transition-transform duration-300 transform hover:scale-105"
+              className="mt-24 sm:mt-48 w-full object-cover object-right-bottom transition-transform duration-300 transform hover:scale-105"
               src={Image1}
               alt="banner image"
               width={1500}
@@ -48,15 +48,17 @@ const Explore = () => {
             />
           </div>
         </div>
-        <div className="cursor-pointer bg-gray-50 h-screen-25 lg:h-10rem xxl:h-15rem flex flex-col items-center justify-around image-scale-effect-small">
+        <div className="cursor-pointer bg-gray-50 h-screen-50 lg:h-[30rem] xxl:h-[35rem] flex flex-col items-center justify-center">
         <a href="/test-drive">
           <div>
-            <span className="text-center w-full text-3xl capitalize font-medium">
-              let&apos;s drive
-            </span>
+          <div className="w-full">
+              <span className="z-10 block text-center text-black w-full text-3xl capitalize font-medium">
+                <span className="block">Let&apos;s Drive</span>
+              </span>
+            </div>
             <div className="transition-transform duration-300 transform hover:scale-105">
               <Image
-                className="-ml-1 w-3/4"
+                className="-ml-1 w-full"
                 src={swift}
                 alt="banner image"
                 width={500}
@@ -66,11 +68,11 @@ const Explore = () => {
           </div>
         </a>
         </div>
-        <div className="cursor-pointer bg-red-500 h-screen-50 lg:h-20rem xxl:h-20rem relative overflow-hidden image-scale-effect-small">
+        <div className="cursor-pointer bg-red-600 h-screen-50 lg:h-[30rem] xxl:h-[35rem] relative overflow-hidden">
          <a href="/genuine-parts">
           <div className="flex flex-col items-center justify-around lg:justify-end absolute left-0 top-0 w-full h-full">
             <div className="absolute left-0 top-0 w-full pt-10">
-              <span className="z-10 relative block text-center text-gray-200 lg:mb-5 w-full text-3xl capitalize font-medium">
+              <span className="z-10 relative block text-center text-gray-200 w-full text-3xl capitalize font-medium">
                 <span className="block text-sm">Reach Out</span>
                 <span className="block">To Us</span>
               </span>
@@ -87,7 +89,7 @@ const Explore = () => {
           </div>
           </a>
         </div>
-        <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-20rem xxl:h-20rem flex items-center justify-center">
+        <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[30rem] xxl:h-[35rem] flex items-center justify-center">
           <div className="capitalize text-center text-gray-100 font-light">
             <div className="text-4xl leading-tight">
               <span className="block">Suzuki</span>
@@ -103,18 +105,18 @@ const Explore = () => {
             </div>
           </div>
         </div>
-        <div className="cursor-pointer bg-white h-screen-50 lg:h-20rem xxl:h-20rem relative">
+        <div className="cursor-pointer bg-white h-screen-50 lg:h-[30rem] xxl:h-[35rem] relative">
           <a href="/book-service">
-          <div className="flex flex-col items-center justify-end absolute left-0 top-0 w-full h-full">
+          <div className="flex flex-col items-center justify-around absolute left-0 top-10 w-full h-full">
             <div>
               <span className="text-center text-gray-900 mb-5 w-full text-3xl capitalize font-medium">
                 <span className="block text-sm">Book A</span>
                 <span className="block">Car Service</span>
               </span>
             </div>
-            <div className="relative transition-transform duration-300 transform hover:scale-105">
+            <div className="relative transition-transform duration-300 transform hover:scale-102">
               <Image
-                className="w-48 xxl:w-64 mx-auto"
+                className="w-full"
                 src={engine}
                 alt="banner image"
                 width={500}
