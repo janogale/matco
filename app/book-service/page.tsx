@@ -33,9 +33,10 @@ const page = () => {
       <div className="md:max-w-screen-xl mx-auto mt-10 px-5 xxl:px-0 text-gray-800">
         <div className="w-full space-y-10">
           <div className="content text-lg">
-            <h2 className="text-3xl font-semibold uppercase text-sky-600 mb-5">
+            <h2 className="text-3xl font-semibold uppercase text-sky-600 mt-12 mb-5">
               Servicing
             </h2>
+            <div className="prose prose-lg prose-indigo mt-5 text-gray-500">
             <p>
               Help us making your journey and Suzuki/JAC Service Experience a
               memorable one.
@@ -73,6 +74,7 @@ const page = () => {
               >
                 +252 (63) 6390000
               </a>
+            </div>
             </div>
           </div>
         </div>
