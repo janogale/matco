@@ -3,6 +3,10 @@
 import React, { useState, ChangeEvent, FormEvent } from "react";
 import emailjs from "@emailjs/browser";
 
+import Input from "../form/Input";
+import Button from "../form/Button";
+import TextAreaInput from "../form/TextArea";
+
 interface FormData {
   firstName: string;
   lastName: string;
@@ -64,6 +68,7 @@ const ContactForm = () => {
           console.log(result.text);
           setIsSuccessMessageVisible(true);
           setIsIncompleteFieldsVisible(false);
+
           setFormData({
             firstName: "",
             lastName: "",
@@ -72,6 +77,7 @@ const ContactForm = () => {
             email: "",
             message: "",
           });
+          
         },
         (error) => {
           console.log(error.text);
@@ -84,25 +90,18 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="container mx-auto p-4 bg-sky-600">
+    <div className="container mx-auto p-4 bg-sky-600 rounded">
       <form
         onSubmit={handleSubmit}
-        className="bg-white p-8 shadow rounded focus:outline-none"
+        className="bg-gray-50 p-8 shadow-sm rounded focus:outline-none"
       >
         <h2 className="text-2xl font-bold text-gray-900 text-center mb-4 sm:text-3xl sm:tracking-tight">
           Get in Tech
         </h2>
         <div className="flex justify-between rounded my-2">
           <div className="mb-4 w-full mr-2">
-            <label
-              htmlFor="firstName"
-              className="block text-gray-500 font-semibold mb-2"
-            >
-              First Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="firstName"
+            <Input
+              label="First Name*"
               name="firstName"
               placeholder="Enter your first name"
               value={formData.firstName}
@@ -111,15 +110,8 @@ const ContactForm = () => {
             />
           </div>
           <div className="mb-4 w-full">
-            <label
-              htmlFor="lastName"
-              className="block text-gray-500 font-semibold mb-2"
-            >
-              Last Name <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="lastName"
+            <Input
+              label="Last Name*"
               name="lastName"
               placeholder="Enter your last name"
               value={formData.lastName}
@@ -130,15 +122,8 @@ const ContactForm = () => {
         </div>
         <div className="flex justify-between rounded my-2">
           <div className="mb-4 w-full mr-2">
-            <label
-              htmlFor="phoneNumber"
-              className="block text-gray-500 font-semibold mb-2"
-            >
-              Phone Number <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="tel"
-              id="phoneNumber"
+            <Input
+              label="Phone Number*"
               name="phoneNumber"
               placeholder="Enter your number"
               value={formData.phoneNumber}
@@ -147,15 +132,8 @@ const ContactForm = () => {
             />
           </div>
           <div className="mb-4mb-4 w-full">
-            <label
-              htmlFor="address"
-              className="block text-gray-500 font-semibold mb-2"
-            >
-              Address <span className="text-red-500">*</span>
-            </label>
-            <input
-              type="text"
-              id="address"
+            <Input
+              label="Address*"
               name="address"
               placeholder="Enter your address"
               value={formData.address}
@@ -165,15 +143,8 @@ const ContactForm = () => {
           </div>
         </div>
         <div className="mb-4 rounded my-2">
-          <label
-            htmlFor="email"
-            className="block text-gray-500 font-semibold mb-2 outline-none focus:border-none"
-          >
-            Email <span className="text-red-500">*</span>
-          </label>
-          <input
-            type="email"
-            id="email"
+          <Input
+            label="Email*"
             name="email"
             placeholder="Enter your email"
             value={formData.email}
@@ -182,14 +153,8 @@ const ContactForm = () => {
           />
         </div>
         <div className="mb-4 rounded my-2">
-          <label
-            htmlFor="message"
-            className="block text-gray-500 font-semibold mb-2 outline-none focus:border-none"
-          >
-            Message <span className="text-red-500">*</span>
-          </label>
-          <textarea
-            id="message"
+          <TextAreaInput
+            label="Message"
             name="message"
             placeholder="Enter your message"
             value={formData.message}
@@ -203,12 +168,10 @@ const ContactForm = () => {
           </div>
         ) : (
           <div className="flex justify-center">
-            <button
-              type="submit"
+            <Button
+              label="Submit"
               className="bg-sky-600 text-white w-full px-4 py-2 rounded focus:border-none font-semibold hover:bg-sky-500"
-            >
-              Submit
-            </button>
+            />
           </div>
         )}
         {isSuccessMessageVisible && (

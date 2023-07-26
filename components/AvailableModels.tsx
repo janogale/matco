@@ -1,164 +1,65 @@
 import React from "react";
+import Image from "next/image";
+import { useRouter } from "next/navigation";
+import Carousel from "react-multi-carousel";
+import "react-multi-carousel/lib/styles.css";
 
-import Tagline from "./Tagline";
-import Banner from "./ui/Banner";
-
-interface CarType {
-  id: number;
-  name: string;
-  type: string;
-  colors?: string[];
-}
-
-const carTypes: CarType[] = [
-  {
-    id: 1,
-    name: "Vitra",
-    type: "Suzuki",
-    colors: ["White", "Gold", "Grey", "Silver", "Blue", "Ice-blue"],
-  },
-  {
-    id: 2,
-    name: "Swift",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 3,
-    name: "Jimny",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 4,
-    name: "Ertiga",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 5,
-    name: "Grand Vitra (coming soon)",
-    type: "Suzuki",
-    colors: [],
-  },
-  {
-    id: 6,
-    name: "T8 Pickup",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 7,
-    name: "N Series Single Cabin 3ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 8,
-    name: "N Series Double Cabin 3ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 9,
-    name: "Van 3 ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 10,
-    name: "Van 4 ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 11,
-    name: "Van 5 ton",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 12,
-    name: "Sunray Amblunce",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 13,
-    name: "Sunray Bus 17 Seats",
-    type: "JAC Models",
-    colors: [],
-  },
-  {
-    id: 14,
-    name: "Sunray Cargo Van",
-    type: "JAC Models",
-    colors: [],
-  },
-];
-
-const CarTypes: React.FC = () => {
-  const suzukiCars = carTypes.filter((carType) => carType.type === "Suzuki");
-  const jacCars = carTypes.filter((carType) => carType.type === "JAC Models");
+const CarouselComponent = ({ carsData }: any) => {
+  const router = useRouter();
+  
+  // Configuration for the carousel
+  const responsive = {
+    desktop: {
+      breakpoint: { max: 3000, min: 1024 },
+      items: 4,
+    },
+    tablet: {
+      breakpoint: { max: 1024, min: 464 },
+      items: 2,
+    },
+    mobile: {
+      breakpoint: { max: 464, min: 0 },
+      items: 1,
+    },
+  };
 
   return (
-    <div className="container mx-auto p-4">
-      <Banner text1="Available Models" />
-      <Tagline />
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-10 mt-3">
-        <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
-            <div className="bg-red-700 w-24 text-center text-white rounded-md absolute -top-5 -right-5 py-2">Available</div>
-          <h2 className="text-2xl font-bold mb-2">Suzuki</h2>
-          <hr className="mb-3"/>
-          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
-            {suzukiCars.map((carType) => (
-              <div
-                key={carType.id}
-              >
-                <h3 className="text-white font-semibold mb-2 border border-gray-100 rounded-md p-2 bg-[#90c340]">{carType.name}</h3>
-                <ul className="text-gray-600">
-                  {carType.colors?.map((color) => (
-                    <li key={color} className="flex items-center">
-                      <div
-                        className="w-4 h-4 rounded-full mr-2 flex"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                      {color}
-                    </li>
-                  ))}
-                </ul>
+    <Carousel
+      responsive={responsive}
+      infinite={true}
+      // autoPlay={true}
+      // autoPlaySpeed={5000}
+      itemClass="carousel-item-padding-40-px"
+      transitionDuration={500}
+      containerClass="carousel-container"
+      customTransition="transform 500ms ease-in-out"
+    >
+      {carsData.map(
+        (item: { image: string; name: string; logo: string; id: string | number }) => (
+          <div
+          key={item.id}
+           onClick={() => router.push(`/cars/${item.id}`)}
+           className="relative group text-center overflow-hidden border-none p-2 hover:cursor-pointer hover:opacity-75">
+            <div className="relative overflow-hidden cursor-pointer">
+              <Image
+                src={item.image}
+                alt={item.name} 
+                width={1000}
+                height={500}
+                quality={80}
+                className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
+              />
+              <div className="absolute inset-0 flex items-end justify-start pointer-events-none">
+                <p className="absolute font-mono text-white text-2xl font-bold">
+                  {item.logo ? <img src={item.logo} alt={item.name} className="w-28 h-10" /> : <span>{item.name}</span>}
+                </p>
               </div>
-            ))}
+            </div>
           </div>
-        </div>
-        <div className="border border-gray-200 rounded bg-white shadow p-10 relative">
-        <div className="bg-red-700 w-24 text-center text-white rounded-md absolute -top-5 -right-5 py-2">Available</div>
-          <h2 className="text-2xl font-bold mb-2">JAC Models</h2>
-          <hr className="mb-3"/>
-          <div className="grid grid-cols-1 sm:grid-cols-2 2xl:grid-cols-3 gap-4">
-            {jacCars.map((carType) => (
-              <div
-                key={carType.id}
-              >
-                <h3 className="text-white font-semibold mb-2 border border-gray-100 rounded-md p-2 bg-[#90c340]">{carType.name}</h3>
-                <ul className="text-gray-600">
-                  {carType.colors?.map((color) => (
-                    <li key={color} className="flex items-center">
-                      <div
-                        className="w-4 h-4 rounded-full mr-2"
-                        style={{ backgroundColor: color }}
-                      ></div>
-                      {color}
-                    </li>
-                  ))}
-                </ul>
-              </div>
-            ))}
-          </div>
-        </div>
-      </div>
-    </div>
+        )
+      )}
+    </Carousel>
   );
 };
 
-export default CarTypes;
+export default CarouselComponent;

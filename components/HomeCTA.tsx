@@ -1,6 +1,6 @@
 export default function HomeCTA() {
   return (
-    <div className="mx-auto bg-red-700 my-8">
+    <div className="mx-auto bg-red-700 mt-20 my-8">
       <div className="overflow-hidden rounded-lg  shadow-xl lg:grid lg:grid-cols-2 lg:gap-4">
         <div className="aspect-w-5 aspect-h-3 -mt-6 md:aspect-w-2 md:aspect-h-1 relative">
           <img

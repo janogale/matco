@@ -122,8 +122,38 @@ export default function ContactPage() {
           </div>
         </div>
       </div>
+      
       <div className="mx-auto max-w-7xl py-16 px-4 sm:px-6 lg:px-8">
         <div className="mx-auto max-w-lg md:grid md:max-w-none md:grid-cols-2 md:gap-8">
+        <div className="mt-12 sm:mt-16 md:mt-0">
+            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
+              Technical Support
+            </h2>
+            <div className="mt-3">
+              <p className="text-lg text-gray-500">
+                Our Technical Team Is Ready For You
+              </p>
+            </div>
+            <div className="mt-9">
+              <div className="flex">
+                <div className="flex-shrink-0">
+                  <PhoneIconSvg />
+                </div>
+                <div className="ml-3 text-base text-gray-500">
+                  <p>+252 (63) 6390000</p>
+                  <p className="mt-1">Sat-Thru 8am to 5pm</p>
+                </div>
+              </div>
+              <div className="mt-6 flex">
+                <div className="flex-shrink-0">
+                  <EmailIconSvg />
+                </div>
+                <div className="ml-3 text-base text-gray-500">
+                  <p>mustafa@matcomotors.com</p>
+                </div>
+              </div>
+            </div>
+          </div>
           <div>
             <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
               Sales Support
@@ -137,8 +167,8 @@ export default function ContactPage() {
                   <PhoneIconSvg />
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>+252(63)639 0000</p>
-                  <p className="mt-1">Sat-Thru 8am to 6pm</p>
+                  <p>+252(63)639 0001</p>
+                  <p className="mt-1">Sat-Thru 8am to 5pm</p>
                 </div>
               </div>
               <div className="mt-6 flex">
@@ -146,38 +176,7 @@ export default function ContactPage() {
                   <EmailIconSvg />
                 </div>
                 <div className="ml-3 text-base text-gray-500">
-                  <p>matcosales@gmail.com</p>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="mt-12 sm:mt-16 md:mt-0">
-            <h2 className="text-2xl font-bold text-gray-900 sm:text-3xl sm:tracking-tight">
-              Technical Support
-            </h2>
-            <div className="mt-3">
-              <p className="text-lg text-gray-500">
-                Lorem, ipsum dolor sit amet consectetur adipisicing elit. Magni,
-                repellat error corporis doloribus similique, voluptatibus
-                numquam quam, quae officiis facilis.
-              </p>
-            </div>
-            <div className="mt-9">
-              <div className="flex">
-                <div className="flex-shrink-0">
-                  <PhoneIconSvg />
-                </div>
-                <div className="ml-3 text-base text-gray-500">
-                  <p>+252 (63) 6390000</p>
-                  <p className="mt-1">Sat-Thru 8am to 6pm</p>
-                </div>
-              </div>
-              <div className="mt-6 flex">
-                <div className="flex-shrink-0">
-                  <EmailIconSvg />
-                </div>
-                <div className="ml-3 text-base text-gray-500">
-                  <p>mustafa.matco@gmail.com</p>
+                  <p>sales@matcomotors.com</p>
                 </div>
               </div>
             </div>
