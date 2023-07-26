@@ -242,7 +242,7 @@ const GetQouteForm = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <SelectInput
-          label="Car Options"
+          label="Car Models"
           name="carOptions"
           value={formData.carOptions}
           onChange={handleChange}

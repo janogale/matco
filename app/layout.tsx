@@ -12,7 +12,7 @@ export default function RootLayout({
   children: React.ReactNode;
 }) {
   const path = usePathname();
-  
+
   return (
     <html lang="en">
       <head />
@@ -25,6 +25,13 @@ export default function RootLayout({
           {children}
           <Footer />
         </div>
+        <script
+          type="text/javascript"
+          id="hs-script-loader"
+          async
+          defer
+          src="https://js-eu1.hs-scripts.com/141052168.js"
+        ></script>
       </body>
     </html>
   );

@@ -3,7 +3,6 @@ import Image from "next/image";
 import { useRouter } from "next/navigation";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
-import { Card } from "flowbite-react";
 
 const CarouselComponent = ({ carsData }: any) => {
   const router = useRouter();
@@ -28,8 +27,8 @@ const CarouselComponent = ({ carsData }: any) => {
     <Carousel
       responsive={responsive}
       infinite={true}
-      autoPlay={true}
-      autoPlaySpeed={5000}
+      // autoPlay={true}
+      // autoPlaySpeed={5000}
       itemClass="carousel-item-padding-40-px"
       transitionDuration={500}
       containerClass="carousel-container"
@@ -40,7 +39,7 @@ const CarouselComponent = ({ carsData }: any) => {
           <div
           key={item.id}
            onClick={() => router.push(`/cars/${item.id}`)}
-           className="bg-gradient-to-t from-black rounded-md m-2 relative group text-center overflow-hidden border-none p-4 hover:cursor-pointer hover:opacity-75">
+           className="relative group text-center overflow-hidden border-none p-2 hover:cursor-pointer hover:opacity-75">
             <div className="relative overflow-hidden cursor-pointer">
               <Image
                 src={item.image}
