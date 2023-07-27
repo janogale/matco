@@ -12,12 +12,13 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images//models/jac/jaclogo.png",
+    inStock: true,
   },
   {
     id: 3,
     href: "#",
     image: "/images/models/grant-vitara/grant-vitara.jpg",
-    name: "Grant Vitara (out stock)",
+    name: "Grant Vitara",
     price: '80000',
     modalYear: '2017',
     km: "30000km",
@@ -26,6 +27,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
+    inStock: false,
   },
   {
     id: 5,
@@ -40,6 +42,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
+    inStock: true,
   },
   {
     id: 14,
@@ -54,6 +57,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images//models/jac/jaclogo.png",
+    inStock: true,
   },
   {
     id: 6,
@@ -68,6 +72,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/jemnylogo.png",
+    inStock: true,
   },
   {
     id: 8,
@@ -82,6 +87,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: "/images/swiftlogo.png",
+    inStock: true,
   },
   {
     id: 10,
@@ -96,6 +102,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
+    inStock: true,
   },
   {
     id: 11,
@@ -110,6 +117,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
+    inStock: true,
   },
   {
     id: 12,
@@ -124,6 +132,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
+    inStock: true,
   },
   {
     id: 13,
@@ -138,6 +147,7 @@ export const carsData = [
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
     logo: undefined,
+    inStock: true,
   },
 ];
 
