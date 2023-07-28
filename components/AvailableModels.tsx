@@ -11,7 +11,7 @@ const CarouselComponent = ({ carsData }: any) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 5,
+      items: 4,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -46,7 +46,7 @@ const CarouselComponent = ({ carsData }: any) => {
             key={item.id}
             onClick={() => router.push(`/cars/${item.id}`)}
             className={`relative group text-center overflow-hidden border-none p-2 hover:cursor-pointer ${
-              !item.inStock ? "opacity-50 pointer-events-none cursor-not-allowed" : "hover:opacity-75"
+              !item.inStock ? "opacity-50 cursor-not-allowed" : "hover:opacity-75"
             }`}
           >
             <div className="relative overflow-hidden cursor-pointer">
@@ -58,7 +58,7 @@ const CarouselComponent = ({ carsData }: any) => {
                 quality={80}
                 className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
               />
-              <div className="absolute inset-0 flex items-end justify-start pointer-events-none">
+              <div className="absolute inset-0 flex items-end justify-start">
                 <p className="absolute font-mono text-white text-2xl font-bold">
                   {item.logo ? (
                     <img src={item.logo} alt={item.name} className="w-28 h-10" />
@@ -69,8 +69,8 @@ const CarouselComponent = ({ carsData }: any) => {
               </div>
             </div>
             {!item.inStock && (
-              <div className="absolute inset-0 flex items-center justify-center bg-opacity-20 rounded-md pointer-events-none cursor-not-allowed">
-                <p className="text-white text-lg font-semibold">Out of Stock</p>
+              <div className="absolute inset-0 flex items-center justify-center rounded-md">
+                <p className="text-white text-lg font-semibold bg-black px-5 py-1 rounded-full">Coming soon</p>
               </div>
             )}
           </div>

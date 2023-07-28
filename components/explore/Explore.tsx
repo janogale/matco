@@ -92,7 +92,6 @@ const Explore = () => {
         <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[17rem] xxl:h-[35rem] flex items-center justify-center">
           <div className="capitalize text-center text-gray-100 font-light mt-28 mb-32 lg:my-0">
             <div className="text-4xl leading-tight">
-              <span className="block">Suzuki</span>
               <span className="block">Genuine Parts</span>
             </div>
             <div>

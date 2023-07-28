@@ -12,19 +12,13 @@ import { carsData } from "../../sampledata/index";
 interface FormData {
   preferredBranch: string;
   serviceType: string;
-  mobile: string;
   time: string;
   date: string;
-  age: string;
   carOptions: string;
-  modelYear: string;
   firstName: string;
   lastName: string;
   phoneNumber: string;
   email: string;
-  showroom: string;
-  prefix: string;
-  PurchaseType: string;
   hearUs: string;
   confirm: boolean;
 }
@@ -33,19 +27,13 @@ const GetQouteForm = () => {
   const [formData, setFormData] = useState<FormData>({
     preferredBranch: "",
     serviceType: "",
-    mobile: "",
     time: "",
     date: "",
     carOptions: "Vitra",
-    modelYear: "2022",
     firstName: "",
     lastName: "",
-    age: "",
     email: "",
-    showroom: "New Hargeisa",
     phoneNumber: "",
-    prefix: "Mr",
-    PurchaseType: "Individual",
     hearUs: "Email",
     confirm: false,
   });
@@ -84,27 +72,6 @@ const GetQouteForm = () => {
   // Extract unique car names from carsData
   const carNames = Array.from(new Set(carsData.map((car) => car.name)));
 
-  // Extract unique model years from carsData
-  const modelYears = Array.from(new Set(carsData.map((car) => car.modalYear)));
-
-  const selectOptions = [
-    { value: "", label: "Title" },
-    { value: "Mr", label: "Mr" },
-    { value: "Mrs", label: "Mrs" },
-  ];
-
-  const PurchaseType = [
-    { value: "", label: "Select Purchase type" },
-    { value: "individual", label: "Individual" },
-    { value: "company", label: "Company" },
-  ];
-
-  const showroom = [
-    { value: "", label: "Select showroom" },
-    { value: "new hargeisa", label: "New Hargeisa" },
-    { value: "Pepsi", label: "Pepsi" },
-  ];
-
   const preferredBranch = [
     { value: "", label: "Preferred Branch" },
     { value: "new hargeisa", label: "New Hargeisa" },
@@ -127,11 +94,10 @@ const GetQouteForm = () => {
 
   const hearUs = [
     { value: "", label: "Where do you hear us" },
-    { value: "email", label: "Email" },
-    { value: "friend", label: "Friend" },
-    { value: "google", label: "Google" },
-    { value: "Internet", label: "Web - Internet" },
-    { value: "social media", label: "Social Media" },
+    { value: "Referent", label: "Referent" },
+    { value: "Showroom", label: "Showroom" },
+    { value: "web", label: "Our Web" },
+    { value: "Facebook", label: "Facebook" },
     { value: "others", label: "Others" },
   ];
 
@@ -173,23 +139,6 @@ const GetQouteForm = () => {
       </div>
       <hr className="my-5 text-red-500" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
-        <SelectInput
-          label="Select option"
-          name="prefix"
-          value={formData.prefix}
-          onChange={handleChange}
-          options={selectOptions}
-        />
-
-        <SelectInput
-          label="Purchase Type"
-          name="PurchaseType"
-          value={formData.PurchaseType}
-          onChange={handleChange}
-          options={PurchaseType}
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
           label="First Name"
           name="firstName"
@@ -208,22 +157,13 @@ const GetQouteForm = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
-          label="Age"
-          name="age"
-          value={formData.age}
-          onChange={handleChange}
-          placeholder="Age"
-        />
-        <TextInput
           label="Email"
           name="email"
           value={formData.email}
           onChange={handleChange}
           placeholder="Email"
         />
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
           label="Phone Number"
           name="phoneNumber"
@@ -231,32 +171,8 @@ const GetQouteForm = () => {
           value={formData.phoneNumber}
           onChange={handleChange}
         />
-
-        <TextInput
-          label="Mobile Number"
-          name="mobile"
-          value={formData.mobile}
-          onChange={handleChange}
-          placeholder="Mobile Number"
-        />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
-        <SelectInput
-          label="Car Models"
-          name="carOptions"
-          value={formData.carOptions}
-          onChange={handleChange}
-          options={carNames.map((name) => ({ value: name, label: name }))}
-        />
 
-        <SelectInput
-          label="Model Year"
-          name="modelYear"
-          value={formData.modelYear}
-          onChange={handleChange}
-          options={modelYears.map((year) => ({ value: year, label: year }))}
-        />
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
           label="Date"
@@ -277,11 +193,28 @@ const GetQouteForm = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <SelectInput
-          label="Nearest showroom you can visit"
-          name="showroom"
-          value={formData.showroom}
+          label="Car Models"
+          name="carOptions"
+          value={formData.carOptions}
           onChange={handleChange}
-          options={showroom}
+          options={carNames.map((name) => ({ value: name, label: name }))}
+        />
+
+        <SelectInput
+          label="Preferred Branch"
+          name="preferredBranch"
+          value={formData.preferredBranch}
+          onChange={handleChange}
+          options={preferredBranch}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+        <SelectInput
+          label="Service Type"
+          name="serviceType"
+          value={formData.serviceType}
+          onChange={handleChange}
+          options={serviceTypes}
         />
 
         <SelectInput
@@ -290,23 +223,6 @@ const GetQouteForm = () => {
           value={formData.hearUs}
           onChange={handleChange}
           options={hearUs}
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
-        <SelectInput
-          label="Preferred Branch"
-          name="preferredBranch"
-          value={formData.preferredBranch}
-          onChange={handleChange}
-          options={preferredBranch}
-        />
-
-        <SelectInput
-          label="Service Type"
-          name="serviceType"
-          value={formData.serviceType}
-          onChange={handleChange}
-          options={serviceTypes}
         />
       </div>
       <hr className="my-5 text-red-500" />
