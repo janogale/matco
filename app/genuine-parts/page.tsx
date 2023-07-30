@@ -1,7 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import cover from "../../public/images/explore/genuine-parts.webp";
-import cover2 from '../../public/images/models/jac/n-series.jpg'
+import cover2 from '../../public/images/models/jac/n-series-engine.jpg'
 import Container from "../../components/ui/Container";
 import GetQouteForm from "../../components/getqoutform/GetQoutForm";
 
@@ -53,7 +53,7 @@ const GenuinePartsPage = () => {
           <Image
             className="w-full h-auto my-2 group text-center bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
             src={cover2}
-            alt="banner image"
+            alt="n-series-engine"
             width={1500}
             height={500}
           />

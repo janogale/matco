@@ -96,7 +96,7 @@ const Explore = () => {
             </div>
             <div>
               <a
-                href="/get-a-quote"
+                href="/genuine-parts"
                 className="trasn-button border-gray-100 border-2 mt-5 inline-block px-8 rounded py-1 text-base hover:text-sky-600 hover:bg-white hover:border-white transition ease-linear duration-200 hover:font-medium"
               >
                 Explore Parts
