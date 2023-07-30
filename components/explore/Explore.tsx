@@ -3,7 +3,7 @@ import Image from "next/image";
 
 import Banner from "../ui/Banner";
 import Container from "../ui/Container";
-import Image1 from "../../public/images/explore/1.png";
+import Image1 from "../../public/images/models/jac/04.png";
 import swift from "../../public/images/explore/swift.webp";
 import engine from "../../public/images/explore/engine.webp";
 import swiftRed from "../../public/images/explore/swift-red.png";
@@ -12,10 +12,10 @@ const Explore = () => {
   return (
     <section className="explore-the-exciting pt-8">
       <Container>
-        <div className="md:max-w-screen-xl mx-auto px-5 xxl:px-0 heading mb-6">
+        <div className="md:max-w-screen-xl mx-auto px-5 xxl:px-0 heading mb-6 capitalize">
           <Banner
-            text1="Explore the Exciting"
-            text2="New SUZUKI and JAC Models"
+            text1="Our Exciting range of new suzuki and"
+            text2="and JAC vehicle's"
           />
         </div>
       </Container>
@@ -40,7 +40,7 @@ const Explore = () => {
           </div>
           <div className="w-full h-screen-40 sm:h-screen lg:h-[30rem] xxl:h-[35rem] flex items-center justify-end">
             <Image
-              className="mt-24 sm:mt-48 w-full object-cover object-right-bottom transition-transform duration-300 transform hover:scale-105"
+              className="mt-24 sm:mt-48 2xl:mt-80 w-full object-cover object-right-bottom transition-transform duration-300 transform hover:scale-105"
               src={Image1}
               alt="banner image"
               width={1500}
