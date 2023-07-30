@@ -20,7 +20,7 @@ const Explore = () => {
         </div>
       </Container>
       <div className="grid grid-cols-1 lg:grid-cols-2 xl:grid-cols-4">
-        <div className="relative bg-blue-900 h-screen-60 sm:h-screen lg:h-20rem xxl:h-30rem lg:col-span-2 lg:row-span-2 overflow-hidden">
+        <div className="relative bg-blue-900 h-screen-60 sm:h-screen lg:h-25rem xxl:h-30rem lg:col-span-2 lg:row-span-2 overflow-hidden">
           <div className="p-12 absolute left-0 top-0 w-full z-10">
             <div className="uppercase text-xl md:text-4xl xxl:text-5xl leading-none text-gray-100 font-light">
               <span className="block font-medium">
@@ -38,7 +38,7 @@ const Explore = () => {
               </a>
             </div>
           </div>
-          <div className="w-full h-screen-40 sm:h-screen lg:h-[35rem] xxl:h-[40rem] flex items-center justify-end">
+          <div className="w-full h-screen-40 sm:h-screen lg:h-[30rem] xxl:h-[35rem] flex items-center justify-end">
             <Image
               className="mt-24 sm:mt-48 w-full object-cover object-right-bottom transition-transform duration-300 transform hover:scale-105"
               src={Image1}
@@ -89,7 +89,7 @@ const Explore = () => {
           </div>
           </a>
         </div>
-        <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[17rem] xxl:h-[35rem] flex items-center justify-center">
+        <div className="cursor-pointer bg-sky-600 h-screen-50 lg:h-[17rem] 2xl:lg:h-[30rem] xxl:[40rem] flex items-center justify-center">
           <div className="capitalize text-center text-gray-100 font-light mt-28 mb-32 lg:my-0">
             <div className="text-4xl leading-tight">
               <span className="block">Genuine Parts</span>
@@ -104,7 +104,7 @@ const Explore = () => {
             </div>
           </div>
         </div>
-        <div className="cursor-pointer bg-white h-screen-50 lg:h-[17rem] xxl:h-[35rem] relative my-48 lg:my-0">
+        <div className="cursor-pointer bg-white h-screen-50 lg:h-[17rem] 2xl:lg:h-[30rem] xxl:[40rem] relative my-48 lg:my-0">
           <a href="/book-service">
           <div className="flex flex-col items-center justify-center absolute left-0 top-10 w-full h-full">
             <div>

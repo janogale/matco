@@ -11,7 +11,7 @@ const CarouselComponent = ({ carsData }: any) => {
   const responsive = {
     desktop: {
       breakpoint: { max: 3000, min: 1024 },
-      items: 4,
+      items: 5,
     },
     tablet: {
       breakpoint: { max: 1024, min: 464 },
@@ -53,7 +53,7 @@ const CarouselComponent = ({ carsData }: any) => {
               <Image
                 src={item.image}
                 alt={item.name}
-                width={1000}
+                width={500}
                 height={500}
                 quality={80}
                 className="w-full h-64 hover:scale-105 transform transition ease-out duration-500"
