@@ -1,11 +1,9 @@
 "use client";
 
+import { carsData } from "../sampledata";
 import HomeCTA from "../components/HomeCTA";
 import Banner from "../components/ui/Banner";
-// import TabsCars from "../components/TabsCars";
-import { carsData } from "../sampledata";
-import Heading from "../components/ui/Heading";
-// import TapsCars from "../components/cars/TapsCars";
+import HomeCover from '../components/HomeCover';
 import Container from "../components/ui/Container";
 import Explore from "../components/explore/Explore";
 import HomeCarousel from "../components/HomeCarousel";
@@ -34,6 +32,7 @@ export default function Home() {
       </div>
         <AvailableModels carsData={carsData} />
       <HomeCTA />
+      <HomeCover />
       <Explore />
       <div className="my-16"></div>
     </main>
