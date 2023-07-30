@@ -26,7 +26,7 @@ export const carsData = [
     carType: 'Manual',
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: undefined,
+    logo: "/images/models/grant-vitara/logo.png",
     inStock: false,
   },
   {
@@ -41,7 +41,7 @@ export const carsData = [
     carType: 'Manual',
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: undefined,
+    logo: "/images/models/ertiga/logo.png",
     inStock: true,
   },
   {
@@ -86,7 +86,7 @@ export const carsData = [
     carType: 'Manual',
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: "/images/swiftlogo.png",
+    logo: "/images/models/swift/logo.png",
     inStock: true,
   },
   {
@@ -101,7 +101,7 @@ export const carsData = [
     carType: 'Manual',
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: undefined,
+    logo: "/images/models/dzire/logo.png",
     inStock: true,
   },
   {
@@ -116,22 +116,7 @@ export const carsData = [
     carType: 'Manual',
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: undefined,
-    inStock: true,
-  },
-  {
-    id: 12,
-    href: "#",
-    image: "/images/models/dzire/dzire.webp",
-    name: "DZIRE",
-    price: '',
-    modalYear: '2022',
-    km: "24000ks",
-    fuelType: "petrol",
-    carType: 'Manual',
-    engineCapacity: '998 cc',
-    description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: undefined,
+    logo: "/images/models/vitara/vitara.png",
     inStock: true,
   },
   {
@@ -146,7 +131,7 @@ export const carsData = [
     carType: 'Manual',
     engineCapacity: '998 cc',
     description: 'Stainless steel ring and black cover plate,suitable for 195/80R15 96S tyres.',
-    logo: undefined,
+    logo: "/images/models/super-carry/super.svg",
     inStock: true,
   },
 ];
