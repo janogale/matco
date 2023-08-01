@@ -24,7 +24,7 @@ export default function CarsPage() {
           text1="Explore Our Range"
           text2="Explore Suzuki’s range of affordable new cars."
         />
-        <TapsCars />
+        {/* <TapsCars /> */}
       </Container>
       <HomeCTA />
     </main>

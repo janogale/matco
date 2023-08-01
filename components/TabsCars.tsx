@@ -22,7 +22,7 @@ const jacCars = carsData.filter((car) =>
 export default function TabsCars() {
   return (
     <Tabs.Group aria-label="Tabs" style="underline">
-      <Tabs.Item title="All">
+      {/* <Tabs.Item title="All">
         <CarList cars={carsData} />
       </Tabs.Item>
 
@@ -37,7 +37,7 @@ export default function TabsCars() {
       </Tabs.Item>
       <Tabs.Item title="JAC">
         <CarList cars={jacCars} />
-      </Tabs.Item>
+      </Tabs.Item> */}
     </Tabs.Group>
   );
 }
