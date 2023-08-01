@@ -4,9 +4,8 @@ import { Card } from "flowbite-react";
 import { FaRoad } from "react-icons/fa";
 import { AiFillCar } from "react-icons/ai";
 import { GiFuelTank } from "react-icons/gi";
-import { TCar } from "../CarList";
 
-const CarsItem = ({ car }: { car: TCar }) => {
+const CarsItem = ({ car }: any) => {
   const router = useRouter();
 
   return (
