@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 import Button from "../form/Button";
 import TextInput from "../form/Input";
@@ -12,19 +12,13 @@ import { carsData } from "../../sampledata/index";
 interface FormData {
   preferredBranch: string;
   serviceType: string;
-  mobile: string;
   time: string;
   date: string;
-  age: string;
   carOptions: string;
-  modelYear: string;
   firstName: string;
   lastName: string;
   phoneNumber: string;
   email: string;
-  showroom: string;
-  prefix: string;
-  PurchaseType: string;
   hearUs: string;
   confirm: boolean;
 }
@@ -33,22 +27,22 @@ const GetQouteForm = () => {
   const [formData, setFormData] = useState<FormData>({
     preferredBranch: "",
     serviceType: "",
-    mobile: "",
     time: "",
     date: "",
     carOptions: "Vitra",
-    modelYear: "2022",
     firstName: "",
     lastName: "",
-    age: "",
     email: "",
-    showroom: "New Hargeisa",
     phoneNumber: "",
-    prefix: "Mr",
-    PurchaseType: "Individual",
     hearUs: "Email",
     confirm: false,
   });
+
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
+  const [isErrorMessageVisible, setIsErrorMessageVisible] = useState(false);
+  const [isIncompleteFieldsVisible, setIsIncompleteFieldsVisible] =
+    useState(false);
 
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
@@ -77,33 +71,57 @@ const GetQouteForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+
+    // Check if any input field is empty
+    const isAnyFieldEmpty = Object.values(formData).some(
+      (value) => value === ""
+    );
+    if (isAnyFieldEmpty) {
+      setIsIncompleteFieldsVisible(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    emailjs
+      .sendForm(
+        "service_nwii4qc",
+        "template_0erjgij",
+        e.target as HTMLFormElement,
+        "user_wnA788cKxFTdURQEXJHCA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSuccessMessageVisible(true);
+          setIsIncompleteFieldsVisible(false);
+
+          setFormData({
+            preferredBranch: "",
+            serviceType: "",
+            time: "",
+            date: "",
+            carOptions: "",
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNumber: "",
+            hearUs: "",
+            confirm: false,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setIsErrorMessageVisible(true);
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   // Extract unique car names from carsData
   const carNames = Array.from(new Set(carsData.map((car) => car.name)));
-
-  // Extract unique model years from carsData
-  const modelYears = Array.from(new Set(carsData.map((car) => car.modalYear)));
-
-  const selectOptions = [
-    { value: "", label: "Title" },
-    { value: "Mr", label: "Mr" },
-    { value: "Mrs", label: "Mrs" },
-  ];
-
-  const PurchaseType = [
-    { value: "", label: "Select Purchase type" },
-    { value: "individual", label: "Individual" },
-    { value: "company", label: "Company" },
-  ];
-
-  const showroom = [
-    { value: "", label: "Select showroom" },
-    { value: "new hargeisa", label: "New Hargeisa" },
-    { value: "Pepsi", label: "Pepsi" },
-  ];
 
   const preferredBranch = [
     { value: "", label: "Preferred Branch" },
@@ -127,11 +145,10 @@ const GetQouteForm = () => {
 
   const hearUs = [
     { value: "", label: "Where do you hear us" },
-    { value: "email", label: "Email" },
-    { value: "friend", label: "Friend" },
-    { value: "google", label: "Google" },
-    { value: "Internet", label: "Web - Internet" },
-    { value: "social media", label: "Social Media" },
+    { value: "Referent", label: "Referent" },
+    { value: "Showroom", label: "Showroom" },
+    { value: "web", label: "Our Web" },
+    { value: "Facebook", label: "Facebook" },
     { value: "others", label: "Others" },
   ];
 
@@ -173,23 +190,6 @@ const GetQouteForm = () => {
       </div>
       <hr className="my-5 text-red-500" />
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
-        <SelectInput
-          label="Select option"
-          name="prefix"
-          value={formData.prefix}
-          onChange={handleChange}
-          options={selectOptions}
-        />
-
-        <SelectInput
-          label="Purchase Type"
-          name="PurchaseType"
-          value={formData.PurchaseType}
-          onChange={handleChange}
-          options={PurchaseType}
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
           label="First Name"
           name="firstName"
@@ -208,22 +208,13 @@ const GetQouteForm = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
-          label="Age"
-          name="age"
-          value={formData.age}
-          onChange={handleChange}
-          placeholder="Age"
-        />
-        <TextInput
           label="Email"
           name="email"
           value={formData.email}
           onChange={handleChange}
           placeholder="Email"
         />
-      </div>
 
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
           label="Phone Number"
           name="phoneNumber"
@@ -231,32 +222,8 @@ const GetQouteForm = () => {
           value={formData.phoneNumber}
           onChange={handleChange}
         />
-
-        <TextInput
-          label="Mobile Number"
-          name="mobile"
-          value={formData.mobile}
-          onChange={handleChange}
-          placeholder="Mobile Number"
-        />
       </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
-        <SelectInput
-          label="Car Models"
-          name="carOptions"
-          value={formData.carOptions}
-          onChange={handleChange}
-          options={carNames.map((name) => ({ value: name, label: name }))}
-        />
 
-        <SelectInput
-          label="Model Year"
-          name="modelYear"
-          value={formData.modelYear}
-          onChange={handleChange}
-          options={modelYears.map((year) => ({ value: year, label: year }))}
-        />
-      </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <TextInput
           label="Date"
@@ -277,11 +244,28 @@ const GetQouteForm = () => {
       </div>
       <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
         <SelectInput
-          label="Nearest showroom you can visit"
-          name="showroom"
-          value={formData.showroom}
+          label="Car Models"
+          name="carOptions"
+          value={formData.carOptions}
           onChange={handleChange}
-          options={showroom}
+          options={carNames.map((name) => ({ value: name, label: name }))}
+        />
+
+        <SelectInput
+          label="Preferred Branch"
+          name="preferredBranch"
+          value={formData.preferredBranch}
+          onChange={handleChange}
+          options={preferredBranch}
+        />
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
+        <SelectInput
+          label="Service Type"
+          name="serviceType"
+          value={formData.serviceType}
+          onChange={handleChange}
+          options={serviceTypes}
         />
 
         <SelectInput
@@ -290,23 +274,6 @@ const GetQouteForm = () => {
           value={formData.hearUs}
           onChange={handleChange}
           options={hearUs}
-        />
-      </div>
-      <div className="grid grid-cols-1 md:grid-cols-2 gap-2 md:gap-10">
-        <SelectInput
-          label="Preferred Branch"
-          name="preferredBranch"
-          value={formData.preferredBranch}
-          onChange={handleChange}
-          options={preferredBranch}
-        />
-
-        <SelectInput
-          label="Service Type"
-          name="serviceType"
-          value={formData.serviceType}
-          onChange={handleChange}
-          options={serviceTypes}
         />
       </div>
       <hr className="my-5 text-red-500" />
@@ -320,12 +287,39 @@ const GetQouteForm = () => {
         />
       </div>
       <hr className="my-5 text-red-500" />
-      <div className="col-span-2 flex justify-center">
+      {/* <div className="col-span-2 flex justify-center">
         <Button
           label="Submit"
           className="bg-sky-600 text-white px-4 py-2 w-full rounded-md font-semibold hover:bg-sky-500"
         />
-      </div>
+      </div> */}
+      {isSubmitting ? (
+          <div className="flex items-center justify-center mt-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-900"></div>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <Button
+              label="Submit"
+              className="bg-sky-600 text-white w-full px-4 py-2 rounded focus:border-none font-semibold hover:bg-sky-500"
+            />
+          </div>
+        )}
+        {isSuccessMessageVisible && (
+          <div className="bg-green-500 text-white w-full px-4 p-2 rounded mt-4">
+            Message sent successfully!
+          </div>
+        )}
+        {isErrorMessageVisible && (
+          <div className="bg-red-500 text-white p-2 w-full px-4 rounded mt-4">
+            Error sending message. Please try again later.
+          </div>
+        )}
+        {isIncompleteFieldsVisible && (
+          <div className="bg-yellow-500 text-white p-2 w-full px-4 rounded mt-4">
+            Please fill in all the required fields.
+          </div>
+        )}
     </form>
   );
 };

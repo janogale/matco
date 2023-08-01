@@ -1,6 +1,7 @@
 import React from "react";
 import Image from "next/image";
 import cover from "../../public/images/explore/genuine-parts.webp";
+import cover2 from '../../public/images/models/jac/n-series-engine.jpg'
 import Container from "../../components/ui/Container";
 import GetQouteForm from "../../components/getqoutform/GetQoutForm";
 
@@ -34,17 +35,28 @@ const GenuinePartsPage = () => {
         <div className="w-full space-y-10">
           <div className="content text-lg">
             <h2 className="text-3xl font-semibold uppercase text-sky-600 mb-5">
-              SUZUKI GENUINE PARTS
+              GENUINE PARTS
             </h2>
-            <p>
-              Suzuki Genuine Parts are engineered to precise and exacting
-              product quality standards. Using Suzuki Genuine Parts will also
+            <p className="my-12 text-gray-500">
+              Genuine Parts are engineered to precise and exacting
+              product quality standards. Using Genuine Parts will also
               ensure your safety is not compromised when you need it the most.
-              Suzuki qualified aftersales personnel have the latest tools and
+              MATCO qualified aftersales personnel have the latest tools and
               equipment at their disposal to ensure they obtain the right part
               for the job, and that it will be fitted correctly.
             </p>
           </div>
+        </div>
+      </div>
+      <div className="cover relative">
+        <div className="w-full overflow-hidden flex items-center justify-end">
+          <Image
+            className="w-full h-auto my-2 group text-center bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
+            src={cover2}
+            alt="n-series-engine"
+            width={1500}
+            height={500}
+          />
         </div>
       </div>
       <div className="md:max-w-screen-xl mx-auto mt-10 px-5 xxl:px-0">

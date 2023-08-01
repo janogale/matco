@@ -4,23 +4,30 @@ function HomeCarousel() {
   return (
     <div className="h-96 md:h-screen rounded-none bg-slate-400">
       <Carousel className="rounded-none">
-        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/swift.png')]">
+        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/models/swift/207.jpg')]">
           <img
-            src="/images/swiftlogo.png"
+            src="/images/models/swift/logo.png"
             alt="..."
             className="absolute h-6 sm:h-12 z-50 bottom-16 left-4"
           />
         </div>
-        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/jac1.webp')]">
+        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/models/jac/jac.jpg')]">
           <img
             src="/images/jaclogo.png"
             alt="..."
             className="absolute h-6 sm:h-12 z-50 bottom-16 left-4"
           />
         </div>
-        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/celerio.png')]">
+        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/models/jac/poster-img.webp')]">
           <img
-            src="/images/celeriologo.png"
+            src="/images/models/grant-vitara/logo.png"
+            alt="..."
+            className="absolute h-6 sm:h-12 z-50 bottom-16 left-4"
+          />
+        </div>
+        <div className="relative h-full w-full bg-no-repeat bg-cover bg-center bg-fixed bg-[url('/images/models/jac/n-series.jpg')]">
+        <img
+            src="/images/jaclogo.png"
             alt="..."
             className="absolute h-6 sm:h-12 z-50 bottom-16 left-4"
           />

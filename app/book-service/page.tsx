@@ -61,7 +61,7 @@ const page = () => {
                   href="https://wa.me/+252636390000"
                   target="_blank"
                   className="border-b border-gray-400 pb-1 hover:text-red-500"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   WhatsApp message
                 </a>{" "}
@@ -70,7 +70,7 @@ const page = () => {
                   href="callto:+252636390000"
                   target="_blank"
                   className="border-b border-gray-400 pb-1 hover:text-red-500"
-                  rel="noreferrer"
+                  rel="noopener noreferrer"
                 >
                   +252 (63) 6390000
                 </a>

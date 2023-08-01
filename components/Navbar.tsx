@@ -1,4 +1,4 @@
-import { Navbar } from "flowbite-react";
+import { Dropdown, Navbar } from "flowbite-react";
 import Image from "next/image";
 import logo from "../public/logo.png";
 import jacLogo from "../public/images/jac.png";
@@ -49,9 +49,18 @@ export default function NavbarTop() {
         <Navbar.Link href="/" className="text-lg text-white dark:text-white">
           <span className="text-white">Home</span>
         </Navbar.Link>
-        <Navbar.Link href="/about" className="text-lg text-white dark:text-white">
-          <span className="text-white">About</span>
-        </Navbar.Link>
+        <div className="text-lg text-white dark:text-white">
+        <Dropdown label="Discover" inline className="bg-red-500 border-none shadow-none" href="#">
+          <span className="flex justify-between items-center -py-1 hover:bg-none">
+          <Dropdown.Item>
+            <a href="/discover/suzuki" className="hover:bg-none text-white hover:text-[rgb(2,132,199)] text-lg font-bold">Suzuki</a>
+          </Dropdown.Item>
+          <Dropdown.Item>
+          <a href="/discover/jac" className="hover:bg-none text-white hover:text-[rgb(2,132,199)] text-lg font-bold">JAC</a>
+          </Dropdown.Item>
+          </span>
+        </Dropdown>
+        </div>
         <Navbar.Link href="/services" className="text-lg text-white dark:text-white">
           <span className="text-white">Services</span>
         </Navbar.Link>

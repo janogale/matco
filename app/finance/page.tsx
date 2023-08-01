@@ -1,8 +1,25 @@
 import Image from "next/image";
+
+import Heading from "../../components/ui/Heading";
 import Container from "../../components/ui/Container";
+import partnerLogo from "../../public/images/partner/logo.webp";
 import cover from "../../public/images/models/grant-vitara/grant-vitara.jpg";
 
 export default function FinancePage() {
+  const installmentPlans = [
+    { years: 1 },
+    { years: 2 },
+    { years: 3 },
+    { years: 4 },
+    { years: 5 },
+  ];
+
+  const financePartner = {
+    name: "Dara salaam Bank",
+    logo: partnerLogo,
+    website: "https://darasalaambank.com",
+  };
+
   return (
     <Container>
       <div className="cover relative">
@@ -31,36 +48,35 @@ export default function FinancePage() {
         </div>
       </div>
       <div className="prose prose-lg prose-indigo mx-auto my-12 text-gray-500">
-      <p>
-        Buying a car is exciting! Whether it gives you that ultimate sense of
-        freedom to take a sho&apos;t left whenever, or you simply want to travel
-        from point A to point B, we have a Suzuki and JAC for every type of
-        adventure.
-      </p>
-      <p>
-        Visit our nearest office determine what your car&apos;s yearly
-        instalment will be. or
-      </p>
-      <div className="font-semibold mt-10">
-        To know more details please drop a{" "}
-        <a
-          href="https://wa.me/+252636390000"
-          target="_blank"
-          className="border-b border-gray-400 pb-1 hover:text-red-500"
-          rel="noreferrer"
-        >
-          WhatsApp message
-        </a>{" "}
-        or Call MATCO Service Hotline Number:
-        <a
-          href="callto:+252636390000"
-          target="_blank"
-          className="border-b border-gray-400 pb-1 hover:text-red-500"
-          rel="noreferrer"
-        >
-          +252 (63) 6390000
-        </a>
-      </div>
+        <p>
+          Buying a car is exciting! Whether it gives you that ultimate sense of
+          freedom to take a sho&apos;t left whenever, or you simply want to
+          travel from point A to point B, we have a Suzuki and JAC for every
+          type of adventure.
+        </p>
+        <Heading>Finance Installment Plans:</Heading>
+        <ul className="list-disc pl-6">
+          {installmentPlans.map((plan) => (
+            <li key={plan.years}>{plan.years}-year plan</li>
+          ))}
+        </ul>
+        <Heading>Our Partners:</Heading>
+        <div className="flex flex-col mt-10">
+          <a
+            href={financePartner.website}
+            target="_blank"
+            rel="noopener noreferrer"
+            className="bg-gray-200 overflow-hidden rounded-tl-3xl rounded-br-3xl flex items-center"
+          >
+            <Image
+              src={financePartner.logo}
+              alt={financePartner.name}
+              width={500}
+              height={300}
+              className="object-cover w-full hover:scale-105 transform transition ease-out duration-500"
+            />
+          </a>
+        </div>
       </div>
     </Container>
   );
