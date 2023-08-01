@@ -1,7 +1,7 @@
 "use client";
 
 import React, { useState, ChangeEvent, FormEvent } from "react";
-import Image from "next/image";
+import emailjs from "@emailjs/browser";
 
 import Button from "../form/Button";
 import TextInput from "../form/Input";
@@ -38,6 +38,12 @@ const GetQouteForm = () => {
     confirm: false,
   });
 
+  const [isSubmitting, setIsSubmitting] = useState(false);
+  const [isSuccessMessageVisible, setIsSuccessMessageVisible] = useState(false);
+  const [isErrorMessageVisible, setIsErrorMessageVisible] = useState(false);
+  const [isIncompleteFieldsVisible, setIsIncompleteFieldsVisible] =
+    useState(false);
+
   const handleChange = (
     e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>
   ) => {
@@ -65,8 +71,53 @@ const GetQouteForm = () => {
 
   const handleSubmit = (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    // Handle form submission here
-    console.log(formData);
+
+    // Check if any input field is empty
+    const isAnyFieldEmpty = Object.values(formData).some(
+      (value) => value === ""
+    );
+    if (isAnyFieldEmpty) {
+      setIsIncompleteFieldsVisible(true);
+      return;
+    }
+
+    setIsSubmitting(true);
+
+    emailjs
+      .sendForm(
+        "service_nwii4qc",
+        "template_0erjgij",
+        e.target as HTMLFormElement,
+        "user_wnA788cKxFTdURQEXJHCA"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+          setIsSuccessMessageVisible(true);
+          setIsIncompleteFieldsVisible(false);
+
+          setFormData({
+            preferredBranch: "",
+            serviceType: "",
+            time: "",
+            date: "",
+            carOptions: "",
+            firstName: "",
+            lastName: "",
+            email: "",
+            phoneNumber: "",
+            hearUs: "",
+            confirm: false,
+          });
+        },
+        (error) => {
+          console.log(error.text);
+          setIsErrorMessageVisible(true);
+        }
+      )
+      .finally(() => {
+        setIsSubmitting(false);
+      });
   };
 
   // Extract unique car names from carsData
@@ -236,12 +287,39 @@ const GetQouteForm = () => {
         />
       </div>
       <hr className="my-5 text-red-500" />
-      <div className="col-span-2 flex justify-center">
+      {/* <div className="col-span-2 flex justify-center">
         <Button
           label="Submit"
           className="bg-sky-600 text-white px-4 py-2 w-full rounded-md font-semibold hover:bg-sky-500"
         />
-      </div>
+      </div> */}
+      {isSubmitting ? (
+          <div className="flex items-center justify-center mt-4">
+            <div className="animate-spin rounded-full h-8 w-8 border-t-2 border-b-2 border-gray-900"></div>
+          </div>
+        ) : (
+          <div className="flex justify-center">
+            <Button
+              label="Submit"
+              className="bg-sky-600 text-white w-full px-4 py-2 rounded focus:border-none font-semibold hover:bg-sky-500"
+            />
+          </div>
+        )}
+        {isSuccessMessageVisible && (
+          <div className="bg-green-500 text-white w-full px-4 p-2 rounded mt-4">
+            Message sent successfully!
+          </div>
+        )}
+        {isErrorMessageVisible && (
+          <div className="bg-red-500 text-white p-2 w-full px-4 rounded mt-4">
+            Error sending message. Please try again later.
+          </div>
+        )}
+        {isIncompleteFieldsVisible && (
+          <div className="bg-yellow-500 text-white p-2 w-full px-4 rounded mt-4">
+            Please fill in all the required fields.
+          </div>
+        )}
     </form>
   );
 };
