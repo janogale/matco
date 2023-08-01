@@ -7,6 +7,7 @@ import { carsData } from "../../../sampledata";
 import Sidebar from "../../../components/Sidebar";
 import Modal from "../../../components/modal/Modal";
 import Container from "../../../components/ui/Container";
+import Spinner from '../../../components/ui/Spinner'
 
 interface CarData {
   id: number;
@@ -29,7 +30,7 @@ export default function CarDetailsPage() {
   const id = pathname.split("/").pop();
 
   if (!id || isNaN(Number(id))) {
-    return <div>Loading...</div>;
+    return <Spinner />
   }
 
   const carId = parseInt(id);
