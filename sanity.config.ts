@@ -4,7 +4,6 @@ import { deskTool } from "sanity/desk";
 import schemas from './sanity/schemas';
 
 const config = defineConfig({
-  name: "default",
   projectId: "a8x3s50m",
   title: 'Matco Motors',
   dataset: "production", 

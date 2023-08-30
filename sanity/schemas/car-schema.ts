@@ -18,7 +18,7 @@ const car = {
       },
     },
     {
-      name: "image",
+      name: "frontImage",
       title: "Front Image",
       type: "image",
       options: { hotspot: true },
