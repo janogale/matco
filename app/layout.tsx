@@ -13,6 +13,21 @@ export default function RootLayout({
 }) {
   const path = usePathname();
 
+  const isStudioPath = path?.includes("studio");
+
+  if (isStudioPath) {
+    return (
+       <html lang="en">
+      <head />
+      <body>
+        <div className="mx-auto w-full relative">
+          {children}
+        </div>
+      </body>
+    </html>
+    )
+  }
+
   return (
     <html lang="en">
       <head />

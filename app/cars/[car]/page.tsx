@@ -31,14 +31,13 @@ export default function CarDetailsPage({ params }: Props) {
     fetchCarDetails();
     setPathname(window.location.pathname);
   }, [slug]);
-  
 
   useEffect(() => {
     setPathname(window.location.pathname);
   }, []);
 
   if (!carDetails) {
-    return <Spinner />
+    return <Spinner />;
   }
 
   // Function to open the modal
@@ -54,8 +53,14 @@ export default function CarDetailsPage({ params }: Props) {
   return (
     <Container>
       <Sidebar openModal={openModal} />
-      <div className="bg-red-500 my-20">
-        <h1 className="bg-red-500 my-20">{carDetails.name}</h1>
+      <div className="my-20">
+        <Image
+          src={carDetails.coverImage}
+          width={800}
+          height={500}
+          alt="Modal Image"
+          className="rounded-lg w-full h-full max-h-96"
+        />
         <PortableText value={carDetails.content} />
       </div>
       <Modal
