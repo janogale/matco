@@ -44,11 +44,6 @@ const car = {
       ],
     },
     {
-      name: "url",
-      title: "URL",
-      type: "url",
-    },
-    {
       name: "content",
       title: "Content",
       type: "array",
