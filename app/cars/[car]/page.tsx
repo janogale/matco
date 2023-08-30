@@ -2,6 +2,7 @@
 
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
+import { PortableText } from "@portabletext/react";
 
 import Sidebar from "../../../components/Sidebar";
 import Modal from "../../../components/modal/Modal";
@@ -53,7 +54,10 @@ export default function CarDetailsPage({ params }: Props) {
   return (
     <Container>
       <Sidebar openModal={openModal} />
-      <div className="bg-red-500 my-20">{carDetails.name}</div>
+      <div className="bg-red-500 my-20">
+        <h1 className="bg-red-500 my-20">{carDetails.name}</h1>
+        <PortableText value={carDetails.content} />
+      </div>
       <Modal
         isOpen={isModalOpen}
         onClose={closeModal}

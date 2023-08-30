@@ -1,14 +1,10 @@
-import { Car } from "../types/car";
 import { createClient, groq } from "next-sanity";
+import clientConfig from "../config/client-config";
+
+import { Car } from "../types/car";
 
 export async function getCars(): Promise<Car[]> {
-  const client = createClient({
-    projectId: "a8x3s50m",
-    dataset: "production",
-    apiVersion: "2023-08-30",
-  });
-
-  return client.fetch(
+  return createClient(clientConfig).fetch(
     groq`*[_type == "car"]{
       _id,
       name,
@@ -25,13 +21,7 @@ export async function getCars(): Promise<Car[]> {
 }
 
 export async function getCar(slug: string): Promise<Car> {
-  const client = createClient({
-    projectId: "a8x3s50m",
-    dataset: "production",
-    apiVersion: "2023-08-30",
-  });
-
-  return client.fetch(
+  return createClient(clientConfig).fetch(
     groq`*[_type == "car" && slug.current == $slug][0]{
       _id,
       name,
