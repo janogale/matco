@@ -15,6 +15,7 @@ type Props = {
   params: { car: string };
 };
 
+
 export default function CarDetailsPage({ params }: Props) {
   const [pathname, setPathname] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -53,15 +54,26 @@ export default function CarDetailsPage({ params }: Props) {
   return (
     <Container>
       <Sidebar openModal={openModal} />
-      <div className="my-20">
+      <div className="mt-10 mb-20 rounded-lg overflow-hidden w-full">
         <Image
           src={carDetails.coverImage}
-          width={800}
-          height={500}
+          width={1000}
+          height={700}
           alt="Modal Image"
-          className="rounded-lg w-full h-full max-h-96"
+          className="w-full h-auto group text-center rounded-md bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
         />
-        <PortableText value={carDetails.content} />
+      </div>
+      <PortableText
+       value={carDetails.content}
+       />
+      <div className="my-20">
+        <p>
+          {" "}
+          *All the informations provided are manufacturer’s data and may vary
+          for each market.
+        </p>
+
+        <p>*The specifications are subject to change without prior notice.</p>
       </div>
       <Modal
         isOpen={isModalOpen}

@@ -11,7 +11,7 @@ export async function getCars(): Promise<Car[]> {
       "slug": slug.current,
       "frontImage": frontImage.asset->url,
       "coverImage": coverImage.asset->url,
-      "logoImage": logo.asset->url,
+      "logo": logo.asset->url,
       content,
       features,
       "featureImages": images[].asset->url,
