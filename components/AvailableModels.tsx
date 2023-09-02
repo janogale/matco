@@ -4,8 +4,7 @@ import { useRouter } from "next/navigation";
 import Carousel from "react-multi-carousel";
 import "react-multi-carousel/lib/styles.css";
 import { Car } from "../sanity/types/car";
-import { Spinner } from "flowbite-react";
-import path from "path";
+import Spinner from "./ui/Spinner";
 
 type AvailableModelsProps = {
   cars: Car[];
