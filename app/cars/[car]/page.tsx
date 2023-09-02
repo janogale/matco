@@ -15,7 +15,6 @@ type Props = {
   params: { car: string };
 };
 
-
 export default function CarDetailsPage({ params }: Props) {
   const [pathname, setPathname] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
@@ -63,14 +62,41 @@ export default function CarDetailsPage({ params }: Props) {
           className="w-full h-auto group text-center rounded-md bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
         />
       </div>
-      <PortableText
-       value={carDetails.content}
-       />
+      <div className="my-10">
+        <PortableText value={carDetails.content} />
+      </div>
+      <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-10">
+        <div className="order-2 lg:order-1 p-1 w-full h-full">
+          <Image
+            src={carDetails.frontImage}
+            width={1500}
+            height={1500}
+            alt={carDetails.name}
+            className="w-full h-full group text-center rounded-md bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
+          />
+        </div>
+        <div className="w-full order-1 lg:order-2">
+          <PortableText value={carDetails.features} />
+        </div>
+      </div>
+      <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-5 items-center mt-20">
+        {carDetails.featureImages &&
+          carDetails.featureImages.map((image, index) => (
+            <Image
+              key={index}
+              src={image}
+              width={200}
+              height={200}
+              alt={carDetails.name}
+              className="w-full h-full group text-center rounded-md bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
+            />
+          ))}
+      </div>
       <div className="my-20">
         <p>
           {" "}
-          *All the informations provided are manufacturer’s data and may vary
-          for each market.
+          *All the information provided are manufacturer’s data and may vary for
+          each market.
         </p>
 
         <p>*The specifications are subject to change without prior notice.</p>

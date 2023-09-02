@@ -6,6 +6,7 @@ export type Car = {
   slug: string;
   frontImage: string;
   coverImage: string;
+  featureImage: string;
   content: PortableTextBlock[];
   features: PortableTextBlock[];
   featureImages: string[];
