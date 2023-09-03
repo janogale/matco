@@ -3,6 +3,8 @@
 import React, { useState, useEffect } from "react";
 import Image from "next/image";
 import { PortableText } from "@portabletext/react";
+import imageUrlBuilder from '@sanity/image-url'
+import config from "../../../sanity.config"
 
 import Sidebar from "../../../components/Sidebar";
 import Modal from "../../../components/modal/Modal";
@@ -15,10 +17,13 @@ type Props = {
   params: { car: string };
 };
 
+
+
 export default function CarDetailsPage({ params }: Props) {
   const [pathname, setPathname] = useState("");
   const [isModalOpen, setIsModalOpen] = useState(false);
-  const [carDetails, setCarDetails] = useState<Car | null>(null); // Initialize with null
+  const [carDetails, setCarDetails] = useState<Car | null>(null); // Initialize with null.
+
 
   const slug = params.car;
 
@@ -37,7 +42,11 @@ export default function CarDetailsPage({ params }: Props) {
   }, []);
 
   if (!carDetails) {
-    return <div className="mt-20 h-[50vh] flex justify-center items-center"><Spinner /></div>;
+    return (
+      <div className="mt-20 h-[50vh] flex justify-center items-center">
+        <Spinner />
+      </div>
+    );
   }
 
   // Function to open the modal
@@ -49,6 +58,25 @@ export default function CarDetailsPage({ params }: Props) {
   const closeModal = () => {
     setIsModalOpen(false);
   };
+
+  const builder = imageUrlBuilder(config);
+
+  function urlFor(source: any) {
+    return builder.image(source)
+  }
+
+  const ptComponents = {
+    types: {
+      image: ({ value }: { value: any }) => (
+        <Image 
+        src={urlFor(value).url()}
+        alt="Image"
+        width={800}
+        height={800}
+        />
+      )
+    }
+  }
 
   return (
     <Container>
@@ -62,8 +90,11 @@ export default function CarDetailsPage({ params }: Props) {
           className="w-full h-auto group text-center rounded-md bg-white hover:cursor-pointer hover:opacity-75 hover:scale-105 transform transition ease-out duration-500 cursor-pointer"
         />
       </div>
-      <div className="my-10">
-        <PortableText value={carDetails.content} />
+      <div className="prose max-w-none pb-8 pt-10 prose-lg">
+        <PortableText
+          value={ carDetails.content }
+          components={ptComponents}
+        />
       </div>
       <div className="grid grid-cols-1 lg:grid-cols-2 gap-5 items-center mt-10">
         <div className="order-2 lg:order-1 p-1 w-full h-full">
@@ -109,3 +140,4 @@ export default function CarDetailsPage({ params }: Props) {
     </Container>
   );
 }
+
