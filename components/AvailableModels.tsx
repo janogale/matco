@@ -81,9 +81,9 @@ const CarouselComponent = ({ cars }: AvailableModelsProps) => {
                     src={car.logo}
                     alt={car.name}
                     width={200}
-                    height={100}
+                    height={70}
                     quality={80}
-                    className="w-28 h-10"
+                    className="w-28 h-10 p-2"
                   />
                 ) : (
                   <span>{car.name}</span>
