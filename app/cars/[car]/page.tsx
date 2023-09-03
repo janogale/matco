@@ -37,7 +37,7 @@ export default function CarDetailsPage({ params }: Props) {
   }, []);
 
   if (!carDetails) {
-    return <div className="mt-20"><Spinner /></div>;
+    return <div className="mt-20 h-[50vh] flex justify-center items-center"><Spinner /></div>;
   }
 
   // Function to open the modal
