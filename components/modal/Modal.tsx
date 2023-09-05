@@ -7,11 +7,20 @@ type ModalProps = {
   isOpen: boolean;
   onClose: () => void;
   imageSrc: string;
+  brochure: string;
+  specificationSheet:string;
 };
 
-const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
+const Modal = ({ isOpen, onClose, imageSrc, brochure, specificationSheet }: ModalProps) => {
   if (!isOpen) return null;
 
+  const handleDownload = (fileUrl: string | null) =>{
+    if(fileUrl){
+      window.open(fileUrl, "_blank")
+    } else {
+      alert("File does not exist. Please contact Matco team.");
+    }
+  }
   return (
     <div className="fixed inset-0 flex items-center justify-center z-50 cursor-pointer">
       <div
@@ -34,13 +43,19 @@ const Modal = ({ isOpen, onClose, imageSrc }: ModalProps) => {
             />
           </div>
           <div className="mt-5 mb-3 flex">
-            <button className="bg-gray-200 hover:bg-gray-300 rounded-md mr-5 flex justify-between items-center">
+            <button
+             className="bg-gray-200 hover:bg-gray-300 rounded-md mr-5 flex justify-between items-center"
+             onClick={() => handleDownload(brochure)}
+             >
               <AiTwotoneFileMarkdown className="bg-red-500 text-white w-6 h-6" />
               <span className="text-xs mx-2 font-semibold">
                 Download Brochure
               </span>
             </button>
-            <button className="bg-gray-200 hover:bg-gray-300 rounded-md flex justify-between items-center">
+            <button 
+            className="bg-gray-200 hover:bg-gray-300 rounded-md flex justify-between items-center"
+             onClick={() => handleDownload(specificationSheet)}
+            >
               <BiSortDown className="bg-red-500 text-white w-6 h-6" />
               <span className="text-xs mx-2 font-semibold">
                 Specification Sheet

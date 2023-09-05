@@ -16,6 +16,8 @@ export async function getCars(): Promise<Car[]> {
       content,
       features,
       "featureImages": images[].asset->url,
+      "brochure": brochure.asset->url,
+      "specificationSheet": specificationSheet.asset->url,
       inStock
     }`
   );
@@ -28,11 +30,14 @@ export async function getCar(slug: string): Promise<Car> {
       name,
       "slug": slug.current,
       "frontImage": frontImage.asset->url,
+      "featureImage": featureImage.asset->url,
       "coverImage": coverImage.asset->url,
       "logoImage": logo.asset->url,
       content,
       features,
       "featureImages": images[].asset->url,
+      "brochure": brochure.asset->url,
+      "specificationSheet": specificationSheet.asset->url,
       inStock
     }`,
     { slug }

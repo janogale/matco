@@ -147,6 +147,22 @@ const car = {
       title: "In Stock",
       type: "boolean",
     },
+    {
+      name: "brochure",
+      title: "Brochure",
+      type: "file",
+      options: {
+        accept: ".pdf"
+      }
+    },
+    {
+      name: "specificationSheet",
+      title: "Specification Sheet",
+      type: "file",
+      options: {
+        accept: ".pdf"
+      }
+    }
   ],
 };
 

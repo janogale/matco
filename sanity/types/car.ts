@@ -11,5 +11,7 @@ export type Car = {
   features: PortableTextBlock[];
   featureImages: string[];
   logo: string;
+  brochure: string;
+  specificationSheet: string;
   inStock: boolean;
 };

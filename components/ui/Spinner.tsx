@@ -1,8 +1,7 @@
 "use client";
 
-import { Button, Spinner } from "flowbite-react";
+import { Spinner } from "flowbite-react";
 
-import Container from "./Container";
 
 export default function Buttons() {
   return (

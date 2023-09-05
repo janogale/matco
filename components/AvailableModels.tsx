@@ -52,7 +52,7 @@ const CarouselComponent = ({ cars }: AvailableModelsProps) => {
       {cars.map((car: Car) => (
         <div
           key={car._id}
-          onClick={() => router.push(`/cars/${car.slug}`)}
+          onClick={() => router.push(`/vehicles/${car.slug}`)}
           className={`relative group text-center overflow-hidden border-none p-2 hover:cursor-pointer ${
             !car.inStock ? "opacity-50 cursor-not-allowed" : "hover:opacity-75"
           }`}
