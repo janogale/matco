@@ -26,7 +26,7 @@ export default function ContactPage() {
                   />
                   <img
                     className="absolute rounded-3xl object-contain object-center shadow-2xl invisible group-hover:visible"
-                    src="/images/models/vitara/1.webp"
+                    src="/images/models/jac/2.webp"
                     alt=""
                   />
                 </div>

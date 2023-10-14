@@ -1,14 +1,13 @@
 "use client";
 
-import { Button, Spinner } from "flowbite-react";
+import { Spinner } from "flowbite-react";
 
-import Container from "./Container";
 
 export default function Buttons() {
   return (
-    <Container>
+    <div className="flex justify-center items-center">
       <Spinner aria-label="Alternate spinner button example" />
-      <span className="pl-3">Loading...</span>
-    </Container>
+      <span className="pl-3 text-lg text-gray-400 font-semibold">Please wait a little bit</span>
+    </div>
   );
 }

@@ -24,7 +24,7 @@ const Sidebar = ({ openModal }: any) => {
   ];
 
   // Check if the current pathname matches the car details page path
-  const isCarDetailsPage = pathname?.startsWith("/cars/") ?? false;
+  const isCarDetailsPage = pathname?.startsWith("/vehicles/") ?? false;
 
   return (
     <div className="hidden md:flex fixed top-1/2 right-0 transform -translate-y-1/2 h-full max-h-56 z-50 text-black w-20 flex-col justify-center items-center space-y-4">
